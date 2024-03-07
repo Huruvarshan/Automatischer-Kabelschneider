@@ -1,18 +1,18 @@
-# Kabel- und Schrumpfschlauchschneider
-# Beschreibung: 
-Dieses Repository enthält die KiCad-Dateien und den Code für den Microcontroller eines Open-Source-Kabel- und Schrumpfschlauchschneiders. Das Gerät ist darauf ausgelegt, Kabel, Schrumpfschläuche und ähnliche Materialien präzise und effizient zu verarbeiten.
+# Cable and Heat Shrink Tube Cutter
+# Description:
+This repository contains the KiCad files and code for the microcontroller of an open-source cable and heat shrink tube cutter. The device is designed to process cables, heat shrink tubes, and similar materials precisely and efficiently.
 
-## Funktionen:
+## Features:
 
-- Programmierbare Längen- und Stückzahleingabe über kapazitive Taster und Display
-- Präziser Schneidemechanismus für saubere Schnitte unabhängig von Material und Durchmesser
-- Nahtloser Wechsel zwischen verschiedenen Materialien und Durchmessern
-- Benachrichtigungsfunktion über kleine Beacons bei Fertigstellung des Auftrags
-- Sicherheitsfunktionen wie Überhitzungsschutz, "SawStop" und Run-Out-Sensor
+- Programmable length and quantity input via capacitive buttons and display
+- Precise cutting mechanism for clean cuts regardless of material and diameter
+- Seamless transition between different materials and diameters
+- Notification function via small beacons upon completion of the job
+- Safety features such as overheat protection, "SawStop," and run-out sensor
 
-## Hinweise:
-- Die KiCad-Dateien enthalten die Schaltpläne und Layouts für die Herstellung des Geräts.
-- Der bereitgestellte Code ist für die Programmierung und Steuerung des Microcontrollers vorgesehen.
-- Bitte beachten Sie die Sicherheitshinweise und Wartungsanleitungen für das Gerät.
+## Notes:
+- The KiCad files contain the schematics and layouts for manufacturing the device.
+- The provided code is intended for programming and controlling the microcontroller.
+- Please refer to the safety instructions and maintenance manuals for the device.
 
-Dieses Projekt ist eine Open-Source-Lösung für die Kabel- und Schrumpfschlauchverarbeitung. Wir freuen uns über Beiträge und Verbesserungsvorschläge von der Community!
+This project is an open-source solution for cable and heat shrink tube processing. We welcome contributions and suggestions for improvement from the community!
