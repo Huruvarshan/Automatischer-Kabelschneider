@@ -1,0 +1,12 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "a8d0b249-d66b-4b00-8de7-55ddd07021b2")
+	(paper "A4")
+	(title_block
+		(rev "v1.0")
+		(company "Mechatronik Schule Winterthur")
+	)
+	(lib_symbols)
+)

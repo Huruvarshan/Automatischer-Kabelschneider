@@ -1,0 +1,134 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "ff414881-00bc-48a3-bd83-dba8c1da722a")
+	(paper "A4")
+	(title_block
+		(title "Main sheet")
+		(date "2024-03-27")
+		(rev "v1.0")
+		(company "Mechatronik Schule Winterthur")
+		(comment 1 "This is the main schematic sheet of this KiCad Project")
+	)
+	(lib_symbols)
+	(sheet
+		(at 97.79 81.28)
+		(size 43.18 15.24)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "352ad1d3-9b58-40da-b881-d99a3f860b8b")
+		(property "Sheetname" "Main Microcontroller"
+			(at 97.79 80.5684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "main_microcontroller_AKS.kicad_sch"
+			(at 97.79 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 97.79 109.22)
+		(size 27.94 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b7d74188-216a-42cc-9b81-f0b98f12fae4")
+		(property "Sheetname" "Slave Microcontroller"
+			(at 97.79 108.5084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "slave_microcontroller_AKS.kicad_sch"
+			(at 97.79 122.5046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100.33 55.88)
+		(size 49.53 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f74e80f9-ed0a-4a5e-b87b-a2149d82d164")
+		(property "Sheetname" "Powersupply_AKS"
+			(at 100.33 55.1684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "powersupply_AKS.kicad_sch"
+			(at 100.33 69.1646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
