@@ -118,6 +118,26 @@
 				(justify left top)
 			)
 		)
+		(pin "D+" input
+			(at 149.86 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3b2bd8bf-7ca5-47f0-bfb1-277b4702ca80")
+		)
+		(pin "D-" input
+			(at 149.86 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6a35ed13-9bfd-4e8c-aa1a-d9a358e4b8ae")
+		)
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a"
