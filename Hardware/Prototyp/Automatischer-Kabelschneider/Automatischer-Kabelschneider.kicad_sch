@@ -12,6 +12,66 @@
 		(comment 1 "This is the main schematic sheet of this KiCad Project")
 	)
 	(lib_symbols)
+	(wire
+		(pts
+			(xy 158.75 90.17) (xy 158.75 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05f72442-aeeb-4c73-8eb3-1ddae14d2be4")
+	)
+	(wire
+		(pts
+			(xy 140.97 86.36) (xy 153.67 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "248f463d-a232-47d9-846f-c866b34700fe")
+	)
+	(wire
+		(pts
+			(xy 158.75 62.23) (xy 149.86 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65c2fbb7-f7b9-4257-80e9-f6283a4b8d2c")
+	)
+	(wire
+		(pts
+			(xy 140.97 90.17) (xy 158.75 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e065f1a-208c-4ded-bd4f-cac89a2a6a2a")
+	)
+	(wire
+		(pts
+			(xy 153.67 64.77) (xy 149.86 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0df4ef3-a728-44f9-a80c-c19972996a21")
+	)
+	(wire
+		(pts
+			(xy 153.67 86.36) (xy 153.67 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfb0b663-189f-44b6-a2f9-005b1242e486")
+	)
 	(sheet
 		(at 97.79 81.28)
 		(size 43.18 15.24)
@@ -41,6 +101,26 @@
 				)
 				(justify left top)
 			)
+		)
+		(pin "D-" bidirectional
+			(at 140.97 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "82a1feae-cf04-4503-b5f7-4f9739c7f505")
+		)
+		(pin "D+" bidirectional
+			(at 140.97 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3c56f490-1408-48ba-8177-233b5abdefc2")
 		)
 		(instances
 			(project "Automatischer-Kabelschneider"
@@ -118,7 +198,7 @@
 				(justify left top)
 			)
 		)
-		(pin "D+" input
+		(pin "D+" bidirectional
 			(at 149.86 62.23 0)
 			(effects
 				(font
@@ -128,7 +208,7 @@
 			)
 			(uuid "3b2bd8bf-7ca5-47f0-bfb1-277b4702ca80")
 		)
-		(pin "D-" input
+		(pin "D-" bidirectional
 			(at 149.86 64.77 0)
 			(effects
 				(font
