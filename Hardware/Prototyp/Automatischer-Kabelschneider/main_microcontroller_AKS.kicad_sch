@@ -995,6 +995,260 @@
 				)
 			)
 		)
+		(symbol "LED:WS2812B-2020"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 5.08 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right bottom)
+				)
+			)
+			(property "Value" "WS2812B-2020"
+				(at 1.27 -5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
+				(at 1.27 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
+				(at 2.54 -9.525 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "RGB LED NeoPixel Nano addressable"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED*WS2812*-2020_PLCC4*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "WS2812B-2020_0_0"
+				(text "RGB"
+					(at 2.286 -4.191 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+					)
+				)
+			)
+			(symbol "WS2812B-2020_0_1"
+				(polyline
+					(pts
+						(xy 1.27 -3.556) (xy 1.778 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 1.778 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.699 -3.556) (xy 2.667 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -2.54) (xy 1.27 -3.556) (xy 1.27 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.524) (xy 1.27 -2.54) (xy 1.27 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.683 -1.016) (xy 3.683 -3.556) (xy 3.683 -4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.699 -1.524) (xy 2.667 -1.524) (xy 3.683 -3.556) (xy 4.699 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 5.08)
+					(end -5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "WS2812B-2020_1_1"
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "DOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "RF_Module:ESP32-S3-WROOM-2"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2690,10 +2944,42 @@
 		)
 	)
 	(junction
+		(at 22.86 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55839049-94e2-4e27-a054-bd1107060d80")
+	)
+	(junction
+		(at 22.86 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "626251fb-db70-4c67-940e-8d6f0d2c45e1")
+	)
+	(junction
 		(at 57.15 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "74c2f208-bf58-4573-a3f4-0233c1886aa7")
+	)
+	(junction
+		(at 22.86 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "91e1ec00-fbda-4f09-92c3-179cdb6cb6e7")
+	)
+	(no_connect
+		(at 36.83 78.74)
+		(uuid "78319735-677c-4daa-876f-8af16001c14b")
+	)
+	(wire
+		(pts
+			(xy 22.86 71.12) (xy 22.86 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a1f0de6-3dfd-4486-b1f1-7aea24d28836")
 	)
 	(wire
 		(pts
@@ -2704,6 +2990,16 @@
 			(type default)
 		)
 		(uuid "0b573f19-3c4c-4028-bf3d-16eb4243027d")
+	)
+	(wire
+		(pts
+			(xy 106.68 180.34) (xy 99.06 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c04c340-62e0-4d9c-b3dd-5471872f3996")
 	)
 	(wire
 		(pts
@@ -2737,6 +3033,36 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 99.06) (xy 88.9 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1919f169-fb70-43de-a959-8b69e6d13b4c")
+	)
+	(wire
+		(pts
+			(xy 45.72 171.45) (xy 45.72 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ba9cabf-76fa-4c58-9e2e-60f9b4f0a082")
+	)
+	(wire
+		(pts
+			(xy 87.63 96.52) (xy 88.9 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20405387-ca19-4e1f-9fce-9c654a0d8433")
+	)
+	(wire
+		(pts
 			(xy 87.63 109.22) (xy 88.9 109.22)
 		)
 		(stroke
@@ -2747,6 +3073,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 93.98) (xy 88.9 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32f2ed15-df16-4388-a830-b55faba9d6b8")
+	)
+	(wire
+		(pts
 			(xy 115.57 43.18) (xy 87.63 43.18)
 		)
 		(stroke
@@ -2754,6 +3090,46 @@
 			(type default)
 		)
 		(uuid "35f7acf5-5cc8-4a6e-9b80-583dddf85fab")
+	)
+	(wire
+		(pts
+			(xy 87.63 104.14) (xy 88.9 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ea2cef8-9b51-4ce8-8624-57bfb401f31d")
+	)
+	(wire
+		(pts
+			(xy 24.13 78.74) (xy 22.86 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46954de8-ce92-4b4a-88b7-243f6c6e3193")
+	)
+	(wire
+		(pts
+			(xy 87.63 106.68) (xy 88.9 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46c683e0-1b14-48cc-92de-3bb93fa07355")
+	)
+	(wire
+		(pts
+			(xy 22.86 73.66) (xy 24.13 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "557e7d82-fbf4-4097-a910-f1e762628a54")
 	)
 	(wire
 		(pts
@@ -2807,6 +3183,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 73.66) (xy 38.1 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fb29a1b-6464-41d0-8bfa-49e4f1b4b5e7")
+	)
+	(wire
+		(pts
 			(xy 105.41 35.56) (xy 102.87 35.56)
 		)
 		(stroke
@@ -2837,6 +3223,36 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 171.45) (xy 68.58 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80489201-02fe-4543-9ad9-a8f3967cebc7")
+	)
+	(wire
+		(pts
+			(xy 53.34 180.34) (xy 60.96 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "865d98a6-9e6c-40c2-9e81-35063537e982")
+	)
+	(wire
+		(pts
+			(xy 36.83 71.12) (xy 38.1 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a746768-0a4f-4fe3-8313-24c402a060b1")
+	)
+	(wire
+		(pts
 			(xy 57.15 25.4) (xy 57.15 26.67)
 		)
 		(stroke
@@ -2847,6 +3263,56 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 187.96) (xy 91.44 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4ecbb78-a39c-4a9a-83c7-c69346d3754d")
+	)
+	(wire
+		(pts
+			(xy 22.86 76.2) (xy 22.86 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9134af3-8a90-448e-9508-1fa7516e389e")
+	)
+	(wire
+		(pts
+			(xy 22.86 73.66) (xy 22.86 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9dfb76c-80ac-4b87-86ac-df4ee3aa1323")
+	)
+	(wire
+		(pts
+			(xy 91.44 171.45) (xy 91.44 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac382dbe-b4b8-448e-ba6a-3df852f0b4da")
+	)
+	(wire
+		(pts
+			(xy 36.83 68.58) (xy 38.1 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad03c1b8-da51-4b8b-b7e1-4d99f187f956")
+	)
+	(wire
+		(pts
 			(xy 105.41 35.56) (xy 105.41 46.99)
 		)
 		(stroke
@@ -2854,6 +3320,26 @@
 			(type default)
 		)
 		(uuid "ad78acf5-e549-496e-b140-6181c12426d3")
+	)
+	(wire
+		(pts
+			(xy 22.86 78.74) (xy 22.86 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aeedea7e-ccd4-49b0-abe4-7ce64300945c")
+	)
+	(wire
+		(pts
+			(xy 36.83 76.2) (xy 38.1 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0ea36f7-134a-4f44-bc31-bc6a3ab45e05")
 	)
 	(wire
 		(pts
@@ -2887,6 +3373,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 187.96) (xy 45.72 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baa9988b-0327-4f82-8b10-9cde98d06682")
+	)
+	(wire
+		(pts
 			(xy 57.15 34.29) (xy 57.15 35.56)
 		)
 		(stroke
@@ -2907,6 +3403,16 @@
 	)
 	(wire
 		(pts
+			(xy 22.86 68.58) (xy 22.86 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c418e374-c97f-450e-afd0-c859eea353ee")
+	)
+	(wire
+		(pts
 			(xy 115.57 41.91) (xy 115.57 43.18)
 		)
 		(stroke
@@ -2914,6 +3420,36 @@
 			(type default)
 		)
 		(uuid "c7c74ec1-3fd3-4e41-b16c-d6c0a5d6ee2b")
+	)
+	(wire
+		(pts
+			(xy 114.3 171.45) (xy 114.3 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd989071-f775-4b57-bb0e-6a3c15259b5e")
+	)
+	(wire
+		(pts
+			(xy 24.13 68.58) (xy 22.86 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cee0e416-00af-4cab-9291-03c5e15688bd")
+	)
+	(wire
+		(pts
+			(xy 114.3 187.96) (xy 114.3 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6c2cc0d-bcf1-4bc6-b677-469b079b8db1")
 	)
 	(wire
 		(pts
@@ -2947,6 +3483,36 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 71.12) (xy 22.86 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e55b09e5-9d99-4702-94b2-f04f9a58bf37")
+	)
+	(wire
+		(pts
+			(xy 76.2 180.34) (xy 83.82 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5e0174a-580e-4a2c-a78b-92e6055b4c0f")
+	)
+	(wire
+		(pts
+			(xy 22.86 76.2) (xy 24.13 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e95f93d5-a6f3-4a2b-81c7-f20bf16c33ac")
+	)
+	(wire
+		(pts
 			(xy 22.86 25.4) (xy 22.86 26.67)
 		)
 		(stroke
@@ -2954,6 +3520,36 @@
 			(type default)
 		)
 		(uuid "eb931e76-bcd1-4c70-bf15-58366e528727")
+	)
+	(wire
+		(pts
+			(xy 87.63 101.6) (xy 88.9 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebb5eb1b-0560-453c-b277-ee94cf46066c")
+	)
+	(wire
+		(pts
+			(xy 68.58 187.96) (xy 68.58 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec52def8-80a5-42ac-a658-202545447a14")
+	)
+	(wire
+		(pts
+			(xy 121.92 180.34) (xy 123.19 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1770baa-5fad-4204-bf1f-e20de35fbbc6")
 	)
 	(wire
 		(pts
@@ -2996,6 +3592,182 @@
 			(justify left bottom)
 		)
 		(uuid "fe1795ec-9a09-4f1c-b6d7-6b7d860b792a")
+	)
+	(global_label "MTCK"
+		(shape passive)
+		(at 38.1 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "021ce568-dd13-427e-aa4a-c55ffd2cddbe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 44.9329 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MTMS"
+		(shape passive)
+		(at 88.9 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0971fbc8-ddfe-471d-8570-c992a96be7f3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 95.8538 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MTDO"
+		(shape output)
+		(at 88.9 96.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5e1e31ea-b27b-4b55-99a5-c6a2dde05332")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 96.9047 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MTDI"
+		(shape output)
+		(at 38.1 76.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6c2be87b-9043-4748-b30f-5a733acf919e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 45.379 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MTDI"
+		(shape input)
+		(at 88.9 99.06 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8a6ac011-2eb9-4c80-b14d-91a14d122b2f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 96.179 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MTCK"
+		(shape passive)
+		(at 88.9 93.98 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "973b3372-09e8-4b77-8fc4-df28afb1b4c4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 95.7329 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MTDO"
+		(shape input)
+		(at 38.1 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9aeeccf1-5e36-4cc3-ba25-4f749cad1cb5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 46.1047 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MTMS"
+		(shape passive)
+		(at 38.1 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b0c25287-5af9-4e96-b0a7-1b7ac028874c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 45.0538 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
 	)
 	(hierarchical_label "D+"
 		(shape bidirectional)
@@ -3259,6 +4031,158 @@
 		)
 	)
 	(symbol
+		(lib_id "LED:WS2812B-2020")
+		(at 91.44 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "10cb59ca-f131-432d-8b02-b4b69a9d91a5")
+		(property "Reference" "D12"
+			(at 105.41 174.0214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-2020"
+			(at 105.41 176.5614 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
+			(at 92.71 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
+			(at 93.98 189.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
+			(at 91.44 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "bcedc51f-c1bc-484e-89c7-a15bfc248025")
+		)
+		(pin "1"
+			(uuid "2a57e78b-5913-4a3e-8d81-f855373c9596")
+		)
+		(pin "2"
+			(uuid "0af99100-6a9d-4f07-9c2f-a7679fb6f014")
+		)
+		(pin "3"
+			(uuid "1ead4d81-d606-4f33-a8f2-6f2915a30214")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:WS2812B-2020")
+		(at 114.3 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1eff0165-bb9a-4033-8c77-c00e778ca36e")
+		(property "Reference" "D13"
+			(at 128.27 174.0214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-2020"
+			(at 128.27 176.5614 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
+			(at 115.57 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
+			(at 116.84 189.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
+			(at 114.3 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "a8dde455-408a-4eae-b1da-a354ffc86b82")
+		)
+		(pin "1"
+			(uuid "a8d2bb45-e895-4ded-b3ec-09eff6104459")
+		)
+		(pin "2"
+			(uuid "2869d4c0-574e-4cfa-ab39-ec5f437921c9")
+		)
+		(pin "3"
+			(uuid "838d5150-e833-48d0-adde-cb7c33fc6b26")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 124.46 46.99 0)
 		(unit 1)
@@ -3456,17 +4380,82 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
-		(at 149.86 90.17 0)
+		(lib_id "power:+3.3V")
+		(at 45.72 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
+		(uuid "2658329c-dc8d-4798-82a5-1ff8cda73416")
+		(property "Reference" "#PWR094"
+			(at 45.72 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 45.72 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 45.72 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d5cc0f61-8052-4730-bafc-e5aa181063ec")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR094")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 29.21 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(uuid "26955d67-9edb-4b99-a2d3-925689ca9b84")
 		(property "Reference" "J5"
-			(at 151.13 78.74 0)
+			(at 30.48 65.532 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3474,15 +4463,16 @@
 			)
 		)
 		(property "Value" "Conn_02x05_Odd_Even"
-			(at 151.13 81.28 0)
+			(at 30.48 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical"
-			(at 149.86 90.17 0)
+			(at 29.21 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3491,7 +4481,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 90.17 0)
+			(at 29.21 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3500,7 +4490,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 149.86 90.17 0)
+			(at 29.21 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3542,6 +4532,72 @@
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
 					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 91.44 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a5c4cc4-1a26-4f7b-93d0-ad0275b530c4")
+		(property "Reference" "#PWR096"
+			(at 91.44 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 91.44 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 91.44 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "87791393-5ad3-40b1-bef4-fe9320859270")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR096")
 					(unit 1)
 				)
 			)
@@ -3613,6 +4669,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 45.72 189.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e86b8c8-cdb6-46bf-8d9e-ce17446d0560")
+		(property "Reference" "#PWR098"
+			(at 45.72 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 45.72 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0572c7eb-1a91-442f-af85-0b77e8a96c88")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR098")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint_Small")
 		(at 88.9 109.22 0)
 		(unit 1)
@@ -3674,6 +4796,73 @@
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
 					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 88.9 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "47d078b0-dd0b-4fa7-aac9-fbab8a5f90be")
+		(property "Reference" "TP11"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 90.17 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 93.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 88.9 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5b74e8a1-4ccd-4f4e-aa5c-8dd1a34e0608")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -3866,6 +5055,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 22.86 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "50f30903-d084-49de-bc18-c6907f32eb54")
+		(property "Reference" "#PWR093"
+			(at 22.86 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 22.86 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 22.86 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2f5e2923-5621-4a62-9220-e765a269baf6")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 46.99 35.56 0)
 		(unit 1)
@@ -3928,6 +5182,138 @@
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
 					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 91.44 189.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5890c503-edf2-4811-93cb-5cc4d292cd93")
+		(property "Reference" "#PWR0100"
+			(at 91.44 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 91.44 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "118bb0f1-a65f-405c-9838-6bd0a1676fd3")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 22.86 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5cde804b-30cf-4451-b08e-c4597394194b")
+		(property "Reference" "#PWR091"
+			(at 22.86 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 22.86 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 22.86 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "28197adf-01a5-4e1f-b982-984502f4dc96")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR091")
 					(unit 1)
 				)
 			)
@@ -3997,6 +5383,72 @@
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 114.3 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6614aa88-184f-4c4b-8d57-c4d132b7afbe")
+		(property "Reference" "#PWR097"
+			(at 114.3 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 114.3 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 114.3 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb2ef536-81a1-4e99-8ee3-6a26bbc40d2f")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -4473,6 +5925,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 68.58 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "978c612e-7e94-4743-aa4b-78abe70e9188")
+		(property "Reference" "#PWR095"
+			(at 68.58 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 68.58 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 68.58 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1e65948c-07a0-4fb7-a447-cd9244de6794")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR095")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 29.21 46.99 0)
 		(unit 1)
@@ -4602,6 +6120,139 @@
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 88.9 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a4f42646-ae31-4885-9370-598e67f80c1d")
+		(property "Reference" "TP10"
+			(at 90.17 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 90.17 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 93.98 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 88.9 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce70f0f6-0bc0-48cc-b69f-64526e4b71f3")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 68.58 189.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1bde66a-9d0b-4ecb-891e-c4870f2787ac")
+		(property "Reference" "#PWR099"
+			(at 68.58 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 68.58 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 68.58 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b3fea19b-24e3-4a69-bf8f-9faa98417655")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -4845,6 +6496,150 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 123.19 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b78cf18a-bc81-4919-97df-fc5d553ea305")
+		(property "Reference" "TP12"
+			(at 124.46 180.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 124.46 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 128.27 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 123.19 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c473034-ac96-464b-bda5-01f3fec3b263")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:WS2812B-2020")
+		(at 45.72 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bf25ffb7-6979-4f3c-a79c-3c20de2d2b3e")
+		(property "Reference" "D10"
+			(at 31.75 174.0214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-2020"
+			(at 31.75 176.5614 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
+			(at 46.99 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
+			(at 48.26 189.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
+			(at 45.72 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "bdb1c37c-fbc7-40f2-a9ae-839f0bb1bcfc")
+		)
+		(pin "1"
+			(uuid "27ba2ab6-fb96-4b0f-a0b0-3aef8bae9e3a")
+		)
+		(pin "2"
+			(uuid "dbde4fa2-ed21-4f8f-89b6-02cab6777b56")
+		)
+		(pin "3"
+			(uuid "b8dabfd7-64de-4a2d-a638-1d0f84b4d397")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 97.79 35.56 0)
 		(unit 1)
@@ -4907,6 +6702,72 @@
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
 					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 114.3 189.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c8f15a2c-0c4b-4306-9f29-17b886bf0d03")
+		(property "Reference" "#PWR0101"
+			(at 114.3 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 114.3 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9be51e79-a627-4185-9c97-ffa42afd92e6")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -4977,6 +6838,82 @@
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
 					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:WS2812B-2020")
+		(at 68.58 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d7b479a2-594f-4c1c-85b7-9943fadd8e61")
+		(property "Reference" "D11"
+			(at 82.55 174.0214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-2020"
+			(at 82.55 176.5614 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
+			(at 69.85 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
+			(at 71.12 189.865 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
+			(at 68.58 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "5c3b213a-eace-4b67-a10f-1c08109f1f4a")
+		)
+		(pin "1"
+			(uuid "c859d30b-b566-4145-bef8-cecc6fc4d34a")
+		)
+		(pin "2"
+			(uuid "0287f2d0-f600-467c-b252-7eb82fb71061")
+		)
+		(pin "3"
+			(uuid "2ae1c9a3-4512-48b0-b675-894376d8fc4d")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/352ad1d3-9b58-40da-b881-d99a3f860b8b"
+					(reference "D11")
 					(unit 1)
 				)
 			)
