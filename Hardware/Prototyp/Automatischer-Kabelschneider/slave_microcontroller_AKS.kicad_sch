@@ -1169,6 +1169,290 @@
 				)
 			)
 		)
+		(symbol "Device:Q_NMOS_GSD"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Q_NMOS_GSD"
+				(at 5.08 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "N-MOSFET transistor, gate/source/drain"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Q_NMOS_GSD_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "Q_NMOS_GSD_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -4163,10 +4447,28 @@
 		)
 	)
 	(junction
+		(at 63.5 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00ccab2f-cb61-4d46-b252-5a03f22f930e")
+	)
+	(junction
 		(at 43.18 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0aba8dde-828c-441e-80c6-6b74858529e7")
+	)
+	(junction
+		(at 168.91 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15136c59-d948-4bc5-ade2-1947edc529f3")
+	)
+	(junction
+		(at 215.9 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "272fd699-7f5c-4f0e-873a-d4cde93dcb15")
 	)
 	(junction
 		(at 96.52 35.56)
@@ -4175,16 +4477,46 @@
 		(uuid "2db3d599-cff7-4b91-a84a-2d6ccaa272eb")
 	)
 	(junction
+		(at 19.05 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3295c925-1ba0-45ba-ab4d-a3fa868463da")
+	)
+	(junction
 		(at 67.31 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "45ba5c6b-4116-435e-be19-e7ea68df1e01")
 	)
 	(junction
+		(at 78.74 191.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5266bb5b-b5d1-48e5-9466-f80fe1a4b2a4")
+	)
+	(junction
+		(at 208.28 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56b911ba-43e8-4384-acc3-097678d3e5da")
+	)
+	(junction
+		(at 215.9 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "584bfb8b-72dd-408f-9bbe-88132d80af64")
+	)
+	(junction
 		(at 96.52 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cf9b350-5925-4cf8-acd8-d1c29e900545")
+	)
+	(junction
+		(at 78.74 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "90b4c220-cfcc-46c9-bbd7-90db5431faa1")
 	)
 	(junction
 		(at 25.4 27.94)
@@ -4199,10 +4531,612 @@
 		(uuid "9c813029-a61d-4b7b-b6e6-8cf03894081a")
 	)
 	(junction
+		(at 63.5 191.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a903cfc6-64ba-4ad7-931e-4713e5a66758")
+	)
+	(junction
 		(at 57.15 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ac57caa4-aab6-4572-ae1d-252bd0f522f4")
+	)
+	(junction
+		(at 167.64 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae50c8b4-d953-4b3f-8d19-d5c43f81c49f")
+	)
+	(no_connect
+		(at 114.3 60.96)
+		(uuid "052310d0-79c1-4bbf-9b48-e64e58724f92")
+	)
+	(no_connect
+		(at 114.3 71.12)
+		(uuid "071f4fc5-6bf2-4fe8-a9b3-44cd6441e77b")
+	)
+	(no_connect
+		(at 114.3 137.16)
+		(uuid "197a17bb-c292-4762-9339-429ab41b5713")
+	)
+	(no_connect
+		(at 114.3 111.76)
+		(uuid "2504097b-bac0-4f03-8ab0-024dcc635e9e")
+	)
+	(no_connect
+		(at 114.3 81.28)
+		(uuid "3cdef929-21a4-4ab5-986e-ff78f0c9f589")
+	)
+	(no_connect
+		(at 114.3 114.3)
+		(uuid "3e1dca14-4116-40c2-8d07-4a74061d9ee6")
+	)
+	(no_connect
+		(at 114.3 88.9)
+		(uuid "3ef0d20a-e4c9-4302-9b62-bbeab99e78ca")
+	)
+	(no_connect
+		(at 114.3 134.62)
+		(uuid "475580d6-cfed-41db-b487-b0a1cf1a5a49")
+	)
+	(no_connect
+		(at 114.3 66.04)
+		(uuid "484bb7c9-49b4-4f38-9b1a-f77ae64b5f87")
+	)
+	(no_connect
+		(at 114.3 142.24)
+		(uuid "4a29a2d3-3312-4364-9e42-dd95f6c49f66")
+	)
+	(no_connect
+		(at 114.3 58.42)
+		(uuid "4dfd7151-c999-4123-ac7c-33fdedcd4417")
+	)
+	(no_connect
+		(at 114.3 104.14)
+		(uuid "5b43c354-1133-4e9a-a83e-292637290ce5")
+	)
+	(no_connect
+		(at 114.3 119.38)
+		(uuid "6b2718db-a56b-4165-8c0e-e5e7d6296e52")
+	)
+	(no_connect
+		(at 114.3 116.84)
+		(uuid "7008ef70-e05f-4269-96fa-ceafb1b33cd8")
+	)
+	(no_connect
+		(at 114.3 124.46)
+		(uuid "79fe6bec-d65f-4920-9e58-5614f12b521b")
+	)
+	(no_connect
+		(at 114.3 55.88)
+		(uuid "8e198d57-2141-4a4b-8a3b-492cf23c30ac")
+	)
+	(no_connect
+		(at 114.3 91.44)
+		(uuid "967df187-2eff-4d5f-98f7-0fba4b936bfc")
+	)
+	(no_connect
+		(at 114.3 83.82)
+		(uuid "9964db09-d6a6-4a90-86a1-e9952d5b1e81")
+	)
+	(no_connect
+		(at 114.3 132.08)
+		(uuid "a1932693-34c9-4df8-bbc6-91b1e0173dba")
+	)
+	(no_connect
+		(at 114.3 127)
+		(uuid "a4c6bb50-091d-4a95-83d1-c926698deb16")
+	)
+	(no_connect
+		(at 114.3 78.74)
+		(uuid "ac733f92-08e8-413a-bf8e-ad642998868c")
+	)
+	(no_connect
+		(at 114.3 101.6)
+		(uuid "c181bd58-6787-41ec-b009-1f906bbc5d69")
+	)
+	(no_connect
+		(at 114.3 129.54)
+		(uuid "caedb24d-f836-4020-9e74-19410337f46c")
+	)
+	(no_connect
+		(at 114.3 86.36)
+		(uuid "cc0981dc-3a8a-4f87-8d08-dce12885bfe6")
+	)
+	(no_connect
+		(at 114.3 68.58)
+		(uuid "db0ae23f-f307-437c-9cec-512e3a1adb19")
+	)
+	(no_connect
+		(at 114.3 106.68)
+		(uuid "e1f8fdd3-f102-444a-9a2e-26b66ce5ec8f")
+	)
+	(no_connect
+		(at 114.3 139.7)
+		(uuid "e7f300ef-c7f1-4cc5-b110-b6f4d5f1624c")
+	)
+	(no_connect
+		(at 114.3 109.22)
+		(uuid "e88460b3-7bce-4665-bcae-3cce78237c2d")
+	)
+	(no_connect
+		(at 114.3 73.66)
+		(uuid "ebfa13a0-775e-4dab-b0b2-1afc50818314")
+	)
+	(no_connect
+		(at 114.3 93.98)
+		(uuid "f2be9766-7c21-4c84-b280-4c9a3db52550")
+	)
+	(no_connect
+		(at 114.3 63.5)
+		(uuid "f5b5ebaa-3f9d-42de-b141-fdb1bce09c50")
+	)
+	(no_connect
+		(at 114.3 96.52)
+		(uuid "ff3257ae-2d99-4963-a2a6-5180993ddaea")
+	)
+	(bus_entry
+		(at 215.9 40.64)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "099f664c-9e9e-4f42-9f21-3ba920b424ab")
+	)
+	(bus_entry
+		(at 160.02 45.72)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dd4630a-ff7e-4e95-a21a-2a17332d7215")
+	)
+	(bus_entry
+		(at 243.84 68.58)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "178c333a-538c-44f1-809d-e79527a4ddf0")
+	)
+	(bus_entry
+		(at 251.46 106.68)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18b26c77-72c2-43c1-9c53-6aaab117899a")
+	)
+	(bus_entry
+		(at 251.46 109.22)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cc83aa1-0203-474b-a871-98efb5be13bd")
+	)
+	(bus_entry
+		(at 160.02 73.66)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ddc3067-e5ab-468c-8ebc-89caf74beb87")
+	)
+	(bus_entry
+		(at 170.18 114.3)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22a60151-d6f1-44c5-b35f-d61dbdf105ac")
+	)
+	(bus_entry
+		(at 160.02 71.12)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30404185-b4c8-43c3-a82c-3e0068b29b7a")
+	)
+	(bus_entry
+		(at 170.18 106.68)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "350c7d84-69b6-46e3-8fda-34a175255b2a")
+	)
+	(bus_entry
+		(at 160.02 60.96)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37713bc9-8420-46d3-b734-f0f58259514d")
+	)
+	(bus_entry
+		(at 170.18 116.84)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a9fdf77-aabe-444b-8c1f-b93ae24c01d8")
+	)
+	(bus_entry
+		(at 215.9 60.96)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cc754a8-57ea-42c8-9733-836718b1e373")
+	)
+	(bus_entry
+		(at 160.02 35.56)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4271d73e-4344-4151-a064-6043ad7ecfe1")
+	)
+	(bus_entry
+		(at 160.02 68.58)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43672a8e-d021-444c-a9a5-0d749e29cc92")
+	)
+	(bus_entry
+		(at 170.18 104.14)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4506ea54-b826-4a94-8ff6-1d30783764e5")
+	)
+	(bus_entry
+		(at 160.02 38.1)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49ab2959-8973-4b78-a2f8-bdeffd777263")
+	)
+	(bus_entry
+		(at 160.02 66.04)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ec89df1-e8ca-47f4-bd0c-3aa3bb7d90fc")
+	)
+	(bus_entry
+		(at 243.84 43.18)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5053c965-8313-4fb6-92da-8f21fe886b58")
+	)
+	(bus_entry
+		(at 160.02 63.5)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55b10eb0-9459-4c2d-aa6c-1917ff264fdb")
+	)
+	(bus_entry
+		(at 170.18 111.76)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59de0f61-be9c-440a-ae6e-788d857e9e6d")
+	)
+	(bus_entry
+		(at 208.28 106.68)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "605bab2b-94d8-47df-9d35-e540ee23de0b")
+	)
+	(bus_entry
+		(at 160.02 50.8)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6606ed60-dafc-4629-9034-b34ee17588c4")
+	)
+	(bus_entry
+		(at 251.46 111.76)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6683a864-bf66-4cec-b755-9037fd4991ec")
+	)
+	(bus_entry
+		(at 243.84 45.72)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a9fe0cb-ed62-4de6-b5be-1d5b66483dca")
+	)
+	(bus_entry
+		(at 215.9 35.56)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fe1640a-98a5-48ec-a2cb-9118fbd962c5")
+	)
+	(bus_entry
+		(at 215.9 66.04)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74cf0c00-bbe2-4b35-a8ee-711f02cb4646")
+	)
+	(bus_entry
+		(at 208.28 101.6)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8190f64b-ac3d-4e13-978c-bdc9ef82991c")
+	)
+	(bus_entry
+		(at 243.84 63.5)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83c12169-d923-408c-b118-1dd063da466b")
+	)
+	(bus_entry
+		(at 215.9 38.1)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ec2a7e6-9974-4cd2-b811-1db8bb05ac66")
+	)
+	(bus_entry
+		(at 208.28 104.14)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a172636d-1335-4f90-bd80-0d72491ae766")
+	)
+	(bus_entry
+		(at 251.46 104.14)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a76d9220-41be-4d40-8e98-42b3d150e191")
+	)
+	(bus_entry
+		(at 160.02 33.02)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aaf1f7f5-9245-44af-845c-461fbdc04e2c")
+	)
+	(bus_entry
+		(at 170.18 119.38)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abe56130-eda9-40c7-9a29-edb259486543")
+	)
+	(bus_entry
+		(at 160.02 43.18)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b139a806-30ef-4c49-b9fe-0aa671f0ac33")
+	)
+	(bus_entry
+		(at 160.02 55.88)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbec00be-fc00-47b4-8f50-b0967109762a")
+	)
+	(bus_entry
+		(at 243.84 38.1)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdce5afc-1dc6-401b-8c67-0a3aadcd473d")
+	)
+	(bus_entry
+		(at 208.28 109.22)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beedf035-2149-436c-beec-f2be4a96efec")
+	)
+	(bus_entry
+		(at 170.18 101.6)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c194327a-79bf-4d74-bb5d-35133c2701e6")
+	)
+	(bus_entry
+		(at 243.84 40.64)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c47bd39f-cb8f-4c81-b92f-41477795d321")
+	)
+	(bus_entry
+		(at 160.02 40.64)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d38092ff-f5c4-455d-baed-7928e972ee74")
+	)
+	(bus_entry
+		(at 215.9 58.42)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9a35aec-8d9b-43e4-b6a8-d1775a35ff92")
+	)
+	(bus_entry
+		(at 215.9 63.5)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df1dc7a3-6a2b-435f-be0a-6f1b41663aa9")
+	)
+	(bus_entry
+		(at 215.9 43.18)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df511b0f-924a-4de0-a65d-d27053d92906")
+	)
+	(bus_entry
+		(at 160.02 48.26)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e30be031-f7e0-4073-9e6a-a864e219125a")
+	)
+	(bus_entry
+		(at 243.84 66.04)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e48dcf8c-7f75-4a0d-bcfe-d48884fd8721")
+	)
+	(bus_entry
+		(at 170.18 109.22)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e89ad510-e4f4-4361-ac48-af11a0e22dfb")
+	)
+	(bus_entry
+		(at 160.02 58.42)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8a3e835-2eec-44f5-b317-7efd5e5ccfa8")
+	)
+	(bus_entry
+		(at 243.84 60.96)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fffa23b4-6505-4cf8-8a8d-6f1136d68ec1")
+	)
+	(wire
+		(pts
+			(xy 78.74 191.77) (xy 81.28 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "001f2bb3-572f-4694-b3f6-3e6ed8049168")
+	)
+	(bus
+		(pts
+			(xy 215.9 40.64) (xy 215.9 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "006479fb-8730-46f3-9304-8d6a6e698397")
+	)
+	(wire
+		(pts
+			(xy 154.94 88.9) (xy 156.21 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03976e5e-2df2-4635-b5c7-71009b4cce6b")
 	)
 	(wire
 		(pts
@@ -4213,6 +5147,46 @@
 			(type default)
 		)
 		(uuid "05af1b13-3866-46f3-a729-cca1e654dcb2")
+	)
+	(bus
+		(pts
+			(xy 208.28 101.6) (xy 208.28 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06c0f0d7-f3c4-4d2b-9235-a62b8dcf8cc9")
+	)
+	(wire
+		(pts
+			(xy 154.94 43.18) (xy 160.02 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "080d6e8f-a5d3-4630-a935-04d570980ff5")
+	)
+	(wire
+		(pts
+			(xy 224.79 59.69) (xy 224.79 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08c96694-d584-4b4a-879c-d8733901024e")
+	)
+	(wire
+		(pts
+			(xy 154.94 78.74) (xy 156.21 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08fb58f5-74d9-4564-b126-4d6b49c8f75a")
 	)
 	(wire
 		(pts
@@ -4236,6 +5210,46 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 157.48) (xy 113.03 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a97fbd5-4c94-4910-878b-069e1cc8170b")
+	)
+	(wire
+		(pts
+			(xy 154.94 35.56) (xy 160.02 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ace8c90-3b48-44ef-ac26-82e803bc241e")
+	)
+	(bus
+		(pts
+			(xy 246.38 29.21) (xy 246.38 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0acf8a1b-9935-4022-a8a3-4dd3acd9607d")
+	)
+	(bus
+		(pts
+			(xy 254 104.14) (xy 254 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c087c3b-4a77-4993-a7d3-02dc665a8105")
+	)
+	(wire
+		(pts
 			(xy 90.17 43.18) (xy 83.82 43.18)
 		)
 		(stroke
@@ -4246,13 +5260,33 @@
 	)
 	(wire
 		(pts
-			(xy 375.92 177.8) (xy 375.92 179.07)
+			(xy 245.11 154.94) (xy 245.11 156.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "0c555f6f-15e8-4a77-ad34-159d167afbe7")
+	)
+	(wire
+		(pts
+			(xy 19.05 179.07) (xy 19.05 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c8db736-0f97-4d35-b964-f4f764e0004b")
+	)
+	(wire
+		(pts
+			(xy 224.79 114.3) (xy 226.06 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d3b44d0-beb0-4c1c-aa3f-af8793c538db")
 	)
 	(wire
 		(pts
@@ -4276,7 +5310,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 107.95) (xy 231.14 107.95)
+			(xy 36.83 180.34) (xy 35.56 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4286,7 +5320,7 @@
 	)
 	(wire
 		(pts
-			(xy 375.92 161.29) (xy 375.92 162.56)
+			(xy 245.11 138.43) (xy 245.11 139.7)
 		)
 		(stroke
 			(width 0)
@@ -4306,13 +5340,113 @@
 	)
 	(wire
 		(pts
-			(xy 330.2 161.29) (xy 330.2 162.56)
+			(xy 238.76 43.18) (xy 243.84 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "103ec31a-b58b-4157-8874-74d5e8699310")
+	)
+	(wire
+		(pts
+			(xy 168.91 121.92) (xy 168.91 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "107be71d-74d9-4db4-8521-dac1f7a7e042")
+	)
+	(wire
+		(pts
+			(xy 199.39 138.43) (xy 199.39 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1204e205-dfd1-46f9-9ab5-964d52fe5b56")
+	)
+	(wire
+		(pts
+			(xy 63.5 165.1) (xy 63.5 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12565592-26c3-44f2-922e-5c799f999712")
+	)
+	(bus
+		(pts
+			(xy 246.38 38.1) (xy 246.38 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12a5cabb-2e22-47f3-8793-f9d177363f34")
+	)
+	(wire
+		(pts
+			(xy 63.5 156.21) (xy 63.5 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "131b3f88-339f-4013-80a7-f304636dca75")
+	)
+	(wire
+		(pts
+			(xy 114.3 154.94) (xy 113.03 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "133ae6ed-ddca-4497-a5fe-8fb6bc5bb380")
+	)
+	(wire
+		(pts
+			(xy 71.12 180.34) (xy 71.12 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17a96c6e-2abd-408d-a102-e7525eb762c9")
+	)
+	(bus
+		(pts
+			(xy 162.56 55.88) (xy 162.56 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17f14b4d-1afd-4d0c-92f5-154b08ede8d6")
+	)
+	(wire
+		(pts
+			(xy 78.74 189.23) (xy 78.74 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "184a9ef0-098c-4d5e-b99f-51148478f9e0")
+	)
+	(wire
+		(pts
+			(xy 78.74 180.34) (xy 78.74 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1949957e-b49e-42d4-9556-3b0d1308d970")
 	)
 	(wire
 		(pts
@@ -4326,7 +5460,7 @@
 	)
 	(wire
 		(pts
-			(xy 391.16 170.18) (xy 383.54 170.18)
+			(xy 260.35 147.32) (xy 252.73 147.32)
 		)
 		(stroke
 			(width 0)
@@ -4356,7 +5490,37 @@
 	)
 	(wire
 		(pts
-			(xy 330.2 177.8) (xy 330.2 179.07)
+			(xy 238.76 104.14) (xy 251.46 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f8c402b-e276-48c8-bb42-12331160e25c")
+	)
+	(bus
+		(pts
+			(xy 162.56 29.21) (xy 215.9 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fafcb3e-86c1-42f0-ad4b-c43b93235af0")
+	)
+	(wire
+		(pts
+			(xy 154.94 38.1) (xy 160.02 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ffbf967-dea0-4303-a689-fba49a0a58ac")
+	)
+	(wire
+		(pts
+			(xy 199.39 154.94) (xy 199.39 156.21)
 		)
 		(stroke
 			(width 0)
@@ -4386,7 +5550,67 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 105.41) (xy 231.14 105.41)
+			(xy 19.05 160.02) (xy 19.05 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "231c3ab3-d09d-4fa3-b0fe-2164532ebb3a")
+	)
+	(bus
+		(pts
+			(xy 246.38 58.42) (xy 246.38 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "279bfd53-00cb-4a39-9063-69b00362f0b1")
+	)
+	(wire
+		(pts
+			(xy 154.94 96.52) (xy 156.21 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "296bddff-46f1-479d-99b8-aef449db92c5")
+	)
+	(bus
+		(pts
+			(xy 162.56 35.56) (xy 162.56 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2996d349-c57e-49da-8dab-8481791d0b72")
+	)
+	(bus
+		(pts
+			(xy 246.38 52.07) (xy 246.38 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a1767fb-e1c8-406d-9b84-449ca609a288")
+	)
+	(wire
+		(pts
+			(xy 154.94 81.28) (xy 156.21 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c1db836-6d11-40f3-8162-6c578cbcf2df")
+	)
+	(wire
+		(pts
+			(xy 36.83 177.8) (xy 35.56 177.8)
 		)
 		(stroke
 			(width 0)
@@ -4396,13 +5620,13 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 97.79) (xy 232.41 97.79)
+			(xy 224.79 102.87) (xy 224.79 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2cc37fc9-3222-49d6-9455-7192d5df8675")
+		(uuid "2cb87acc-d74e-4f24-bc54-b290480f6024")
 	)
 	(wire
 		(pts
@@ -4416,6 +5640,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 121.92) (xy 168.91 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f62084f-5be2-4017-8372-5f96ba937719")
+	)
+	(wire
+		(pts
 			(xy 102.87 35.56) (xy 102.87 38.1)
 		)
 		(stroke
@@ -4423,6 +5657,16 @@
 			(type default)
 		)
 		(uuid "3039346f-8925-4838-ab48-7c6e556c99a1")
+	)
+	(wire
+		(pts
+			(xy 240.03 114.3) (xy 240.03 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30a69e06-8c29-4ea6-bb2a-1733f0b0b173")
 	)
 	(wire
 		(pts
@@ -4436,6 +5680,86 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 167.64) (xy 78.74 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31e035a2-45dc-4b99-af66-51efe045abbf")
+	)
+	(wire
+		(pts
+			(xy 224.79 71.12) (xy 226.06 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32ce3a2f-3ed9-4a94-8728-16a44fb3c578")
+	)
+	(wire
+		(pts
+			(xy 154.94 101.6) (xy 170.18 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "333046ea-5836-426f-b266-a1de8ea1a9ae")
+	)
+	(bus
+		(pts
+			(xy 172.72 95.25) (xy 172.72 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3410d944-0c36-4556-8ea5-9e15506c6bbb")
+	)
+	(wire
+		(pts
+			(xy 63.5 167.64) (xy 66.04 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35952d35-6528-42ee-b2a1-683a0d115586")
+	)
+	(wire
+		(pts
+			(xy 218.44 40.64) (xy 226.06 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35f0cdff-7892-4839-a938-1afd45990a10")
+	)
+	(wire
+		(pts
+			(xy 210.82 111.76) (xy 226.06 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "363d039c-e238-4bba-9f9a-18f753e1161f")
+	)
+	(bus
+		(pts
+			(xy 215.9 58.42) (xy 215.9 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36809580-f436-4697-9fc8-6dc553a8ccb3")
+	)
+	(wire
+		(pts
 			(xy 58.42 124.46) (xy 58.42 120.65)
 		)
 		(stroke
@@ -4443,6 +5767,26 @@
 			(type default)
 		)
 		(uuid "36ac80b1-fec2-4522-95a7-e46ac7c0cc8f")
+	)
+	(bus
+		(pts
+			(xy 208.28 95.25) (xy 208.28 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38bd4a03-7db3-4e87-a1b8-c1e5b623d3bc")
+	)
+	(wire
+		(pts
+			(xy 210.82 104.14) (xy 226.06 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39fc9551-0cc7-4c73-8dac-3662c84379ed")
 	)
 	(wire
 		(pts
@@ -4454,15 +5798,55 @@
 		)
 		(uuid "3aefafe9-f1a1-43f1-8bd3-806bd246ce31")
 	)
+	(bus
+		(pts
+			(xy 162.56 60.96) (xy 162.56 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b580011-c332-4799-ba6d-01a5b4486885")
+	)
 	(wire
 		(pts
-			(xy 398.78 161.29) (xy 398.78 162.56)
+			(xy 267.97 138.43) (xy 267.97 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3bbd2ad9-aec4-4990-bc59-9e88671a07df")
+	)
+	(wire
+		(pts
+			(xy 154.94 50.8) (xy 160.02 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cc17daa-b612-4215-bfed-e0924b9a7351")
+	)
+	(wire
+		(pts
+			(xy 154.94 83.82) (xy 156.21 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40a000e0-43bd-4abf-98b1-1c874b0cfb95")
+	)
+	(wire
+		(pts
+			(xy 167.64 109.22) (xy 170.18 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "421d38c9-54ed-4df0-ae55-23a4993ee22c")
 	)
 	(wire
 		(pts
@@ -4476,6 +5860,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 147.32) (xy 156.21 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "433f607d-afb3-46a3-a636-610eb81bd70c")
+	)
+	(wire
+		(pts
 			(xy 43.18 22.86) (xy 43.18 27.94)
 		)
 		(stroke
@@ -4483,6 +5877,46 @@
 			(type default)
 		)
 		(uuid "43e0474a-b251-4c09-be01-fdc031f86822")
+	)
+	(wire
+		(pts
+			(xy 238.76 106.68) (xy 251.46 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "442e315a-3ebd-4daf-b3b7-b2e7eefa0973")
+	)
+	(wire
+		(pts
+			(xy 114.3 160.02) (xy 113.03 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "443bd031-fd1b-4870-9ab9-dd3b1fb69392")
+	)
+	(bus
+		(pts
+			(xy 162.56 40.64) (xy 162.56 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4472b080-23e6-4deb-87cc-b831d5b052c5")
+	)
+	(wire
+		(pts
+			(xy 154.94 109.22) (xy 167.64 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44a16e2a-de12-4dcc-9211-4eaf03e1b9be")
 	)
 	(wire
 		(pts
@@ -4503,6 +5937,16 @@
 			(type default)
 		)
 		(uuid "45ad818a-d8fa-4975-b86c-9c105eab6215")
+	)
+	(wire
+		(pts
+			(xy 238.76 71.12) (xy 238.76 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45b6ac97-f99f-49fd-8b9c-5cac868080f9")
 	)
 	(wire
 		(pts
@@ -4556,6 +6000,26 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 167.64) (xy 63.5 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b1baf89-9b9c-4fc1-ac23-6a562234d269")
+	)
+	(wire
+		(pts
+			(xy 154.94 93.98) (xy 156.21 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ba8cb05-8c29-4ec1-b30a-74a89034d2d6")
+	)
+	(wire
+		(pts
 			(xy 25.4 60.96) (xy 25.4 59.69)
 		)
 		(stroke
@@ -4563,6 +6027,16 @@
 			(type default)
 		)
 		(uuid "4c4a03d7-d39d-4e4d-8f5b-dab1bbe0f10a")
+	)
+	(bus
+		(pts
+			(xy 172.72 111.76) (xy 172.72 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dfbd2cc-c086-46bc-9e0d-4704119a3c80")
 	)
 	(wire
 		(pts
@@ -4594,6 +6068,16 @@
 		)
 		(uuid "5092c99e-44c3-42f9-af7a-44be0b7c077b")
 	)
+	(bus
+		(pts
+			(xy 172.72 106.68) (xy 172.72 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50d64c62-9f0c-49db-a1a5-77520dc55ac6")
+	)
 	(wire
 		(pts
 			(xy 96.52 44.45) (xy 96.52 45.72)
@@ -4616,6 +6100,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 58.42) (xy 160.02 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53076b87-3f9e-41c6-8f44-cc21e3a47478")
+	)
+	(wire
+		(pts
 			(xy 67.31 43.18) (xy 76.2 43.18)
 		)
 		(stroke
@@ -4623,6 +6117,16 @@
 			(type default)
 		)
 		(uuid "5313e070-3dbe-4460-8536-ff0efcb5ef6c")
+	)
+	(wire
+		(pts
+			(xy 218.44 43.18) (xy 226.06 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "533493b6-1b11-4a50-8ca7-0840fa3ded50")
 	)
 	(wire
 		(pts
@@ -4636,6 +6140,46 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 60.96) (xy 160.02 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "548d46ad-867d-4942-bf11-e5f1c3663a4d")
+	)
+	(wire
+		(pts
+			(xy 154.94 40.64) (xy 160.02 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5601961c-9ac8-412e-b5f7-224b48a8d195")
+	)
+	(wire
+		(pts
+			(xy 154.94 63.5) (xy 160.02 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5668800f-6da3-4799-b50b-b9212c26e6b6")
+	)
+	(wire
+		(pts
+			(xy 224.79 36.83) (xy 224.79 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "567a084a-06c9-493a-ae10-c0c86a7a5349")
+	)
+	(wire
+		(pts
 			(xy 25.4 27.94) (xy 30.48 27.94)
 		)
 		(stroke
@@ -4643,6 +6187,16 @@
 			(type default)
 		)
 		(uuid "569ef1e6-a7c9-4fe8-8dc5-9b9c997747c6")
+	)
+	(wire
+		(pts
+			(xy 154.94 71.12) (xy 160.02 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58a859e1-ca0c-4176-97fe-7c4245d234e2")
 	)
 	(wire
 		(pts
@@ -4656,6 +6210,26 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 149.86) (xy 156.21 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ae07b7a-c496-42e3-9dae-4f5d77b6d90e")
+	)
+	(wire
+		(pts
+			(xy 154.94 132.08) (xy 156.21 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5beeace6-7155-4f98-a77d-c9f99e3c9890")
+	)
+	(wire
+		(pts
 			(xy 375.92 276.86) (xy 375.92 278.13)
 		)
 		(stroke
@@ -4666,13 +6240,53 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 100.33) (xy 232.41 100.33)
+			(xy 154.94 129.54) (xy 156.21 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60310ccc-48e1-4bb3-80d3-f5296937295b")
+	)
+	(bus
+		(pts
+			(xy 162.56 52.07) (xy 215.9 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62c2f5d7-421f-4a3d-80ab-6ab15a61d17a")
+	)
+	(wire
+		(pts
+			(xy 168.91 106.68) (xy 170.18 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "631b6f80-0745-4eeb-aed4-06640c4457c2")
+	)
+	(wire
+		(pts
+			(xy 34.29 172.72) (xy 36.83 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "63366a02-a2c4-44bf-a962-c1bc290ae64b")
+	)
+	(bus
+		(pts
+			(xy 172.72 99.06) (xy 172.72 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63f271e1-33ec-4400-b384-a7cc7809fa1f")
 	)
 	(wire
 		(pts
@@ -4696,6 +6310,26 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 124.46) (xy 167.64 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6631a8f3-a578-4e1d-a872-90b619465822")
+	)
+	(wire
+		(pts
+			(xy 60.96 191.77) (xy 63.5 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66c5c56a-409a-4945-a362-c6fe5164f1b5")
+	)
+	(wire
+		(pts
 			(xy 43.18 27.94) (xy 43.18 29.21)
 		)
 		(stroke
@@ -4706,7 +6340,27 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 177.8) (xy 353.06 179.07)
+			(xy 154.94 127) (xy 156.21 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b51d713-4d76-41e8-adda-ce4bb645641a")
+	)
+	(wire
+		(pts
+			(xy 154.94 48.26) (xy 160.02 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b9f3e81-c9bd-4f5d-b301-c970ce7331a7")
+	)
+	(wire
+		(pts
+			(xy 222.25 154.94) (xy 222.25 156.21)
 		)
 		(stroke
 			(width 0)
@@ -4734,6 +6388,86 @@
 		)
 		(uuid "6f41e571-07df-45a9-a769-950a26688b21")
 	)
+	(bus
+		(pts
+			(xy 246.38 63.5) (xy 246.38 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70072e4a-867b-4920-a774-567e988a157c")
+	)
+	(wire
+		(pts
+			(xy 218.44 66.04) (xy 226.06 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7198d143-b908-4e69-9552-c1f86acf84be")
+	)
+	(wire
+		(pts
+			(xy 154.94 142.24) (xy 156.21 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72c9f565-1750-40d9-ba77-e478e95b90c0")
+	)
+	(bus
+		(pts
+			(xy 162.56 58.42) (xy 162.56 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "732b2538-86a1-432d-b9d4-1fc9699c2104")
+	)
+	(wire
+		(pts
+			(xy 154.94 139.7) (xy 156.21 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76e02c16-c60a-4a60-a970-749a6d8c4d52")
+	)
+	(wire
+		(pts
+			(xy 224.79 48.26) (xy 226.06 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79155a41-792e-4a72-bdab-42ec77ca9a37")
+	)
+	(wire
+		(pts
+			(xy 154.94 68.58) (xy 160.02 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "793ab005-8f48-4f59-8156-46783873fb2e")
+	)
+	(wire
+		(pts
+			(xy 218.44 63.5) (xy 226.06 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a58479f-fcde-4fb7-a090-d5bff5bf98c1")
+	)
 	(wire
 		(pts
 			(xy 102.87 38.1) (xy 114.3 38.1)
@@ -4746,6 +6480,36 @@
 	)
 	(wire
 		(pts
+			(xy 19.05 170.18) (xy 36.83 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b9c6bf8-308e-409d-9003-bfb78e0822f0")
+	)
+	(wire
+		(pts
+			(xy 238.76 40.64) (xy 243.84 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c894619-e0d1-4f8f-aaf6-56364515820f")
+	)
+	(wire
+		(pts
+			(xy 19.05 170.18) (xy 19.05 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7eba3113-d973-4d24-9ff4-f5eb82baa78b")
+	)
+	(wire
+		(pts
 			(xy 154.94 160.02) (xy 156.21 160.02)
 		)
 		(stroke
@@ -4753,6 +6517,26 @@
 			(type default)
 		)
 		(uuid "80897f1a-0a06-4336-8c4a-d947b82e4857")
+	)
+	(bus
+		(pts
+			(xy 162.56 68.58) (xy 162.56 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82d089d2-485f-4a96-934f-b0cf0c51b041")
+	)
+	(bus
+		(pts
+			(xy 162.56 30.48) (xy 162.56 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "833582ea-cd07-4f1a-92f9-2db27d5b1585")
 	)
 	(wire
 		(pts
@@ -4766,6 +6550,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 116.84) (xy 170.18 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83a26a96-bea9-49ee-9bd3-b83d24f44c06")
+	)
+	(wire
+		(pts
 			(xy 90.17 45.72) (xy 90.17 43.18)
 		)
 		(stroke
@@ -4773,6 +6567,36 @@
 			(type default)
 		)
 		(uuid "83fd524c-b6fd-4f5a-ab07-297cace1ab53")
+	)
+	(bus
+		(pts
+			(xy 162.56 66.04) (xy 162.56 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85667e5c-2ab1-4b08-879e-ba290c370740")
+	)
+	(bus
+		(pts
+			(xy 254 106.68) (xy 254 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85935a43-0d0f-4658-8c44-19cae467b74b")
+	)
+	(wire
+		(pts
+			(xy 238.76 60.96) (xy 243.84 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89767b36-3a9d-41da-9775-6deae71a6820")
 	)
 	(wire
 		(pts
@@ -4786,13 +6610,53 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 161.29) (xy 353.06 162.56)
+			(xy 218.44 68.58) (xy 226.06 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fb28fc9-1c7b-4495-b518-886d44d51804")
+	)
+	(wire
+		(pts
+			(xy 222.25 138.43) (xy 222.25 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8fef69bb-a937-4095-8f01-019bc62d2db3")
+	)
+	(wire
+		(pts
+			(xy 78.74 156.21) (xy 78.74 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90a16f32-b52a-464a-8002-3136f68169a8")
+	)
+	(bus
+		(pts
+			(xy 215.9 63.5) (xy 215.9 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90f6fbb3-df74-454c-93fe-1f9c6d543781")
+	)
+	(bus
+		(pts
+			(xy 215.9 29.21) (xy 215.9 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "911719b1-c10d-45e3-865a-fed9ae2a34e9")
 	)
 	(wire
 		(pts
@@ -4803,6 +6667,46 @@
 			(type default)
 		)
 		(uuid "9158fd86-bc78-4e7a-8037-a0a3935bcfe7")
+	)
+	(bus
+		(pts
+			(xy 215.9 38.1) (xy 215.9 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9376e055-9f17-4df3-a4ec-1be77c8fe079")
+	)
+	(bus
+		(pts
+			(xy 172.72 109.22) (xy 172.72 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94dcba00-3463-47ce-9a25-20213a7bcc7a")
+	)
+	(wire
+		(pts
+			(xy 154.94 152.4) (xy 156.21 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "958fb680-3078-431c-8a11-9fbd0bc955cc")
+	)
+	(wire
+		(pts
+			(xy 76.2 191.77) (xy 78.74 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95d9b121-87f5-4dc2-b3a5-ee79bd5320a8")
 	)
 	(wire
 		(pts
@@ -4826,6 +6730,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 180.34) (xy 63.5 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9842ec28-f309-47ac-8553-586e80192893")
+	)
+	(wire
+		(pts
 			(xy 92.71 22.86) (xy 92.71 24.13)
 		)
 		(stroke
@@ -4836,7 +6750,47 @@
 	)
 	(wire
 		(pts
-			(xy 407.67 170.18) (xy 406.4 170.18)
+			(xy 78.74 167.64) (xy 81.28 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98a3352c-c05a-4895-8dcd-f0e86e6a5136")
+	)
+	(wire
+		(pts
+			(xy 154.94 55.88) (xy 160.02 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a5105b5-97ab-471c-87d3-9bd562cdbe28")
+	)
+	(wire
+		(pts
+			(xy 210.82 106.68) (xy 226.06 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c03444e-2e18-492d-997c-e0991021d2c1")
+	)
+	(wire
+		(pts
+			(xy 238.76 63.5) (xy 243.84 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cbfa406-e271-47a5-9454-3637bbf00a2b")
+	)
+	(wire
+		(pts
+			(xy 276.86 147.32) (xy 275.59 147.32)
 		)
 		(stroke
 			(width 0)
@@ -4846,13 +6800,43 @@
 	)
 	(wire
 		(pts
-			(xy 337.82 170.18) (xy 345.44 170.18)
+			(xy 71.12 156.21) (xy 71.12 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a05d88f3-684b-45bf-b307-cd3b247bb32f")
+	)
+	(wire
+		(pts
+			(xy 207.01 147.32) (xy 214.63 147.32)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a09c86a5-db5e-451f-bc62-85a9733c45ca")
+	)
+	(wire
+		(pts
+			(xy 154.94 106.68) (xy 168.91 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a156cfbb-ddbf-4821-b9aa-948580e38d26")
+	)
+	(bus
+		(pts
+			(xy 162.56 45.72) (xy 162.56 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a165cefb-9b82-4101-9e81-85b862483dfe")
 	)
 	(wire
 		(pts
@@ -4866,13 +6850,83 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 107.95) (xy 231.14 109.22)
+			(xy 63.5 191.77) (xy 66.04 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a64bcb47-dd83-4a3c-881d-c254fb96dce6")
+	)
+	(wire
+		(pts
+			(xy 35.56 180.34) (xy 35.56 181.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a6a86b44-807e-43f7-8131-009a950475cf")
+	)
+	(wire
+		(pts
+			(xy 19.05 168.91) (xy 19.05 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a83a1bf4-4907-45c2-8183-a558b64c22ab")
+	)
+	(bus
+		(pts
+			(xy 254 101.6) (xy 254 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9748262-39af-4bbc-8410-cb9c93e5903f")
+	)
+	(wire
+		(pts
+			(xy 238.76 109.22) (xy 251.46 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa12af48-50ef-48a7-8b82-87194dbe77e6")
+	)
+	(bus
+		(pts
+			(xy 172.72 101.6) (xy 172.72 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa53710d-63b9-49e4-a36a-f8e4e5cb4abd")
+	)
+	(wire
+		(pts
+			(xy 154.94 114.3) (xy 170.18 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab33d17c-0069-4a1d-b852-67909702be67")
+	)
+	(wire
+		(pts
+			(xy 114.3 152.4) (xy 113.03 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad0bfec0-2f23-4c5e-9455-9c1e892b9a86")
 	)
 	(wire
 		(pts
@@ -4886,7 +6940,87 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 102.87) (xy 232.41 102.87)
+			(xy 238.76 114.3) (xy 240.03 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aed78105-4826-44d8-91fb-ae6eed283232")
+	)
+	(wire
+		(pts
+			(xy 154.94 45.72) (xy 160.02 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af6f2c30-630d-4e1e-9b7f-9c5cbf5a62f1")
+	)
+	(bus
+		(pts
+			(xy 254 95.25) (xy 208.28 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b09b99cb-29d2-4f3d-aee6-ea3160d52a6c")
+	)
+	(bus
+		(pts
+			(xy 208.28 104.14) (xy 208.28 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b691857c-4d24-470c-8e01-c23f69d83940")
+	)
+	(bus
+		(pts
+			(xy 172.72 114.3) (xy 172.72 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6bed4ff-fc90-4212-9b2e-4bd32c41f537")
+	)
+	(wire
+		(pts
+			(xy 154.94 154.94) (xy 156.21 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b72a7676-c9e1-4608-8db3-3296285d614b")
+	)
+	(bus
+		(pts
+			(xy 162.56 38.1) (xy 162.56 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8879fe9-ee43-46e8-b081-5e3f92ca8f6c")
+	)
+	(bus
+		(pts
+			(xy 172.72 95.25) (xy 208.28 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8caa10f-0dd8-4d62-be36-a0c4c1de014e")
+	)
+	(wire
+		(pts
+			(xy 34.29 175.26) (xy 36.83 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4906,13 +7040,43 @@
 	)
 	(wire
 		(pts
-			(xy 398.78 177.8) (xy 398.78 179.07)
+			(xy 154.94 124.46) (xy 156.21 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbcfbbdd-31d9-4250-a900-777487fc4c29")
+	)
+	(wire
+		(pts
+			(xy 267.97 154.94) (xy 267.97 156.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "bc5b59b8-0af1-46c9-bef8-cec892b9d3a1")
+	)
+	(bus
+		(pts
+			(xy 246.38 60.96) (xy 246.38 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bccda568-f7a8-4eba-b98c-eeb72dbe2cce")
+	)
+	(bus
+		(pts
+			(xy 215.9 29.21) (xy 246.38 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdeda985-7877-4e5a-adb0-04b270e5a5b7")
 	)
 	(wire
 		(pts
@@ -4936,6 +7100,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 134.62) (xy 156.21 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0e1fbe5-8b24-4fe5-b511-3ea1a13a016a")
+	)
+	(wire
+		(pts
 			(xy 35.56 60.96) (xy 35.56 59.69)
 		)
 		(stroke
@@ -4943,6 +7117,26 @@
 			(type default)
 		)
 		(uuid "c21e7e2b-e294-452f-ab2d-14d35093517c")
+	)
+	(wire
+		(pts
+			(xy 63.5 189.23) (xy 63.5 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2eca111-f7e0-4ea9-b578-5332671d52e8")
+	)
+	(wire
+		(pts
+			(xy 154.94 86.36) (xy 156.21 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c583a9c2-7082-429a-a81c-761eb66d58e6")
 	)
 	(wire
 		(pts
@@ -4956,6 +7150,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 66.04) (xy 160.02 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c94a777f-050d-4126-9702-7a18bd4fdcc2")
+	)
+	(wire
+		(pts
 			(xy 25.4 27.94) (xy 25.4 29.21)
 		)
 		(stroke
@@ -4963,6 +7167,16 @@
 			(type default)
 		)
 		(uuid "cbdcb498-eb65-4843-b598-abac9cd9f508")
+	)
+	(wire
+		(pts
+			(xy 154.94 73.66) (xy 160.02 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc4e9b30-d921-4ac7-b534-d6573714a153")
 	)
 	(wire
 		(pts
@@ -4976,6 +7190,16 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 60.96) (xy 226.06 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cde083e1-f527-4a32-a1b5-fe2f095b7da1")
+	)
+	(wire
+		(pts
 			(xy 67.31 38.1) (xy 67.31 43.18)
 		)
 		(stroke
@@ -4983,6 +7207,46 @@
 			(type default)
 		)
 		(uuid "cf28b92d-d9db-476c-9429-93c807f3373f")
+	)
+	(bus
+		(pts
+			(xy 208.28 106.68) (xy 208.28 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf46ee1a-806a-4867-beb4-2f737502c42e")
+	)
+	(bus
+		(pts
+			(xy 246.38 35.56) (xy 246.38 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d32f0def-76a7-4409-8118-5b8f99446f7e")
+	)
+	(bus
+		(pts
+			(xy 215.9 52.07) (xy 246.38 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d433f629-35a3-42e0-9cd4-0528dcef10b1")
+	)
+	(bus
+		(pts
+			(xy 215.9 60.96) (xy 215.9 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d481cbb1-720d-4847-93aa-a712bc734527")
 	)
 	(wire
 		(pts
@@ -4993,6 +7257,36 @@
 			(type default)
 		)
 		(uuid "d68a1e49-5087-4521-b790-822da08d8b6a")
+	)
+	(wire
+		(pts
+			(xy 78.74 165.1) (xy 78.74 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7c1536c-cc27-455f-bd8e-50dc23dcc47c")
+	)
+	(wire
+		(pts
+			(xy 218.44 38.1) (xy 226.06 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d81155ce-0f40-483b-b684-3f654f6444d7")
+	)
+	(wire
+		(pts
+			(xy 190.5 147.32) (xy 191.77 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8495cc2-2267-4005-92fd-ef49cb0ffcf9")
 	)
 	(wire
 		(pts
@@ -5016,6 +7310,26 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 111.76) (xy 251.46 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db4fbc0c-bc42-452b-9168-7d4e7fd13c23")
+	)
+	(wire
+		(pts
+			(xy 154.94 33.02) (xy 160.02 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db697146-228e-47d7-b177-1d7470379f11")
+	)
+	(wire
+		(pts
 			(xy 36.83 86.36) (xy 36.83 88.9)
 		)
 		(stroke
@@ -5034,6 +7348,16 @@
 		)
 		(uuid "ddaf1e99-714d-46cf-87ca-2d3add50c588")
 	)
+	(bus
+		(pts
+			(xy 162.56 52.07) (xy 162.56 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddcae94d-3f17-4884-b8d0-4a7558221f92")
+	)
 	(wire
 		(pts
 			(xy 41.91 127) (xy 43.18 127)
@@ -5043,6 +7367,26 @@
 			(type default)
 		)
 		(uuid "de3aca49-d3ef-42eb-bf89-c41457255ff3")
+	)
+	(wire
+		(pts
+			(xy 154.94 137.16) (xy 156.21 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de3f9ef3-f1b2-41d7-adc0-9843ffbdd68e")
+	)
+	(wire
+		(pts
+			(xy 154.94 104.14) (xy 170.18 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "deb8bd0b-3900-40c5-8d61-96c9f29b9d77")
 	)
 	(wire
 		(pts
@@ -5056,6 +7400,36 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 38.1) (xy 243.84 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e40c2d76-426a-4037-a851-8f8a2d25ae3a")
+	)
+	(wire
+		(pts
+			(xy 238.76 68.58) (xy 243.84 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4a33b97-8e70-4361-b273-b622c830c7d4")
+	)
+	(wire
+		(pts
+			(xy 210.82 109.22) (xy 226.06 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e567e5c9-4ca4-40ec-ab0b-ac5e59cca85b")
+	)
+	(wire
+		(pts
 			(xy 90.17 38.1) (xy 90.17 35.56)
 		)
 		(stroke
@@ -5063,6 +7437,56 @@
 			(type default)
 		)
 		(uuid "e5ccfa75-f3c8-4403-b3de-332f3dbc3cb6")
+	)
+	(bus
+		(pts
+			(xy 246.38 40.64) (xy 246.38 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e62f25b1-1e7d-4760-9080-505b40b3a741")
+	)
+	(bus
+		(pts
+			(xy 162.56 29.21) (xy 162.56 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6789c09-580d-4e0c-818f-edcab3964626")
+	)
+	(bus
+		(pts
+			(xy 215.9 52.07) (xy 215.9 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6da3e22-d9c4-45ac-8d5c-a947fbbca497")
+	)
+	(wire
+		(pts
+			(xy 170.18 124.46) (xy 167.64 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7221592-88d5-457b-8707-1b3a1251d6b1")
+	)
+	(wire
+		(pts
+			(xy 154.94 119.38) (xy 170.18 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e735b155-3d7e-4f2d-b191-a921c72235a2")
 	)
 	(wire
 		(pts
@@ -5076,7 +7500,7 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 170.18) (xy 368.3 170.18)
+			(xy 229.87 147.32) (xy 237.49 147.32)
 		)
 		(stroke
 			(width 0)
@@ -5084,15 +7508,115 @@
 		)
 		(uuid "e8e50650-06eb-4bed-a181-2091487c1127")
 	)
+	(bus
+		(pts
+			(xy 162.56 53.34) (xy 162.56 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb897ca6-c57d-4b68-8bc5-8c126a824837")
+	)
 	(wire
 		(pts
-			(xy 231.14 105.41) (xy 231.14 96.52)
+			(xy 238.76 45.72) (xy 243.84 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecfbc394-a32d-45a7-858f-29c4f87eda2f")
+	)
+	(bus
+		(pts
+			(xy 162.56 33.02) (xy 162.56 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef3169f5-c48c-4e19-bc33-b444ac7db247")
+	)
+	(wire
+		(pts
+			(xy 154.94 91.44) (xy 156.21 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f003e1e4-73cd-4bed-bdd2-8c6873eba00f")
+	)
+	(wire
+		(pts
+			(xy 35.56 177.8) (xy 35.56 168.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f452243f-e011-4e6b-a323-0e5517114845")
+	)
+	(bus
+		(pts
+			(xy 162.56 63.5) (xy 162.56 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4cc4bd6-a1e5-4027-9385-058aaf9987e2")
+	)
+	(wire
+		(pts
+			(xy 218.44 45.72) (xy 226.06 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4ec391b-3b00-4b3c-b8d9-b915016adef0")
+	)
+	(bus
+		(pts
+			(xy 162.56 43.18) (xy 162.56 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7815779-0415-4a91-9545-17e76493a3c6")
+	)
+	(wire
+		(pts
+			(xy 238.76 48.26) (xy 238.76 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f790ac12-e41c-4dd6-b5e5-c93e5715a38b")
+	)
+	(bus
+		(pts
+			(xy 254 109.22) (xy 254 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8f10842-45e0-478e-8d16-0c59c3b6cb13")
+	)
+	(wire
+		(pts
+			(xy 154.94 111.76) (xy 170.18 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa720e4a-ba3e-4495-bb5f-767e93e32f23")
 	)
 	(wire
 		(pts
@@ -5144,6 +7668,178 @@
 		)
 		(uuid "fc97587f-c78f-4871-b361-cce6ec8cd29e")
 	)
+	(bus
+		(pts
+			(xy 215.9 35.56) (xy 215.9 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe6d0712-08b9-4ae5-aa84-ffe7c10db835")
+	)
+	(wire
+		(pts
+			(xy 238.76 66.04) (xy 243.84 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff16e4d3-3663-4e0b-a8c2-e5be20cab4b9")
+	)
+	(bus
+		(pts
+			(xy 172.72 104.14) (xy 172.72 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffe70a67-8a4e-4abe-9478-0b4dc3490fc6")
+	)
+	(text "Place jumper near power source"
+		(exclude_from_sim no)
+		(at 52.07 60.452 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "48e932b6-9b3e-459d-9b81-ef1fc1385f5b")
+	)
+	(label "PA0"
+		(at 223.52 38.1 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "080ad840-7bcd-45b9-8283-27566eaf5a9d")
+	)
+	(label "PB6"
+		(at 154.94 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0812c5d9-9501-446c-a382-a69f1f263cef")
+	)
+	(label "PB3"
+		(at 154.94 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0a28ff92-00fa-4b0f-b7c4-5aabf1c5274c")
+	)
+	(label "ATMEGA_SCL"
+		(at 223.52 104.14 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "13b9e866-eda8-4ccd-9fdc-33425e087384")
+	)
+	(label "ATMEGA_Rx"
+		(at 154.94 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1bf92051-be5b-447f-8097-8aeaf59738e1")
+	)
+	(label "ATMEGA_Tx"
+		(at 154.94 109.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "301fff78-4927-4169-8cf9-26065fea0c99")
+	)
+	(label "PB2"
+		(at 154.94 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3671424c-d082-491c-b362-31ed14ccb575")
+	)
+	(label "PD7"
+		(at 154.94 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a9d63a7-0c91-40f3-9ffb-63cdddf9253b")
+	)
+	(label "PB5"
+		(at 238.76 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3f80574f-ee39-4747-a1a7-a55419d76dae")
+	)
+	(label "PB6"
+		(at 223.52 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4339386e-c8d8-4d4a-a4ca-3765735fc9a8")
+	)
+	(label "PA6"
+		(at 223.52 45.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "455eddfa-33da-4f51-9a3e-eb1d243cd9de")
+	)
+	(label "AT_DISP_RST"
+		(at 154.94 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4ca54bae-494f-4a42-b06d-ef4b6d7b1d00")
+	)
 	(label "ATMEGA_RST"
 		(at 114.3 33.02 180)
 		(fields_autoplaced yes)
@@ -5154,6 +7850,424 @@
 			(justify right bottom)
 		)
 		(uuid "4e90bfb6-a4e9-4ad6-b846-58f057486e7a")
+	)
+	(label "PD7"
+		(at 238.76 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5456916f-42dc-47ff-b9a1-ec5a2ed7bca7")
+	)
+	(label "PD5"
+		(at 238.76 109.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "59c5f670-11ca-41f9-8210-6a2cbf8c37b8")
+	)
+	(label "PB0"
+		(at 223.52 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "636da99e-26f5-44d0-9e30-9410e46c00de")
+	)
+	(label "PB0"
+		(at 154.94 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6671fbe8-bcf7-4786-abf1-dc5fe9752df6")
+	)
+	(label "AT_DISP_RST"
+		(at 223.52 109.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7163ea72-5cdc-4e4d-b2f8-16bb8113d913")
+	)
+	(label "PA5"
+		(at 238.76 43.18 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "83401895-d442-4232-8c0d-ca09ca221650")
+	)
+	(label "ATMEGA_SCL"
+		(at 154.94 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "878b3bb9-a603-47d6-8dcf-c21436e81d10")
+	)
+	(label "PA1"
+		(at 154.94 35.56 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8f4ab70f-4f13-4a8c-810c-78795bb96e2e")
+	)
+	(label "PA2"
+		(at 223.52 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8fc9eb25-6f89-4c31-9a10-cdfe07c67936")
+	)
+	(label "ATMEGA_SDA"
+		(at 154.94 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "92120035-7ab5-4982-a1e9-dac373ecb5dd")
+	)
+	(label "PB1"
+		(at 154.94 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9598fe3f-a6bb-4e02-b798-2439439e2a39")
+	)
+	(label "PB1"
+		(at 238.76 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "965fc4b6-a33f-44dd-8d68-cf07c317417d")
+	)
+	(label "PD6"
+		(at 154.94 116.84 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9972c697-ebeb-4910-a4c2-13c278b10e48")
+	)
+	(label "PB7"
+		(at 154.94 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a02c7c8f-063e-4a81-9776-dbe4b9827334")
+	)
+	(label "PB7"
+		(at 238.76 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0506ecb-0cd8-48f8-9060-ec9111c23ccd")
+	)
+	(label "PA1"
+		(at 238.76 38.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4ace8d4-aa97-4311-9316-c6e372f14c6e")
+	)
+	(label "ATMEGA_Tx"
+		(at 238.76 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "af8e53e7-ae3d-4dc7-aaa9-e7d459cdb067")
+	)
+	(label "PB4"
+		(at 223.52 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b0c51296-a95c-46be-a074-164d6462ca47")
+	)
+	(label "PA0"
+		(at 154.94 33.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b87f698b-50ba-48a6-8e7a-af0f5bc4f255")
+	)
+	(label "PB5"
+		(at 154.94 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8f06445-cea7-4413-9e0a-374676fb489c")
+	)
+	(label "PA3"
+		(at 154.94 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd832698-773b-4868-a2ea-cec6918887e5")
+	)
+	(label "PB3"
+		(at 238.76 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bfe1756b-427d-4281-b8a9-4354cf97c679")
+	)
+	(label "ATMEGA_Rx"
+		(at 223.52 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bfee8dc2-ff24-432d-a742-b82c888150fd")
+	)
+	(label "PB2"
+		(at 223.52 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c20134aa-f99d-4c15-87ea-9a9516593157")
+	)
+	(label "PA7"
+		(at 238.76 45.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c520d7ff-a24e-458e-a8bd-1b7173dd550b")
+	)
+	(label "PB4"
+		(at 154.94 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cab4110a-e8a8-43fb-8f6f-2443843b983f")
+	)
+	(label "PA7"
+		(at 154.94 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb815a4b-cbba-4467-a3c7-231730a49a5e")
+	)
+	(label "ATMEGA_SDA"
+		(at 238.76 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd341ccc-eeaa-45c4-b97d-6eda95c20600")
+	)
+	(label "PA3"
+		(at 223.52 43.18 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d3556439-e240-4de3-9658-da88228d2331")
+	)
+	(label "PA6"
+		(at 154.94 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6a133f0-4bda-42da-b9e9-b9c1d2fd7936")
+	)
+	(label "PA2"
+		(at 154.94 38.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d8be5bff-d13a-407e-af5a-03ac2bb884ad")
+	)
+	(label "PA3"
+		(at 238.76 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "db51989d-a63a-45cc-9478-c34445dcaaff")
+	)
+	(label "PA5"
+		(at 154.94 45.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e0216c9b-b4c0-40dc-ac48-4f54dadad56a")
+	)
+	(label "PD6"
+		(at 223.52 111.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f33413dc-b348-4a60-aacd-ff2cd7a25c9d")
+	)
+	(label "PD5"
+		(at 154.94 114.3 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd233f49-b5ab-459d-9382-1f6a6f5d844a")
+	)
+	(label "PA4"
+		(at 154.94 43.18 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ff4508f4-13f7-4974-ab7c-dccfa8884e9c")
+	)
+	(global_label "AT_DISP_RST"
+		(shape input)
+		(at 19.05 160.02 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "010ba6f9-4b83-4ec7-a57a-aedeb359ce2d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.05 145.242 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
 	)
 	(global_label "ATMEGA_RST"
 		(shape output)
@@ -5190,6 +8304,50 @@
 		(uuid "14c9d9c8-4d15-4d81-9681-ea19d63a142d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 28.0996 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ATMEGA_SCL"
+		(shape input)
+		(at 81.28 191.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1925ace2-8c05-4388-b5c3-efa9fbbed426")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 95.7556 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PD5"
+		(shape input)
+		(at 190.5 147.32 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "19858059-cf2f-4d84-bf63-c48eb71bc781")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 183.7653 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5265,6 +8423,28 @@
 			)
 		)
 	)
+	(global_label "DISP_SCL"
+		(shape output)
+		(at 60.96 191.77 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "45d043b8-b310-4863-9674-6743564b8dbb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 49.1453 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "ATMEGA_TCK"
 		(shape passive)
 		(at 156.21 157.48 0)
@@ -5331,6 +8511,28 @@
 			)
 		)
 	)
+	(global_label "ATMEGA_SDA"
+		(shape bidirectional)
+		(at 81.28 167.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "87322320-3b4c-4aec-9784-1235114f12b0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 96.9274 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "ATMEGA_TCK"
 		(shape passive)
 		(at 41.91 121.92 180)
@@ -5344,6 +8546,50 @@
 		(uuid "abdba9d2-e120-4cc2-9567-85db33f98dbc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 28.5457 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "DISP_SDA"
+		(shape bidirectional)
+		(at 60.96 167.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c55f2d19-636e-4ae6-a387-71912a679605")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 47.9735 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "DISP_SDA"
+		(shape bidirectional)
+		(at 34.29 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c5e6f520-cb4c-456b-b7a9-20438535dab4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.3035 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5397,6 +8643,28 @@
 			)
 		)
 	)
+	(global_label "DISP_SCL"
+		(shape input)
+		(at 34.29 175.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ed4f0cc0-0157-4475-af41-752232bae583")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 22.4753 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "ATMEGA_!RD"
 		(shape output)
 		(at 113.03 149.86 180)
@@ -5441,6 +8709,30 @@
 			)
 		)
 	)
+	(hierarchical_label "ATMEGA_Tx"
+		(shape output)
+		(at 170.18 124.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "53f194a9-b302-4618-8d86-03d8d5339ff4")
+	)
+	(hierarchical_label "ATMEGA_Rx"
+		(shape input)
+		(at 170.18 121.92 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7c3652c9-f22f-4c07-b2ec-5398e880bd41")
+	)
 	(symbol
 		(lib_id "power:GND")
 		(at 25.4 60.96 0)
@@ -5451,7 +8743,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "039619fa-c309-42b4-a8ea-48387a7f3b82")
-		(property "Reference" "#PWR072"
+		(property "Reference" "#PWR0101"
 			(at 25.4 67.31 0)
 			(effects
 				(font
@@ -5501,7 +8793,75 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR072")
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 113.03 160.02 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "056f16e5-588e-44fe-8c0f-5fa2be28bb89")
+		(property "Reference" "TP38"
+			(at 111.76 160.0201 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 111.76 158.7501 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 107.95 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 107.95 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 113.03 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "65a64148-a930-4ef1-99fc-bf276d11d141")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP38")
 					(unit 1)
 				)
 			)
@@ -5517,7 +8877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "066ab748-a966-4fca-a12c-b3a67aa1fff6")
-		(property "Reference" "#PWR0129"
+		(property "Reference" "#PWR0140"
 			(at 398.78 284.48 0)
 			(effects
 				(font
@@ -5567,7 +8927,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0129")
+					(reference "#PWR0140")
 					(unit 1)
 				)
 			)
@@ -5575,7 +8935,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 330.2 161.29 0)
+		(at 199.39 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5583,8 +8943,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "070a4721-de5b-4261-889b-d312abd430fc")
-		(property "Reference" "#PWR0106"
-			(at 330.2 165.1 0)
+		(property "Reference" "#PWR0119"
+			(at 199.39 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5593,7 +8953,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 330.2 156.21 0)
+			(at 199.39 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5601,7 +8961,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 330.2 161.29 0)
+			(at 199.39 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5610,7 +8970,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 330.2 161.29 0)
+			(at 199.39 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5619,7 +8979,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 330.2 161.29 0)
+			(at 199.39 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5633,7 +8993,75 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0106")
+					(reference "#PWR0119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07bce758-6c78-4fd9-b211-e37f201975c2")
+		(property "Reference" "TP32"
+			(at 157.48 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1ac61037-090b-4bbb-bde2-8bfef2ba23bc")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP32")
 					(unit 1)
 				)
 			)
@@ -5649,7 +9077,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a47a7b1-c562-47c0-857d-9abbf477e6d8")
-		(property "Reference" "#PWR084"
+		(property "Reference" "#PWR092"
 			(at 134.62 26.67 0)
 			(effects
 				(font
@@ -5699,7 +9127,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR084")
+					(reference "#PWR092")
 					(unit 1)
 				)
 			)
@@ -5715,7 +9143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d4f40ad-eb00-4227-b99b-13ef42ef0770")
-		(property "Reference" "#PWR077"
+		(property "Reference" "#PWR0108"
 			(at 60.96 80.01 0)
 			(effects
 				(font
@@ -5765,7 +9193,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR077")
+					(reference "#PWR0108")
 					(unit 1)
 				)
 			)
@@ -5773,15 +9201,15 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 231.14 96.52 0)
+		(at 35.56 168.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "0e99c338-ab3d-467d-8d15-1a9eef88765d")
-		(property "Reference" "#PWR0104"
-			(at 231.14 100.33 0)
+		(property "Reference" "#PWR0130"
+			(at 35.56 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5790,7 +9218,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 231.14 91.44 0)
+			(at 35.56 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5798,7 +9226,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 231.14 96.52 0)
+			(at 35.56 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5807,7 +9235,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 231.14 96.52 0)
+			(at 35.56 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5816,7 +9244,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 231.14 96.52 0)
+			(at 35.56 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5830,7 +9258,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0104")
+					(reference "#PWR0130")
 					(unit 1)
 				)
 			)
@@ -5846,7 +9274,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "17835325-4ac9-4fcc-989f-dea5fb619031")
-		(property "Reference" "#PWR073"
+		(property "Reference" "#PWR0106"
 			(at 36.83 80.01 0)
 			(effects
 				(font
@@ -5896,7 +9324,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR073")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -5912,7 +9340,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1a1400db-56b8-4839-a4f6-f1b690807bdd")
-		(property "Reference" "#PWR075"
+		(property "Reference" "#PWR0107"
 			(at 48.26 80.01 0)
 			(effects
 				(font
@@ -5962,7 +9390,75 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR075")
+					(reference "#PWR0107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 113.03 154.94 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b5aacb8-65ac-4a7e-bb61-6a54b7d9d08d")
+		(property "Reference" "TP35"
+			(at 111.76 154.9401 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 111.76 153.6701 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 107.95 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 107.95 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 113.03 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ca7f4d89-a7b2-4412-be9c-8f323dafdc3d")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP35")
 					(unit 1)
 				)
 			)
@@ -5978,7 +9474,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b686f2d-8e35-42a2-9193-7564f70f9df3")
-		(property "Reference" "C20"
+		(property "Reference" "C28"
 			(at 29.21 81.2799 0)
 			(effects
 				(font
@@ -6032,7 +9528,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C20")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -6048,7 +9544,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ba32bc5-12ff-4b03-be86-9ea2573921d7")
-		(property "Reference" "#PWR088"
+		(property "Reference" "#PWR097"
 			(at 57.15 50.8 0)
 			(effects
 				(font
@@ -6098,7 +9594,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR088")
+					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -6114,7 +9610,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1f279226-6ecb-42cd-a886-cec8acd3ee2d")
-		(property "Reference" "#PWR0102"
+		(property "Reference" "#PWR0117"
 			(at 58.42 124.46 0)
 			(effects
 				(font
@@ -6164,7 +9660,73 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0102")
+					(reference "#PWR0117")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 78.74 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2555f6c6-9381-40f9-a694-8754914523bb")
+		(property "Reference" "#PWR0125"
+			(at 78.74 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 78.74 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 78.74 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e770b29f-c97e-42da-a04f-217d842e2357")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0125")
 					(unit 1)
 				)
 			)
@@ -6180,7 +9742,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "29d7fd6c-6a68-4779-9495-778810fdde97")
-		(property "Reference" "#PWR0126"
+		(property "Reference" "#PWR0137"
 			(at 330.2 284.48 0)
 			(effects
 				(font
@@ -6230,7 +9792,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0126")
+					(reference "#PWR0137")
 					(unit 1)
 				)
 			)
@@ -6238,7 +9800,7 @@
 	)
 	(symbol
 		(lib_id "LED:WS2812B-2020")
-		(at 398.78 170.18 0)
+		(at 267.97 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6246,8 +9808,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2b115f0c-cb31-47a3-9aca-8b91d0d8c41b")
-		(property "Reference" "D9"
-			(at 406.4 166.4014 0)
+		(property "Reference" "D13"
+			(at 275.59 143.5414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6255,7 +9817,7 @@
 			)
 		)
 		(property "Value" "WS2812B-2020"
-			(at 412.75 166.4014 0)
+			(at 281.94 143.5414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6264,7 +9826,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
-			(at 400.05 177.8 0)
+			(at 269.24 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6274,7 +9836,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
-			(at 401.32 179.705 0)
+			(at 270.51 156.845 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6284,7 +9846,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
-			(at 398.78 170.18 0)
+			(at 267.97 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6307,7 +9869,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "D9")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -6323,7 +9885,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2bbd4074-f8b9-46e5-8d9d-e4dd1d393a3e")
-		(property "Reference" "C21"
+		(property "Reference" "C29"
 			(at 40.64 81.2799 0)
 			(effects
 				(font
@@ -6377,7 +9939,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C21")
+					(reference "C29")
 					(unit 1)
 				)
 			)
@@ -6385,7 +9947,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 375.92 161.29 0)
+		(at 245.11 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6393,8 +9955,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ddb0b24-1200-4be8-beb6-1c6b19f57ff6")
-		(property "Reference" "#PWR054"
-			(at 375.92 165.1 0)
+		(property "Reference" "#PWR0121"
+			(at 245.11 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6403,7 +9965,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 375.92 156.21 0)
+			(at 245.11 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6411,7 +9973,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 375.92 161.29 0)
+			(at 245.11 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6420,7 +9982,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 375.92 161.29 0)
+			(at 245.11 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6429,7 +9991,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 375.92 161.29 0)
+			(at 245.11 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6443,7 +10005,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR054")
+					(reference "#PWR0121")
 					(unit 1)
 				)
 			)
@@ -6459,7 +10021,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "303c971f-b4bc-4986-8770-3e3c400ff450")
-		(property "Reference" "#PWR087"
+		(property "Reference" "#PWR0103"
 			(at 73.66 67.31 0)
 			(effects
 				(font
@@ -6509,7 +10071,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR087")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -6517,7 +10079,7 @@
 	)
 	(symbol
 		(lib_id "LED:WS2812B-2020")
-		(at 353.06 170.18 0)
+		(at 222.25 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6525,8 +10087,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "30a37c8e-9d61-4cd8-b023-d3636af65820")
-		(property "Reference" "D7"
-			(at 360.68 166.4014 0)
+		(property "Reference" "D11"
+			(at 229.87 143.5414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6534,7 +10096,7 @@
 			)
 		)
 		(property "Value" "WS2812B-2020"
-			(at 367.03 166.4014 0)
+			(at 236.22 143.5414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6543,7 +10105,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
-			(at 354.33 177.8 0)
+			(at 223.52 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6553,7 +10115,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
-			(at 355.6 179.705 0)
+			(at 224.79 156.845 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6563,7 +10125,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
-			(at 353.06 170.18 0)
+			(at 222.25 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6586,7 +10148,214 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "D7")
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30a8dd66-c05f-4858-af0a-ab68945b042b")
+		(property "Reference" "TP14"
+			(at 157.48 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 80.0099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d83197f-baff-4c69-9a06-0af780eced75")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33ae25c5-4869-48ee-a55c-6d1541c761ed")
+		(property "Reference" "TP18"
+			(at 157.48 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5fda7687-c0bc-4143-8b66-0fc868678bf8")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 63.5 161.29 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "37a9cdb3-e4cb-4efb-93bf-4a83590b5220")
+		(property "Reference" "R14"
+			(at 60.96 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 60.96 162.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 61.722 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 63.5 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 63.5 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "43ad8e15-82db-4e81-b789-775365dc6fbc")
+		)
+		(pin "2"
+			(uuid "4800b15a-c46e-4c52-b7b7-844ce3d5b2bf")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -6602,7 +10371,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39996945-9102-414e-bd74-93242ba5e502")
-		(property "Reference" "#PWR074"
+		(property "Reference" "#PWR0110"
 			(at 25.4 95.25 0)
 			(effects
 				(font
@@ -6652,7 +10421,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR074")
+					(reference "#PWR0110")
 					(unit 1)
 				)
 			)
@@ -6668,7 +10437,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b47bf01-1c1b-4502-bde6-cc6fabf4e281")
-		(property "Reference" "#PWR089"
+		(property "Reference" "#PWR091"
 			(at 92.71 26.67 0)
 			(effects
 				(font
@@ -6718,7 +10487,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR089")
+					(reference "#PWR091")
 					(unit 1)
 				)
 			)
@@ -6734,7 +10503,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44c16db8-23c0-479f-9608-ac410a6b93f0")
-		(property "Reference" "#PWR0128"
+		(property "Reference" "#PWR0139"
 			(at 375.92 284.48 0)
 			(effects
 				(font
@@ -6784,7 +10553,165 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0128")
+					(reference "#PWR0139")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 78.74 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44fad708-99da-4c53-864d-b9adc518b041")
+		(property "Reference" "#PWR0134"
+			(at 78.74 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 78.74 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 78.74 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6660a492-3dbd-4163-b36f-e4fdd09c233c")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0134")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 231.14 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "469c86a2-1713-48c4-86c2-ed1773ae844f")
+		(property "Reference" "J6"
+			(at 232.41 35.052 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x05_Odd_Even"
+			(at 232.41 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+			(at 231.14 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 231.14 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "b16c10eb-35d7-4adc-836f-e30afe9d75b2")
+		)
+		(pin "5"
+			(uuid "6a73424b-d53d-4c24-a649-07293ababf17")
+		)
+		(pin "7"
+			(uuid "893941e5-024d-4f9b-a570-3449d99c241f")
+		)
+		(pin "2"
+			(uuid "30ac4289-6465-4648-b623-e7e327b9d496")
+		)
+		(pin "10"
+			(uuid "30cd6415-563c-43b3-a03f-bb1340c60e47")
+		)
+		(pin "4"
+			(uuid "3c710e69-fd50-4df8-846a-853598a5ce95")
+		)
+		(pin "6"
+			(uuid "263e8582-cd1f-448b-90c0-772ed9d8aefe")
+		)
+		(pin "8"
+			(uuid "38800b16-bccc-4a3e-997e-0ff5befc8c23")
+		)
+		(pin "1"
+			(uuid "6c27076e-36b0-4b36-9877-8938782b79cf")
+		)
+		(pin "9"
+			(uuid "b6fdcea0-f9c7-4bb6-ba78-11671b10f119")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -6861,6 +10788,140 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a5f7add-dab6-460c-a2b5-866805d3192e")
+		(property "Reference" "TP28"
+			(at 157.48 139.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 140.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e18d9ad0-33f9-4a80-9c5f-37ed9b360c97")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 224.79 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4c40bd6e-42c7-464d-bc50-1bb0526041b8")
+		(property "Reference" "#PWR0115"
+			(at 224.79 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 224.79 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 224.79 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d3258f06-4e77-4fd2-838e-ad57204c32a6")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0115")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 60.96 88.9 0)
 		(unit 1)
@@ -6870,7 +10931,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4cdf2685-a70d-4832-aae3-c9e650ddbdf2")
-		(property "Reference" "#PWR078"
+		(property "Reference" "#PWR0113"
 			(at 60.96 95.25 0)
 			(effects
 				(font
@@ -6920,7 +10981,146 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR078")
+					(reference "#PWR0113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50230a5e-8c58-4972-ab1a-83344453a91e")
+		(property "Reference" "TP25"
+			(at 157.48 132.0799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cf29079f-0808-41d7-b679-2ef8590fd0eb")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 19.05 165.1 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "511299b7-9519-44a9-9b4a-adb15f7e88a3")
+		(property "Reference" "R16"
+			(at 16.51 163.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 16.51 166.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 17.272 165.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 19.05 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 19.05 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6988dcb8-0f0c-4c69-aca8-39a8258e8fae")
+		)
+		(pin "2"
+			(uuid "24da579a-3a3f-45ae-b267-f41861c742c5")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -6936,7 +11136,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5156a632-bb32-4632-9358-c5c06f4cd39b")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR0105"
 			(at 25.4 80.01 0)
 			(effects
 				(font
@@ -6986,7 +11186,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR069")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -6994,7 +11194,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x05")
-		(at 237.49 102.87 0)
+		(at 41.91 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7002,8 +11202,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5193122e-1a59-46b7-93b5-0c1887a9457b")
-		(property "Reference" "J3"
-			(at 240.03 102.8699 0)
+		(property "Reference" "J10"
+			(at 44.45 175.2599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7012,7 +11212,7 @@
 			)
 		)
 		(property "Value" "Conn_01x05"
-			(at 240.03 104.1399 0)
+			(at 44.45 176.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7022,7 +11222,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
-			(at 237.49 102.87 0)
+			(at 41.91 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7031,7 +11231,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 237.49 102.87 0)
+			(at 41.91 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7040,7 +11240,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 237.49 102.87 0)
+			(at 41.91 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7066,7 +11266,75 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "J3")
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5367b1c4-ea7c-44ee-ac1f-076c0fde407d")
+		(property "Reference" "TP24"
+			(at 157.48 129.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0fb84902-659e-49c9-986d-c45e7b39ab5f")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP24")
 					(unit 1)
 				)
 			)
@@ -7082,7 +11350,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53b5a9bd-1948-405c-9a09-a16798dbc8e6")
-		(property "Reference" "#PWR081"
+		(property "Reference" "#PWR090"
 			(at 43.18 26.67 0)
 			(effects
 				(font
@@ -7132,7 +11400,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR081")
+					(reference "#PWR090")
 					(unit 1)
 				)
 			)
@@ -7149,7 +11417,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "55988c59-aef1-46fd-8475-8bc18a95d08d")
-		(property "Reference" "C29"
+		(property "Reference" "C26"
 			(at 83.312 44.45 90)
 			(effects
 				(font
@@ -7201,7 +11469,78 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C29")
+					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 63.5 185.42 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "57049cc8-3142-4a05-88d1-49d11135f35a")
+		(property "Reference" "R18"
+			(at 60.96 184.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 60.96 186.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 61.722 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 63.5 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 63.5 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8ecf5f84-5212-440d-bd06-4a5a9bd6b169")
+		)
+		(pin "2"
+			(uuid "7c83abd8-8e1b-4bca-a137-c3174621f4a0")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -7209,7 +11548,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 375.92 179.07 0)
+		(at 245.11 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7217,8 +11556,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a518fbc-34d4-401c-8d2c-4d5d70c259d0")
-		(property "Reference" "#PWR059"
-			(at 375.92 185.42 0)
+		(property "Reference" "#PWR0128"
+			(at 245.11 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7227,7 +11566,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 375.92 184.15 0)
+			(at 245.11 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7235,7 +11574,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 375.92 179.07 0)
+			(at 245.11 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7244,7 +11583,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 375.92 179.07 0)
+			(at 245.11 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7253,7 +11592,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 375.92 179.07 0)
+			(at 245.11 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7267,7 +11606,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR059")
+					(reference "#PWR0128")
 					(unit 1)
 				)
 			)
@@ -7283,7 +11622,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5cc40050-d8b9-476b-8c40-750115333c71")
-		(property "Reference" "#PWR071"
+		(property "Reference" "#PWR0102"
 			(at 35.56 67.31 0)
 			(effects
 				(font
@@ -7333,7 +11672,355 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR071")
+					(reference "#PWR0102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5df49c52-7a1d-47b1-8864-232210021c7e")
+		(property "Reference" "TP27"
+			(at 157.48 137.1599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e70c95f-4e40-42b3-8a82-19b96cace5f7")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "62a1e211-867c-48da-b6e8-966f107f42a3")
+		(property "Reference" "TP15"
+			(at 157.48 81.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "26c052b7-4f99-457b-8e2f-73fa0b0a30c9")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 224.79 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "67efa2d9-5386-455e-8a4b-7e1f17c7e9cb")
+		(property "Reference" "#PWR094"
+			(at 224.79 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 224.79 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 224.79 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebcfa18b-5068-465e-9e7b-c1f2964fe333")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR094")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Q_NMOS_GSD")
+		(at 71.12 165.1 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "697a059a-f988-4162-9ee2-efa12b97f5bc")
+		(property "Reference" "Q5"
+			(at 71.12 171.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NMOS_GSD"
+			(at 69.8501 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
+			(at 73.66 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 71.12 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 71.12 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "6f17621b-9e86-4515-a309-a1539b50c0ab")
+		)
+		(pin "1"
+			(uuid "fae9873e-5911-49c0-be5a-dddfbf778d89")
+		)
+		(pin "2"
+			(uuid "15df3b48-53e3-4b5b-8656-4b71d16008b5")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Q_NMOS_GSD")
+		(at 71.12 189.23 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71c4e032-791f-49d5-8d20-d30a3214b768")
+		(property "Reference" "Q6"
+			(at 71.12 195.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NMOS_GSD"
+			(at 69.8501 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
+			(at 73.66 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 71.12 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 71.12 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "c2556822-926c-4a75-a3d3-ee1ccc42eb39")
+		)
+		(pin "1"
+			(uuid "446e0f4e-8349-48ac-b20e-7251c0ff5e79")
+		)
+		(pin "2"
+			(uuid "f035fdba-488f-4ef5-8b86-2276243e1ffc")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -7714,7 +12401,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73de8b77-ce37-41f4-a025-76de96b24ae2")
-		(property "Reference" "#PWR070"
+		(property "Reference" "#PWR0111"
 			(at 36.83 95.25 0)
 			(effects
 				(font
@@ -7764,7 +12451,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR070")
+					(reference "#PWR0111")
 					(unit 1)
 				)
 			)
@@ -7780,7 +12467,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "75f34b57-7739-49e2-95d2-720c3c93d865")
-		(property "Reference" "C28"
+		(property "Reference" "C25"
 			(at 83.312 36.83 90)
 			(effects
 				(font
@@ -7832,7 +12519,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C28")
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -7848,7 +12535,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79ac0c56-e240-4473-9c9d-f662dd71956d")
-		(property "Reference" "#PWR083"
+		(property "Reference" "#PWR095"
 			(at 25.4 50.8 0)
 			(effects
 				(font
@@ -7898,7 +12585,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR083")
+					(reference "#PWR095")
 					(unit 1)
 				)
 			)
@@ -7906,7 +12593,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 398.78 161.29 0)
+		(at 267.97 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7914,8 +12601,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79ca2f8d-a24f-4d46-bc16-7228830eb6e6")
-		(property "Reference" "#PWR055"
-			(at 398.78 165.1 0)
+		(property "Reference" "#PWR0122"
+			(at 267.97 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7924,7 +12611,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 398.78 156.21 0)
+			(at 267.97 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7932,7 +12619,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 398.78 161.29 0)
+			(at 267.97 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7941,7 +12628,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 398.78 161.29 0)
+			(at 267.97 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7950,7 +12637,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 398.78 161.29 0)
+			(at 267.97 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7964,7 +12651,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR055")
+					(reference "#PWR0122")
 					(unit 1)
 				)
 			)
@@ -7980,7 +12667,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a152157-81f2-4afa-89f3-1d4831ffb397")
-		(property "Reference" "C26"
+		(property "Reference" "C24"
 			(at 46.99 31.7499 0)
 			(effects
 				(font
@@ -8034,7 +12721,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C26")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -8050,7 +12737,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ad1e50b-0b7b-4b58-a357-efaad147bbd4")
-		(property "Reference" "#PWR076"
+		(property "Reference" "#PWR0112"
 			(at 48.26 95.25 0)
 			(effects
 				(font
@@ -8100,7 +12787,73 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR076")
+					(reference "#PWR0112")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 240.03 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7bd86a2a-756c-4f38-a86d-f5e8528e4aa5")
+		(property "Reference" "#PWR0116"
+			(at 240.03 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 240.03 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 240.03 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a60eb124-5be3-479e-b729-62e4ffadd2d3")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0116")
 					(unit 1)
 				)
 			)
@@ -8175,6 +12928,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "803f459a-9bf6-4228-b5ba-a682b0dd492d")
+		(property "Reference" "TP26"
+			(at 157.48 134.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 135.8899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f9bdcb1-7834-4ef0-b4b1-f0f58cfa7c7d")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 48.26 82.55 0)
 		(unit 1)
@@ -8184,7 +13005,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "812791e5-928a-49f3-9c5a-a2bd76f8c996")
-		(property "Reference" "C22"
+		(property "Reference" "C30"
 			(at 52.07 81.2799 0)
 			(effects
 				(font
@@ -8238,24 +13059,43 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C22")
+					(reference "C30")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 353.06 161.29 0)
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "902b2b15-8eac-4467-a565-d5c59cc9e06a")
-		(property "Reference" "#PWR053"
-			(at 353.06 165.1 0)
+		(uuid "81a5b27f-b9ff-49f3-b8cb-a1d351de1413")
+		(property "Reference" "TP16"
+			(at 157.48 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 85.0899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8263,8 +13103,266 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 353.06 156.21 0)
+		(property "Datasheet" "~"
+			(at 161.29 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cbff8a9b-6879-4847-8382-253cc68633e0")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 19.05 175.26 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "84131925-21e8-4426-853a-b3a7b7efb6c4")
+		(property "Reference" "R17"
+			(at 16.51 173.9899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2k"
+			(at 16.51 176.5299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 17.272 175.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 19.05 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 19.05 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fdfee7b2-69aa-4923-b1dc-e292dfae4ac1")
+		)
+		(pin "2"
+			(uuid "143ae030-bb2b-46ca-a651-b65e4471a893")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 78.74 161.29 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "86fb9289-1f7d-443c-ab05-c348f70214c4")
+		(property "Reference" "R15"
+			(at 81.28 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 81.28 162.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 80.518 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 78.74 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 78.74 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3454a92a-d261-4819-84fd-9a4888598c81")
+		)
+		(pin "2"
+			(uuid "c423fcfb-a495-46f6-8190-a5b27487d2bb")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c54e7fe-757a-432f-8186-eccc6ada6b5f")
+		(property "Reference" "TP34"
+			(at 157.48 152.3999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bc179d80-bee6-4cb1-99e6-4076949ae518")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 63.5 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8da53690-9c6a-4825-a9a9-b7f7a4751efe")
+		(property "Reference" "#PWR0132"
+			(at 63.5 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 63.5 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8272,7 +13370,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 353.06 161.29 0)
+			(at 63.5 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8281,7 +13379,73 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 161.29 0)
+			(at 63.5 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 63.5 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b1ed33da-b51d-46d2-baab-aa0b937fe089")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0132")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 222.25 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "902b2b15-8eac-4467-a565-d5c59cc9e06a")
+		(property "Reference" "#PWR0120"
+			(at 222.25 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 222.25 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 222.25 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8290,7 +13454,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 353.06 161.29 0)
+			(at 222.25 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8304,7 +13468,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR053")
+					(reference "#PWR0120")
 					(unit 1)
 				)
 			)
@@ -8320,7 +13484,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9288f5ed-63ef-4f61-919d-49246cf2c178")
-		(property "Reference" "C25"
+		(property "Reference" "C23"
 			(at 29.21 31.7499 0)
 			(effects
 				(font
@@ -8374,7 +13538,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C25")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -8382,15 +13546,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Small")
-		(at 407.67 170.18 0)
+		(at 276.86 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "9651601d-2b6d-494c-ab78-5d900be04468")
-		(property "Reference" "TP7"
-			(at 408.94 170.1799 0)
+		(property "Reference" "TP31"
+			(at 278.13 147.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8399,7 +13563,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Small"
-			(at 408.94 171.4499 0)
+			(at 278.13 148.5899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8409,7 +13573,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 412.75 170.18 0)
+			(at 281.94 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8418,7 +13582,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 412.75 170.18 0)
+			(at 281.94 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8427,7 +13591,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 407.67 170.18 0)
+			(at 276.86 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8441,7 +13605,99 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "TP7")
+					(reference "TP31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 231.14 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "986f1c1e-3282-4f08-990a-cf8f73f2a86c")
+		(property "Reference" "J8"
+			(at 232.41 101.092 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x05_Odd_Even"
+			(at 232.41 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+			(at 231.14 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 231.14 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "1a15c779-eb7d-4c31-a18b-8d8f4c1d624c")
+		)
+		(pin "5"
+			(uuid "8ea6b859-bef9-4830-874f-7bf72fa62af4")
+		)
+		(pin "7"
+			(uuid "05532aae-732b-482c-a05d-2fce6d02d0ba")
+		)
+		(pin "2"
+			(uuid "fc26df50-0da0-4c95-a490-6fac6df3ad8c")
+		)
+		(pin "10"
+			(uuid "0734bea0-268b-4f2f-a9eb-5b2cda1f533e")
+		)
+		(pin "4"
+			(uuid "ad6cc22d-90b4-4354-868c-03b358710161")
+		)
+		(pin "6"
+			(uuid "cbd813cb-02be-4c9e-876e-b7c649b9f653")
+		)
+		(pin "8"
+			(uuid "f0783b7c-580c-43f8-930b-9059a37311f9")
+		)
+		(pin "1"
+			(uuid "12e1e146-4e7c-46f2-9ca5-1d707247173a")
+		)
+		(pin "9"
+			(uuid "97967edb-60f7-4679-92e0-96ead178f181")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -8449,7 +13705,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 231.14 109.22 0)
+		(at 35.56 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8457,8 +13713,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ee9c74f-2fe2-40e5-a935-327461da9590")
-		(property "Reference" "#PWR0105"
-			(at 231.14 115.57 0)
+		(property "Reference" "#PWR0136"
+			(at 35.56 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8467,7 +13723,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 231.14 114.3 0)
+			(at 35.56 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8475,7 +13731,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 231.14 109.22 0)
+			(at 35.56 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8484,7 +13740,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 231.14 109.22 0)
+			(at 35.56 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8493,7 +13749,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 231.14 109.22 0)
+			(at 35.56 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8507,7 +13763,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0105")
+					(reference "#PWR0136")
 					(unit 1)
 				)
 			)
@@ -8523,7 +13779,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9febc659-39d7-4045-96e5-dfe807490e91")
-		(property "Reference" "#PWR092"
+		(property "Reference" "#PWR098"
 			(at 67.31 50.8 0)
 			(effects
 				(font
@@ -8573,7 +13829,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR092")
+					(reference "#PWR098")
 					(unit 1)
 				)
 			)
@@ -8589,7 +13845,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2313191-a252-4635-b35f-7172f3adaa69")
-		(property "Reference" "#PWR090"
+		(property "Reference" "#PWR0131"
 			(at 134.62 181.61 0)
 			(effects
 				(font
@@ -8639,7 +13895,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR090")
+					(reference "#PWR0131")
 					(unit 1)
 				)
 			)
@@ -8647,7 +13903,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 398.78 179.07 0)
+		(at 267.97 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8655,8 +13911,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a311dbf8-a583-400e-a1b1-4331982f0a96")
-		(property "Reference" "#PWR060"
-			(at 398.78 185.42 0)
+		(property "Reference" "#PWR0129"
+			(at 267.97 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8665,7 +13921,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 398.78 184.15 0)
+			(at 267.97 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8673,7 +13929,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 398.78 179.07 0)
+			(at 267.97 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8682,7 +13938,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 398.78 179.07 0)
+			(at 267.97 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8691,7 +13947,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 398.78 179.07 0)
+			(at 267.97 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8705,7 +13961,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR060")
+					(reference "#PWR0129")
 					(unit 1)
 				)
 			)
@@ -8713,7 +13969,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 353.06 179.07 0)
+		(at 222.25 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8721,8 +13977,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a325e665-e947-489e-bff6-6307ef6feb16")
-		(property "Reference" "#PWR058"
-			(at 353.06 185.42 0)
+		(property "Reference" "#PWR0127"
+			(at 222.25 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8731,7 +13987,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 353.06 184.15 0)
+			(at 222.25 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8739,7 +13995,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 353.06 179.07 0)
+			(at 222.25 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8748,7 +14004,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 179.07 0)
+			(at 222.25 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8757,7 +14013,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 353.06 179.07 0)
+			(at 222.25 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8771,7 +14027,141 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR058")
+					(reference "#PWR0127")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 238.76 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a3ea5759-ff39-481c-9603-df6999c0df03")
+		(property "Reference" "#PWR0104"
+			(at 238.76 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 238.76 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 238.76 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5d6191fd-7181-43d5-adfe-a26e4c9e2008")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7df1d50-b392-4d85-b8fb-d5e3eef04bb4")
+		(property "Reference" "TP20"
+			(at 157.48 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8bbfa604-297d-44de-8c37-9ab6329bd1e3")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP20")
 					(unit 1)
 				)
 			)
@@ -8787,7 +14177,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bbbbe2b0-93ee-465d-aead-3f42a42e7fda")
-		(property "Reference" "C24"
+		(property "Reference" "C32"
 			(at 77.47 81.2799 0)
 			(effects
 				(font
@@ -8841,7 +14231,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C24")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -8857,7 +14247,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bc7bc463-badd-4fbf-ac52-457432bf17ac")
-		(property "Reference" "R9"
+		(property "Reference" "R13"
 			(at 30.48 53.34 90)
 			(effects
 				(font
@@ -8909,7 +14299,73 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "R9")
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 63.5 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd4e029f-2d07-4405-858e-7316531ab66e")
+		(property "Reference" "#PWR0123"
+			(at 63.5 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 63.5 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 63.5 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a4796eb9-ba00-42dc-8c3a-3f9b0ee6b95a")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0123")
 					(unit 1)
 				)
 			)
@@ -8987,7 +14443,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 330.2 179.07 0)
+		(at 199.39 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8995,8 +14451,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bef3c359-0735-45c6-8480-399158c647ef")
-		(property "Reference" "#PWR057"
-			(at 330.2 185.42 0)
+		(property "Reference" "#PWR0126"
+			(at 199.39 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9005,7 +14461,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 330.2 184.15 0)
+			(at 199.39 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9013,7 +14469,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 330.2 179.07 0)
+			(at 199.39 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9022,7 +14478,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 330.2 179.07 0)
+			(at 199.39 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9031,7 +14487,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 330.2 179.07 0)
+			(at 199.39 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9045,7 +14501,75 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR057")
+					(reference "#PWR0126")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c093b9b6-f4bb-487c-867e-39d0d96c129d")
+		(property "Reference" "TP21"
+			(at 157.48 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1107c4c9-f7a2-4f38-8fd1-6b9e0d571924")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP21")
 					(unit 1)
 				)
 			)
@@ -9061,7 +14585,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c17eee34-07ef-49b2-b884-bf8f1c917051")
-		(property "Reference" "C23"
+		(property "Reference" "C31"
 			(at 64.77 81.2799 0)
 			(effects
 				(font
@@ -9115,7 +14639,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "C23")
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -9131,7 +14655,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3faa230-e262-4383-8dfd-824a9e065262")
-		(property "Reference" "#PWR080"
+		(property "Reference" "#PWR0114"
 			(at 73.66 95.25 0)
 			(effects
 				(font
@@ -9181,7 +14705,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR080")
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)
@@ -9197,7 +14721,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4440602-2287-4f84-9ee5-bbe35bf6022b")
-		(property "Reference" "R10"
+		(property "Reference" "R12"
 			(at 95.25 26.6699 0)
 			(effects
 				(font
@@ -9251,7 +14775,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "R10")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -9327,6 +14851,206 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 113.03 152.4 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c84c2d4a-d14f-4d8c-805c-1dcef1889433")
+		(property "Reference" "TP33"
+			(at 111.76 152.4001 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 111.76 151.1301 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 107.95 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 107.95 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 113.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb760ef2-5163-4713-a300-fd1ae2bb7508")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 224.79 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c960e92a-b6f0-465f-8e25-c99f94d73093")
+		(property "Reference" "#PWR0100"
+			(at 224.79 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 224.79 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 224.79 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5299cde1-9a38-4b7c-8a9d-9bc8721cf34b")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 238.76 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca4247fc-2f4c-499a-a75f-9aa67edc26ba")
+		(property "Reference" "#PWR099"
+			(at 238.76 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 238.76 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 238.76 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1df871ca-e43c-4a5f-b142-0a801615458a")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR099")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 353.06 278.13 0)
 		(unit 1)
@@ -9336,7 +15060,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb30f22e-bae5-4df3-bf98-2f47150d7b29")
-		(property "Reference" "#PWR0127"
+		(property "Reference" "#PWR0138"
 			(at 353.06 284.48 0)
 			(effects
 				(font
@@ -9386,7 +15110,575 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0127")
+					(reference "#PWR0138")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 231.14 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d3ec4b20-78f5-42d7-9270-b506161cbd29")
+		(property "Reference" "J7"
+			(at 232.41 57.912 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x05_Odd_Even"
+			(at 232.41 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+			(at 231.14 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 231.14 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "16cd7600-4385-4b42-851f-b2ecf251581b")
+		)
+		(pin "5"
+			(uuid "6f14f072-27fa-4599-996c-dc84cc3bf237")
+		)
+		(pin "7"
+			(uuid "7c2d2e18-dd47-4dc5-ab9f-63040e56442d")
+		)
+		(pin "2"
+			(uuid "3392939c-26d7-4cc1-9681-25715f563fc1")
+		)
+		(pin "10"
+			(uuid "f4a0dab4-f8d4-459d-9268-24f08846a7a1")
+		)
+		(pin "4"
+			(uuid "84e4c86a-844c-4c8e-81f5-a36a39046d1e")
+		)
+		(pin "6"
+			(uuid "9b596c3b-9b65-425d-a3e6-05c84bbd2abe")
+		)
+		(pin "8"
+			(uuid "f6de52db-a43d-44c1-8c49-b97b7a66ac51")
+		)
+		(pin "1"
+			(uuid "acbd3b06-8a3d-474d-8f83-310e4ffdb24a")
+		)
+		(pin "9"
+			(uuid "77e8dd3f-0963-4f5f-a488-ce22f8a9571c")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 71.12 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d875487b-aa6c-4fb4-92ba-ddb57f55c422")
+		(property "Reference" "#PWR0133"
+			(at 71.12 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 71.12 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 71.12 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fd119936-5314-46ea-a899-8fc7387f9e66")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0133")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d91245a9-4d6e-4afb-8ee8-a57602602444")
+		(property "Reference" "TP17"
+			(at 157.48 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a8230576-c67d-4f70-9dae-b1705beacba3")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 78.74 185.42 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d9180801-d0fb-41b1-a873-ddd3ef7794d0")
+		(property "Reference" "R19"
+			(at 81.28 184.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 81.28 186.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 80.518 185.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 78.74 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 78.74 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "73194454-cba9-49b3-9cc8-10735bce5a2a")
+		)
+		(pin "2"
+			(uuid "6c05b22d-781e-4bb5-96bd-86729a9e0753")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "da273439-d1a5-4215-9391-0c2dd43340c5")
+		(property "Reference" "TP19"
+			(at 157.48 91.4399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 92.7099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7e55e1c-8685-4a38-9b6c-864fcbec7101")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "da57f983-2724-47d6-b547-68d9e4167bdf")
+		(property "Reference" "TP23"
+			(at 157.48 126.9999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 128.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "30f24d31-ea29-40b1-84ba-8158376470a5")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db12ecbc-1ea0-4ad2-9ef4-1b1651395f57")
+		(property "Reference" "TP30"
+			(at 157.48 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 148.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "09fe77d6-00c1-4525-8d71-2f77e3b5cea2")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dbafacf6-51cb-4c83-b5a4-849f7e1b765b")
+		(property "Reference" "TP36"
+			(at 157.48 154.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 156.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a801d042-9e73-4050-b025-c213ce8cc7dd")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP36")
 					(unit 1)
 				)
 			)
@@ -9402,7 +15694,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dbdc132e-882e-4c99-b4f7-1cc81c78c250")
-		(property "Reference" "#PWR082"
+		(property "Reference" "#PWR089"
 			(at 25.4 26.67 0)
 			(effects
 				(font
@@ -9452,7 +15744,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR082")
+					(reference "#PWR089")
 					(unit 1)
 				)
 			)
@@ -9460,7 +15752,7 @@
 	)
 	(symbol
 		(lib_id "LED:WS2812B-2020")
-		(at 330.2 170.18 0)
+		(at 199.39 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9468,8 +15760,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dc98db47-e18a-4ab9-b582-29130a42b68c")
-		(property "Reference" "D6"
-			(at 316.23 163.8614 0)
+		(property "Reference" "D10"
+			(at 185.42 141.0014 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9477,7 +15769,7 @@
 			)
 		)
 		(property "Value" "WS2812B-2020"
-			(at 316.23 166.4014 0)
+			(at 185.42 143.5414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9485,7 +15777,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
-			(at 331.47 177.8 0)
+			(at 200.66 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9495,7 +15787,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
-			(at 332.74 179.705 0)
+			(at 201.93 156.845 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9505,7 +15797,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
-			(at 330.2 170.18 0)
+			(at 199.39 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9528,7 +15820,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "D6")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -9544,7 +15836,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0a577ee-cc20-4d72-a6ee-d318364f4f01")
-		(property "Reference" "#PWR085"
+		(property "Reference" "#PWR096"
 			(at 43.18 50.8 0)
 			(effects
 				(font
@@ -9594,7 +15886,275 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR085")
+					(reference "#PWR096")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e39ba06d-8ef2-4881-80e6-033f9d604b40")
+		(property "Reference" "TP22"
+			(at 157.48 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 125.7299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "84d308d0-3b93-4ced-bdd3-1bd6b0534ac1")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 71.12 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9a0a22c-08ef-46fc-af35-b8b613b23ab0")
+		(property "Reference" "#PWR0124"
+			(at 71.12 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 71.12 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 71.12 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5fdc9ff9-0401-4fa5-a8f8-e80af6d37080")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0124")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 19.05 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec63ff71-3a23-4f04-8a43-06b2d8012232")
+		(property "Reference" "#PWR0135"
+			(at 19.05 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 19.05 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 19.05 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 19.05 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 19.05 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bfab68b9-b83a-454d-8018-f6d4afa6265b")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "#PWR0135")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 113.03 157.48 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ed5fdc42-0405-459a-9dd0-12a4df595095")
+		(property "Reference" "TP37"
+			(at 111.76 157.4801 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 111.76 156.2101 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 107.95 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 107.95 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 113.03 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66c239cd-3c19-4331-9239-d1d43ae0e4e1")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP37")
 					(unit 1)
 				)
 			)
@@ -9610,7 +16170,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f43f79ab-1222-451a-89d1-fb5d99e959a8")
-		(property "Reference" "#PWR079"
+		(property "Reference" "#PWR0109"
 			(at 73.66 80.01 0)
 			(effects
 				(font
@@ -9660,7 +16220,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR079")
+					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -9676,7 +16236,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f6a241ca-ef19-4b59-877e-e1bd501c5f40")
-		(property "Reference" "#PWR0103"
+		(property "Reference" "#PWR0118"
 			(at 57.15 139.7 0)
 			(effects
 				(font
@@ -9726,7 +16286,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR0103")
+					(reference "#PWR0118")
 					(unit 1)
 				)
 			)
@@ -9734,7 +16294,7 @@
 	)
 	(symbol
 		(lib_id "LED:WS2812B-2020")
-		(at 375.92 170.18 0)
+		(at 245.11 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9742,8 +16302,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fbf6de52-eb37-40c1-95dd-cff31e493e0d")
-		(property "Reference" "D8"
-			(at 383.54 166.4014 0)
+		(property "Reference" "D12"
+			(at 252.73 143.5414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9751,7 +16311,7 @@
 			)
 		)
 		(property "Value" "WS2812B-2020"
-			(at 389.89 166.4014 0)
+			(at 259.08 143.5414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9760,7 +16320,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_WS2812B-2020_PLCC4_2.0x2.0mm"
-			(at 377.19 177.8 0)
+			(at 246.38 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9770,7 +16330,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf"
-			(at 378.46 179.705 0)
+			(at 247.65 156.845 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9780,7 +16340,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller, 2.0 x 2.0 mm, 12 mA"
-			(at 375.92 170.18 0)
+			(at 245.11 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9803,7 +16363,75 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "D8")
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 156.21 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fcaf4461-5e2f-492d-a70a-75ce6d8d1b00")
+		(property "Reference" "TP29"
+			(at 157.48 142.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 157.48 143.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 161.29 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 156.21 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00364ed8-cde9-4a17-aa03-225762cbf1ca")
+		)
+		(instances
+			(project "Automatischer-Kabelschneider"
+				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
+					(reference "TP29")
 					(unit 1)
 				)
 			)
@@ -9819,7 +16447,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd005012-25f1-4735-b65b-27f9a2d687ca")
-		(property "Reference" "#PWR086"
+		(property "Reference" "#PWR093"
 			(at 137.16 26.67 0)
 			(effects
 				(font
@@ -9869,7 +16497,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "#PWR086")
+					(reference "#PWR093")
 					(unit 1)
 				)
 			)
@@ -9885,7 +16513,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fec2e7d6-aef4-48ed-aebe-5f06e6f8961c")
-		(property "Reference" "J4"
+		(property "Reference" "J9"
 			(at 49.53 118.11 0)
 			(effects
 				(font
@@ -9962,7 +16590,7 @@
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a/b7d74188-216a-42cc-9b81-f0b98f12fae4"
-					(reference "J4")
+					(reference "J9")
 					(unit 1)
 				)
 			)

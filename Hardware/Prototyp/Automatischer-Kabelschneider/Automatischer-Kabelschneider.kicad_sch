@@ -34,6 +34,36 @@
 	)
 	(wire
 		(pts
+			(xy 153.67 125.73) (xy 153.67 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31be73d9-3bdc-45ae-8e2f-a5ccc4e3d623")
+	)
+	(wire
+		(pts
+			(xy 153.67 97.79) (xy 140.97 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "334ad5f5-f142-4724-9ec3-dff45cc82cf1")
+	)
+	(wire
+		(pts
+			(xy 125.73 121.92) (xy 151.13 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53f126ea-4f76-46d7-8224-b723faebde2f")
+	)
+	(wire
+		(pts
 			(xy 158.75 62.23) (xy 149.86 62.23)
 		)
 		(stroke
@@ -41,6 +71,16 @@
 			(type default)
 		)
 		(uuid "65c2fbb7-f7b9-4257-80e9-f6283a4b8d2c")
+	)
+	(wire
+		(pts
+			(xy 151.13 101.6) (xy 140.97 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "663f160b-afc1-4e96-9a71-8b3c00776c8d")
 	)
 	(wire
 		(pts
@@ -64,6 +104,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 121.92) (xy 151.13 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bec5c596-cfe9-4a67-afd6-2dc0bcd13373")
+	)
+	(wire
+		(pts
 			(xy 153.67 86.36) (xy 153.67 64.77)
 		)
 		(stroke
@@ -72,9 +122,19 @@
 		)
 		(uuid "bfb0b663-189f-44b6-a2f9-005b1242e486")
 	)
+	(wire
+		(pts
+			(xy 125.73 125.73) (xy 153.67 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc51d0a3-b0b9-40ee-ae14-9ff599eea85b")
+	)
 	(sheet
 		(at 97.79 81.28)
-		(size 43.18 15.24)
+		(size 43.18 22.86)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -94,7 +154,7 @@
 			)
 		)
 		(property "Sheetfile" "main_microcontroller_AKS.kicad_sch"
-			(at 97.79 97.1046 0)
+			(at 97.79 104.7246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -122,6 +182,26 @@
 			)
 			(uuid "3c56f490-1408-48ba-8177-233b5abdefc2")
 		)
+		(pin "5V_ESP_Rx" input
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "580718af-8797-47da-8dfc-a88e8f3eb23c")
+		)
+		(pin "5V_ESP_Tx" output
+			(at 140.97 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1c8f8b79-6feb-4cc6-8e28-817b2ae2d9ae")
+		)
 		(instances
 			(project "Automatischer-Kabelschneider"
 				(path "/ff414881-00bc-48a3-bd83-dba8c1da722a"
@@ -131,7 +211,7 @@
 		)
 	)
 	(sheet
-		(at 97.79 109.22)
+		(at 97.79 119.38)
 		(size 27.94 12.7)
 		(fields_autoplaced yes)
 		(stroke
@@ -143,7 +223,7 @@
 		)
 		(uuid "b7d74188-216a-42cc-9b81-f0b98f12fae4")
 		(property "Sheetname" "Slave Microcontroller"
-			(at 97.79 108.5084 0)
+			(at 97.79 118.6684 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -152,13 +232,33 @@
 			)
 		)
 		(property "Sheetfile" "slave_microcontroller_AKS.kicad_sch"
-			(at 97.79 122.5046 0)
+			(at 97.79 132.6646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
+		)
+		(pin "ATMEGA_Tx" output
+			(at 125.73 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a4f2cace-5338-433d-aa9b-a65dfef09480")
+		)
+		(pin "ATMEGA_Rx" input
+			(at 125.73 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c90db50c-8f00-4648-89f0-69a27055862d")
 		)
 		(instances
 			(project "Automatischer-Kabelschneider"
