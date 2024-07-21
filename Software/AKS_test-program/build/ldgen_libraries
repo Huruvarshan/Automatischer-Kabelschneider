@@ -1,4 +1,4 @@
-C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/xtensa/libxtensa.a
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/riscv/libriscv.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/efuse/libefuse.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/esp_mm/libesp_mm.a
@@ -55,12 +55,10 @@ C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_tes
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/wear_levelling/libwear_levelling.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/sdmmc/libsdmmc.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/fatfs/libfatfs.a
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/ieee802154/libieee802154.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/json/libjson.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/mqtt/libmqtt.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
-C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/perfmon/libperfmon.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/spiffs/libspiffs.a
-C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/touch_element/libtouch_element.a
-C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/usb/libusb.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_test-program/build/esp-idf/main/libmain.a
