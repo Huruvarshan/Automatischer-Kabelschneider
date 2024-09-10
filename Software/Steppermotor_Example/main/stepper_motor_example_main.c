@@ -13,11 +13,11 @@
 
 ///////////////////////////////Change the following configurations according to your board//////////////////////////////
 #define STEP_MOTOR_GPIO_EN       1
-#define STEP_MOTOR_GPIO_DIR      4
-#define STEP_MOTOR_GPIO_STEP     5
+#define STEP_MOTOR_GPIO_DIR      5
+#define STEP_MOTOR_GPIO_STEP     4
 #define STEP_MOTOR_ENABLE_LEVEL  0 // DRV8825 is enabled on low level
 #define STEP_MOTOR_SPIN_DIR_CLOCKWISE 1
-#define STEP_MOTOR_SPIN_DIR_COUNTERCLOCKWISE !STEP_MOTOR_SPIN_DIR_CLOCKWISE
+#define STEP_MOTOR_SPIN_DIR_COUNTERCLOCKWISE STEP_MOTOR_SPIN_DIR_CLOCKWISE 
 
 #define STEP_MOTOR_RESOLUTION_HZ 1000000 // 1MHz resolution
 

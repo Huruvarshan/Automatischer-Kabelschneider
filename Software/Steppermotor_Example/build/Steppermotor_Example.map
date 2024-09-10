@@ -20567,7 +20567,7 @@ LOAD C:/esp/tools/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/..
                 0x420084d4                esp_vfs_uart_get_vfs
  .text.app_main
                 0x420084dc      0x288 esp-idf/main/libmain.a(stepper_motor_example_main.c.obj)
-                                0x2b8 (size before relaxing)
+                                0x2b4 (size before relaxing)
                 0x420084dc                app_main
  .text.convert_to_smooth_freq
                 0x42008764       0x44 esp-idf/main/libmain.a(stepper_motor_encoder.c.obj)
