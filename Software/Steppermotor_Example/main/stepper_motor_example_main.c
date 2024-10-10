@@ -54,7 +54,7 @@ void app_main(void)
         .resolution = STEP_MOTOR_RESOLUTION_HZ,
         .sample_points = 500,
         .start_freq_hz = 500,
-        .end_freq_hz = 5000,
+        .end_freq_hz = 2500,
     };
     rmt_encoder_handle_t accel_motor_encoder = NULL;
     ESP_ERROR_CHECK(rmt_new_stepper_motor_curve_encoder(&accel_encoder_config, &accel_motor_encoder));
@@ -68,7 +68,7 @@ void app_main(void)
     stepper_motor_curve_encoder_config_t decel_encoder_config = {
         .resolution = STEP_MOTOR_RESOLUTION_HZ,
         .sample_points = 500,
-        .start_freq_hz = 5000,
+        .start_freq_hz = 2500,
         .end_freq_hz = 500,
     };
     rmt_encoder_handle_t decel_motor_encoder = NULL;
@@ -83,7 +83,7 @@ void app_main(void)
     };
 
     const static uint32_t accel_samples = 500;
-    const static uint32_t uniform_speed_hz = 5000;
+    const static uint32_t uniform_speed_hz = 2500;
     const static uint32_t decel_samples = 500;
 
     while (1) {
@@ -92,7 +92,7 @@ void app_main(void)
         ESP_ERROR_CHECK(rmt_transmit(motor_chan, accel_motor_encoder, &accel_samples, sizeof(accel_samples), &tx_config));
 
         // uniform phase
-        tx_config.loop_count = 5000;
+        tx_config.loop_count = 1500;
         ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
 
         // deceleration phase
