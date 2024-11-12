@@ -12,16 +12,30 @@
 #include "stepper_motor_encoder.h"
 #include "led_strip.h" 
 #include "esp_random.h"
+#include "math.h"
 
-///////////////////////////////Change the following configurations according to your board//////////////////////////////
-#define STEP_MOTOR_GPIO_EN       1
-#define STEP_MOTOR_GPIO_DIR      5
-#define STEP_MOTOR_GPIO_STEP     4
-#define STEP_MOTOR_ENABLE_LEVEL  0 
-#define STEP_MOTOR_SPIN_DIR_CLOCKWISE 1
-#define STEP_MOTOR_SPIN_DIR_COUNTERCLOCKWISE STEP_MOTOR_SPIN_DIR_CLOCKWISE 
 
-#define STEP_MOTOR_RESOLUTION_HZ 1000000 // 1MHz resolution
+#define STEP_MOTOR_GPIO_EN                          1 //Enable pin of the motor driver
+#define STEP_MOTOR_GPIO_DIR                         5 //Direction pin of the motor driver
+#define STEP_MOTOR_GPIO_STEP                        4 //Step pin of the motor driver
+#define STEP_MOTOR_ENABLE_LEVEL                     0 //Enable level of the motor driver; 0 for !ENABLE, 1 for ENABLE
+#define STEP_MOTOR_SPIN_DIR_CLOCKWISE               1 //Spin direction of the motor driver; 1 for clockwise, 0 for counterclockwise
+#define STEP_MOTOR_SPIN_DIR_COUNTERCLOCKWISE        STEP_MOTOR_SPIN_DIR_CLOCKWISE //Spin direction of the motor driver
+
+#define STEP_MOTOR_RESOLUTION_HZ                    1000000 // Resolution of the motor driver in Hz
+#define STEP_MOTOR_ACCEL_DECEL_FREQ                 3000 // Frequency of the motor driver in Hz
+#define STEP_MOTOR_ACCEL_DECEL_SAMPLES              50 // Number of samples for acceleration and deceleration
+#define STEP_MOTOR_FULL_ROTATION_STEPS              3200 // Number of steps for a full rotation, excluding acceleration and deceleration
+#define STEP_MOTOR_FULL_ROTATION_AFTER_ACCEL_DECEL  3100 // STEP_MOTOR_FULL_ROTATION_STEPS - 2 * STEP_MOTOR_ACCEL_DECEL_SAMPLES = 3200 - 100
+
+#define FEEDER_DIAMETER_mm                          50 // Diameter of the feeder in mm
+#define FEEDER_CIRCUMFERENCE_mm                     157 // FEEDER_DIAMETER_mm * π ≈ 50 * 3.14159 = 157.08, rounded to integer
+#define STEPS_PER_mm                                20 // STEP_MOTOR_FULL_ROTATION_STEPS / FEEDER_CIRCUMFERENCE_mm ≈ 3200 / 157.08 = 20.37, rounded to integer
+#define STEPS_PER_um                                20372 //Steps per micrometer
+#define MIN_LENGTH_mm                               5 // (STEP_MOTOR_ACCEL_DECEL_SAMPLES * 2) / STEPS_PER_mm ≈ (50 * 2) / 20 = 5
+
+
+
 
 void stepperMotorTask(void *pvParameters);
 void ledStripTask(void *pvParameters);
@@ -63,7 +77,7 @@ void stepperMotorTask(void *pvParameters){
         .resolution = STEP_MOTOR_RESOLUTION_HZ,
         .sample_points = 500,
         .start_freq_hz = 500,
-        .end_freq_hz = 5000,
+        .end_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
     };
     rmt_encoder_handle_t accel_motor_encoder = NULL;
     ESP_ERROR_CHECK(rmt_new_stepper_motor_curve_encoder(&accel_encoder_config, &accel_motor_encoder));
@@ -77,7 +91,7 @@ void stepperMotorTask(void *pvParameters){
     stepper_motor_curve_encoder_config_t decel_encoder_config = {
         .resolution = STEP_MOTOR_RESOLUTION_HZ,
         .sample_points = 500,
-        .start_freq_hz = 5000,
+        .start_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
         .end_freq_hz = 500,
     };
     rmt_encoder_handle_t decel_motor_encoder = NULL;
@@ -91,12 +105,15 @@ void stepperMotorTask(void *pvParameters){
         .loop_count = 0,
     };
 
-    const static uint32_t accel_samples = 500;
-    const static uint32_t uniform_speed_hz = 5000;
-    const static uint32_t decel_samples = 500;
+    const static uint32_t accel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES;
+    const static uint32_t uniform_speed_hz = STEP_MOTOR_ACCEL_DECEL_FREQ;
+    const static uint32_t decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES;
 
-    uint16_t counter = 0; 
-
+    uint16_t length = 150; // Length of the feeding in mm
+    
+    ESP_LOGI(TAG, "Steps per millimeter: %d", STEPS_PER_mm); 
+    ESP_LOGI(TAG, "Steps per micrometer: %d", STEPS_PER_um); 
+    
     while (1) {
         // acceleration phase
         tx_config.loop_count = 0;
@@ -104,7 +121,7 @@ void stepperMotorTask(void *pvParameters){
 
         // uniform phase
         //tx_config.loop_count = counter;
-        tx_config.loop_count = random()%10000;
+        tx_config.loop_count = (length * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
         ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
 
         // deceleration phase
@@ -112,15 +129,8 @@ void stepperMotorTask(void *pvParameters){
         ESP_ERROR_CHECK(rmt_transmit(motor_chan, decel_motor_encoder, &decel_samples, sizeof(decel_samples), &tx_config));
         // wait all transactions finished
         ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
-
-        /*if (counter >= 25000)
-        {
-            counter = 0;
-        } else {
-            counter = counter + 100; 
-        }*/
         
-        vTaskDelay(pdMS_TO_TICKS(500));        
+        vTaskDelay(pdMS_TO_TICKS(2000));        
     }
 }
 
