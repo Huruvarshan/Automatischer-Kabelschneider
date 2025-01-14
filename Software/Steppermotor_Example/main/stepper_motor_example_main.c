@@ -13,6 +13,11 @@
 #include "led_strip.h" 
 #include "esp_random.h"
 #include "math.h"
+#include "esp_wifi.h"
+#include "nvs_flash.h"
+#include "esp_now.h"
+#include "esp_mac.h"
+#include "string.h"
 
 
 #define STEP_MOTOR_GPIO_EN                          1 //Enable pin of the motor driver
@@ -39,11 +44,24 @@
 
 void stepperMotorTask(void *pvParameters);
 void ledStripTask(void *pvParameters);
+void EspNowTask(void *pvParameters); 
+char *mac_to_str(char *buffer, uint8_t *mac); 
+void on_sent(const uint8_t *mac_addr, esp_now_send_status_t status); 
+void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int data_len); 
 
 void app_main(void)
 {
+    uint8_t my_mac[6];
+    char my_mac_str[13];
+
+
+    esp_efuse_mac_get_default(my_mac);
+    ESP_LOGI("MAC_ADDRESS", "My mac: %s", mac_to_str(my_mac_str, my_mac));
+
+
     xTaskCreate(stepperMotorTask, "stepperMotorTask", 8192, NULL, 4, NULL);
     xTaskCreate(ledStripTask, "ledStripTask", 8192, NULL, 5, NULL);    
+    //xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 4, NULL);
 }
 
 void stepperMotorTask(void *pvParameters){
@@ -168,4 +186,78 @@ void ledStripTask(void *pvParameters){
 
         vTaskDelay(pdMS_TO_TICKS(250));
     } 
+}
+
+void EspNowTask(void *pvParameters){
+
+    uint8_t macDisplay[6] = {0xe4, 0x65, 0xb8, 0x7e, 0x27, 0x98}; 
+    uint8_t my_mac[6];
+    char send_buffer[250];
+    char my_mac_str[13];
+    //char send_buffer[250];
+
+
+    esp_efuse_mac_get_default(my_mac);
+    ESP_LOGI("MAC_ADDRESS", "My mac %s", mac_to_str(my_mac_str, my_mac));
+
+    nvs_flash_init();
+
+    ESP_ERROR_CHECK(esp_netif_init());
+
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+    ESP_ERROR_CHECK(esp_wifi_set_storage(WIFI_STORAGE_RAM));
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    ESP_ERROR_CHECK(esp_wifi_start());
+
+    ESP_ERROR_CHECK(esp_now_init());
+    ESP_ERROR_CHECK(esp_now_register_send_cb(on_sent));
+    ESP_ERROR_CHECK(esp_now_register_recv_cb(on_receive));
+
+    esp_now_peer_info_t peer;
+    memset(&peer, 0, sizeof(esp_now_peer_info_t));
+    memcpy(peer.peer_addr, macDisplay, 6);
+    peer.channel = 0;  
+    peer.ifidx = ESP_IF_WIFI_STA;
+    peer.encrypt = false;
+    ESP_ERROR_CHECK(esp_now_add_peer(&peer));
+
+
+    while (1)
+    {
+        sprintf(send_buffer, "Hello from %s ", my_mac_str);
+        ESP_ERROR_CHECK(esp_now_send(NULL, (uint8_t *)send_buffer, strlen(send_buffer)));
+        vTaskDelay(pdMS_TO_TICKS(1000));
+
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
+}
+
+char *mac_to_str(char *buffer, uint8_t *mac)
+{
+    // sprintf(buffer, "%02x%02x%02x%02x%02x%02x", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+    // below is another way to do this
+    sprintf(buffer, MACSTR, MAC2STR(mac));
+    return buffer;
+}
+
+void on_sent(const uint8_t *mac_addr, esp_now_send_status_t status)
+{
+  char buffer[13];
+  switch (status)
+  {
+  case ESP_NOW_SEND_SUCCESS:
+    ESP_LOGI("MAC_ADDRESS", "message sent to %s", mac_to_str(buffer, (uint8_t *)mac_addr));
+    break;
+  case ESP_NOW_SEND_FAIL:
+    ESP_LOGE("MAC_ADDRESS", "message sent to %s failed", mac_to_str(buffer, (uint8_t *)mac_addr));
+    break;
+  }
+}
+
+void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int data_len)
+{
+  ESP_LOGI("MAC_ADDRESS", "got message from " MACSTR, MAC2STR(esp_now_info->src_addr));
+  printf("message: %.*s\n", data_len, data);
 }
