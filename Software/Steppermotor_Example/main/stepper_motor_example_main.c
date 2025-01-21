@@ -61,7 +61,7 @@ void app_main(void)
 
     xTaskCreate(stepperMotorTask, "stepperMotorTask", 8192, NULL, 4, NULL);
     xTaskCreate(ledStripTask, "ledStripTask", 8192, NULL, 5, NULL);    
-    //xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 4, NULL);
+    xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 4, NULL);
 }
 
 void stepperMotorTask(void *pvParameters){
@@ -226,7 +226,7 @@ void EspNowTask(void *pvParameters){
 
     while (1)
     {
-        sprintf(send_buffer, "Hello from %s ", my_mac_str);
+        sprintf(send_buffer, "Hello from %s. Es stinkt!", my_mac_str);
         ESP_ERROR_CHECK(esp_now_send(NULL, (uint8_t *)send_buffer, strlen(send_buffer)));
         vTaskDelay(pdMS_TO_TICKS(1000));
 
