@@ -41,6 +41,14 @@
 
 
 
+SemaphoreHandle_t feederMutex; 
+
+struct feeder_t {
+    uint16_t setAmount;       // Amount to set
+    uint16_t setLength;       // Length to set
+    uint16_t processedAmount; // Remaining amount
+    bool running;             // Running state
+} feeder;
 
 void stepperMotorTask(void *pvParameters);
 void ledStripTask(void *pvParameters);
@@ -54,6 +62,7 @@ void app_main(void)
     uint8_t my_mac[6];
     char my_mac_str[13];
 
+    feederMutex = xSemaphoreCreateMutex(); 
 
     esp_efuse_mac_get_default(my_mac);
     ESP_LOGI("MAC_ADDRESS", "My mac: %s", mac_to_str(my_mac_str, my_mac));
@@ -65,7 +74,7 @@ void app_main(void)
 }
 
 void stepperMotorTask(void *pvParameters){
-    static const char *TAG = "example";
+    static const char *TAG = "Stepper Motor Example";
     ESP_LOGI(TAG, "Initialize EN + DIR GPIO");
     gpio_config_t en_dir_gpio_config = {
         .mode = GPIO_MODE_OUTPUT,
@@ -127,28 +136,40 @@ void stepperMotorTask(void *pvParameters){
     const static uint32_t uniform_speed_hz = STEP_MOTOR_ACCEL_DECEL_FREQ;
     const static uint32_t decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES;
 
-    uint16_t length = 150; // Length of the feeding in mm
+    uint16_t length = 0; // Length of the feeding in mm
     
     ESP_LOGI(TAG, "Steps per millimeter: %d", STEPS_PER_mm); 
     ESP_LOGI(TAG, "Steps per micrometer: %d", STEPS_PER_um); 
     
     while (1) {
-        // acceleration phase
-        tx_config.loop_count = 0;
-        ESP_ERROR_CHECK(rmt_transmit(motor_chan, accel_motor_encoder, &accel_samples, sizeof(accel_samples), &tx_config));
-
-        // uniform phase
-        //tx_config.loop_count = counter;
-        tx_config.loop_count = (length * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
-        ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
-
-        // deceleration phase
-        tx_config.loop_count = 0;
-        ESP_ERROR_CHECK(rmt_transmit(motor_chan, decel_motor_encoder, &decel_samples, sizeof(decel_samples), &tx_config));
-        // wait all transactions finished
-        ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
         
-        vTaskDelay(pdMS_TO_TICKS(2000));        
+        xSemaphoreTake(feederMutex, portMAX_DELAY);
+        length = feeder.setLength; 
+        feeder.running = true;
+
+        for (uint16_t i = 0; i < feeder.setAmount; i++)
+        {
+            // acceleration phase
+            tx_config.loop_count = 0;
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, accel_motor_encoder, &accel_samples, sizeof(accel_samples), &tx_config));
+
+            // uniform phase
+            //tx_config.loop_count = counter;
+            tx_config.loop_count = (length * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
+
+            // deceleration phase
+            tx_config.loop_count = 0;
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, decel_motor_encoder, &decel_samples, sizeof(decel_samples), &tx_config));
+            // wait all transactions finished
+            ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
+
+            feeder.processedAmount++;
+            vTaskDelay(pdMS_TO_TICKS(2000));     
+        }
+        
+        feeder.running = false;   
+        xSemaphoreGive(feederMutex);
     }
 }
 
@@ -233,6 +254,7 @@ void EspNowTask(void *pvParameters){
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
+
 
 char *mac_to_str(char *buffer, uint8_t *mac)
 {

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "Steppermotor_Example",
-    "project_version":    "f713b6c-dirty",
+    "project_version":    "7401166-dirty",
     "project_path":       "C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/Steppermotor_Example",
     "idf_path":           "C:/Users/e1Suresh/Documents/v5.2.2/esp-idf",
     "build_dir":          "C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/Steppermotor_Example/build",
