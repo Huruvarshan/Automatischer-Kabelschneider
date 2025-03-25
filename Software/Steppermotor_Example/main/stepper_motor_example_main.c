@@ -62,6 +62,11 @@ void app_main(void)
     uint8_t my_mac[6];
     char my_mac_str[13];
 
+    //DELETE THIS!!!!----------------------------------------------------------------
+    feeder.setAmount = 25;
+    feeder.setLength = 150;
+    //DELETE THIS!!!!----------------------------------------------------------------
+
     feederMutex = xSemaphoreCreateMutex(); 
 
     esp_efuse_mac_get_default(my_mac);
@@ -143,7 +148,7 @@ void stepperMotorTask(void *pvParameters){
     
     while (1) {
         
-        xSemaphoreTake(feederMutex, portMAX_DELAY);
+        /*xSemaphoreTake(feederMutex, portMAX_DELAY);
         length = feeder.setLength; 
         feeder.running = true;
 
@@ -169,7 +174,38 @@ void stepperMotorTask(void *pvParameters){
         }
         
         feeder.running = false;   
-        xSemaphoreGive(feederMutex);
+        xSemaphoreGive(feederMutex);*/
+
+
+
+        xSemaphoreTake(feederMutex, portMAX_DELAY); //Take MUTEX to prevent other tasks from accessing the feeder struct
+
+        if (feeder.processedAmount <= feeder.setAmount) //Check if the amount of processed feedings is smaller than the set amount
+        {
+            feeder.running = true; //Set the running flag to true
+
+            // acceleration phase
+            tx_config.loop_count = 0; 
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, accel_motor_encoder, &accel_samples, sizeof(accel_samples), &tx_config));
+
+            // uniform phase
+            //tx_config.loop_count = counter;
+            tx_config.loop_count = (feeder.setLength * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
+
+            // deceleration phase
+            tx_config.loop_count = 0;
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, decel_motor_encoder, &decel_samples, sizeof(decel_samples), &tx_config));
+            // wait all transactions finished
+            ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
+            feeder.processedAmount++; //Increment the processed amount
+
+        } else {
+            feeder.running = false; //Set the running flag to false
+        }
+
+        xSemaphoreGive(feederMutex); //Give MUTEX to allow other tasks to access the feeder struct
+        vTaskDelay(pdMS_TO_TICKS(2000)); //Delay the task for 2 seconds  
     }
 }
 
@@ -199,13 +235,24 @@ void ledStripTask(void *pvParameters){
 
     while (1)
     {
-        led_strip_set_pixel(led_strip, 0, (esp_random()%50), (esp_random()%50), (esp_random()%50)); 
-        /*led_strip_set_pixel(led_strip, 1, 10, 10, 10); 
-        led_strip_set_pixel(led_strip, 2, 10, 10, 10); 
-        led_strip_set_pixel(led_strip, 3, 10, 10, 10); */
-        led_strip_refresh(led_strip);
+        xSemaphoreTake(feederMutex, portMAX_DELAY);
 
-        vTaskDelay(pdMS_TO_TICKS(250));
+        //NOTE TO SELF: Implement the running feeder LED with a task modification!!
+        
+        if (feeder.running) //If the feeder is running
+        {
+            led_strip_set_pixel(led_strip, 1, 50, 50, 0); //Set the second pixel to yellow
+        }
+        else
+        {
+            led_strip_set_pixel(led_strip, 1, 50, 0, 0); //Set the second pixel to red
+        }
+        
+        led_strip_set_pixel(led_strip, 0, (esp_random()%50), (esp_random()%50), (esp_random()%50)); //Set the first pixel to a random color
+        led_strip_refresh(led_strip);
+        
+        xSemaphoreGive(feederMutex);
+        vTaskDelay(pdMS_TO_TICKS(200));
     } 
 }
 
@@ -249,7 +296,6 @@ void EspNowTask(void *pvParameters){
     {
         sprintf(send_buffer, "Hello from %s. Es stinkt!", my_mac_str);
         ESP_ERROR_CHECK(esp_now_send(NULL, (uint8_t *)send_buffer, strlen(send_buffer)));
-        vTaskDelay(pdMS_TO_TICKS(1000));
 
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
