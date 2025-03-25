@@ -5,5 +5,13 @@
     "idf.openOcdConfigs": [
         "board/esp32s3-builtin.cfg"
     ],
-    "idf.toolsPathWin": "c:\\esp\\tools"
+    "idf.toolsPathWin": "c:\\esp\\tools",
+    "idf.portWin": "COM6",
+    "idf.flashType": "JTAG",
+    "idf.customExtraVars": {
+        "OPENOCD_SCRIPTS": "c:\\esp\\tools\\tools\\openocd-esp32\\v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",
+        "IDF_CCACHE_ENABLE": "1",
+        "ESP_ROM_ELF_DIR": "c:\\esp\\tools\\tools\\esp-rom-elfs\\20230320/",
+        "IDF_TARGET": "esp32s3"
+    }
 }

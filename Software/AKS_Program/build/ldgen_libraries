@@ -60,5 +60,7 @@ C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Pro
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/perfmon/libperfmon.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/spiffs/libspiffs.a
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/touch_element/libtouch_element.a
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/usb/libusb.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/main/libmain.a

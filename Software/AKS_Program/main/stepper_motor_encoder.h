@@ -12,6 +12,26 @@
 extern "C" {
 #endif
 
+// Stepper motor configuration
+#define STEP_MOTOR_GPIO_EN                          1 //Enable pin of the motor driver
+#define STEP_MOTOR_GPIO_DIR                         5 //Direction pin of the motor driver
+#define STEP_MOTOR_GPIO_STEP                        4 //Step pin of the motor driver
+#define STEP_MOTOR_ENABLE_LEVEL                     0 //Enable level of the motor driver; 0 for !ENABLE, 1 for ENABLE
+#define STEP_MOTOR_SPIN_DIR_CLOCKWISE               1 //Spin direction of the motor driver; 1 for clockwise, 0 for counterclockwise
+#define STEP_MOTOR_SPIN_DIR_COUNTERCLOCKWISE        STEP_MOTOR_SPIN_DIR_CLOCKWISE //Spin direction of the motor driver
+
+#define STEP_MOTOR_RESOLUTION_HZ                    1000000 // Resolution of the motor driver in Hz
+#define STEP_MOTOR_ACCEL_DECEL_FREQ                 3000 // Frequency of the motor driver in Hz
+#define STEP_MOTOR_ACCEL_DECEL_SAMPLES              50 // Number of samples for acceleration and deceleration
+#define STEP_MOTOR_FULL_ROTATION_STEPS              3200 // Number of steps for a full rotation, excluding acceleration and deceleration
+#define STEP_MOTOR_FULL_ROTATION_AFTER_ACCEL_DECEL  3100 // STEP_MOTOR_FULL_ROTATION_STEPS - 2 * STEP_MOTOR_ACCEL_DECEL_SAMPLES = 3200 - 100
+
+#define FEEDER_DIAMETER_mm                          50 // Diameter of the feeder in mm
+#define FEEDER_CIRCUMFERENCE_mm                     157 // FEEDER_DIAMETER_mm * π ≈ 50 * 3.14159 = 157.08, rounded to integer
+#define STEPS_PER_mm                                20 // STEP_MOTOR_FULL_ROTATION_STEPS / FEEDER_CIRCUMFERENCE_mm ≈ 3200 / 157.08 = 20.37, rounded to integer
+#define STEPS_PER_um                                20372 //Steps per micrometer
+#define MIN_LENGTH_mm                               5 // (STEP_MOTOR_ACCEL_DECEL_SAMPLES * 2) / STEPS_PER_mm ≈ (50 * 2) / 20 = 5
+
 /**
  * @brief Stepper motor curve encoder configuration
  */
