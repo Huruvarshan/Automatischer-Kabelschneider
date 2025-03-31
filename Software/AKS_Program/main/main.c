@@ -18,24 +18,32 @@
 
 char *mac_to_str(char *buffer, uint8_t *mac);
 
+SemaphoreHandle_t feederStructMutex; 
+
 struct feeder_t {
-    uint16_t setAmount;        // Received from external source
-    uint16_t setLength;        // Received from external source
-    uint16_t processedAmount;  // Sent to external device
-    bool flagStartStop;        // Received from external source
-    bool flagAbort;            // Received from external source
-    bool flagError;            // Sent to external device
-    bool flagUpdate;           // Internal: indicates new data is available
+    uint16_t setAmount; // Gets from display unit (R) 
+    uint16_t setLength; // Gets from display unit (R)
+    uint16_t processedAmount; // Sends to display unit (W)
+    bool flagStartStop; // Gets from display unit (R/W)
+    bool flagAbort; // Gets from display unit (R/W)
+    bool flagError; // Sends to display unit (W)
+    bool flagUpdateIngoing; // Gets from display unit (R) 
+    bool flagUpdateOutgoing; // Sends to display unit (W)
 } feeder;
 
+MIT BINARY SEMAPHORE IMPLEMENTIEREN
 
 void app_main(void)
 {
     uint8_t my_mac[6];
     char my_mac_str[13];
 
+    feederStructMutex = xSemaphoreCreateMutex(); 
+
     esp_efuse_mac_get_default(my_mac);
     ESP_LOGI("MAC_ADDRESS", "My mac: %s", mac_to_str(my_mac_str, my_mac));
+
+    // Insert here the task creations
 }
 
 
