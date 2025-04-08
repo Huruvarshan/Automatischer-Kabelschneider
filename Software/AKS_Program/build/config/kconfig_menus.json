@@ -28017,6 +28017,87 @@
                 "id": "component-config-wi-fi-provisioning-manager",
                 "title": "Wi-Fi Provisioning Manager",
                 "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "GPIO connected to the step pin. To disable, set to -1.",
+                                "id": "MOTOR_STEP_IO",
+                                "name": "MOTOR_STEP_IO",
+                                "range": [
+                                    -1,
+                                    55
+                                ],
+                                "title": "Driver step pin",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "GPIO connected to the direction pin. To disable, set to -1.",
+                                "id": "MOTOR_DIR_IO",
+                                "name": "MOTOR_DIR_IO",
+                                "range": [
+                                    -1,
+                                    55
+                                ],
+                                "title": "Driver direction pin",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "GPIO connected to the direction pin. To disable, set to -1.",
+                                "id": "MOTOR_EN_IO",
+                                "name": "MOTOR_EN_IO",
+                                "range": [
+                                    -1,
+                                    55
+                                ],
+                                "title": "Driver enable pin",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "GPIO connected to the micro step 1 pin. To disable, set to -1.",
+                                "id": "MOTOR_MS1_IO",
+                                "name": "MOTOR_MS1_IO",
+                                "range": [
+                                    -1,
+                                    55
+                                ],
+                                "title": "Driver micro step 1 pin",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "GPIO connected to the micro step 2 pin. To disable, set to -1.",
+                                "id": "MOTOR_MS2_IO",
+                                "name": "MOTOR_MS2_IO",
+                                "range": [
+                                    -1,
+                                    55
+                                ],
+                                "title": "Driver micro step 2 pin",
+                                "type": "int"
+                            }
+                        ],
+                        "depends_on": null,
+                        "id": "component-config-stepper-motor-driver-tmc2208-gpio-configuration",
+                        "title": "GPIO Configuration",
+                        "type": "menu"
+                    }
+                ],
+                "depends_on": null,
+                "id": "component-config-stepper-motor-driver-tmc2208",
+                "title": "Stepper Motor Driver TMC2208",
+                "type": "menu"
             }
         ],
         "depends_on": null,

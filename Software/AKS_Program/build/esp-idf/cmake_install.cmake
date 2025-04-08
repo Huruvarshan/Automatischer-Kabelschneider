@@ -419,6 +419,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/pedrominatel__tmc2208/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/main/cmake_install.cmake")
 endif()
 

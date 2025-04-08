@@ -1,0 +1,14 @@
+dependencies:
+  idf:
+    component_hash: null
+    source:
+      type: idf
+    version: 5.2.2
+  pedrominatel/tmc2208:
+    component_hash: e458b0fbb3ceeeb7ec07424148184de6f14fd485f3253e9d47816ed06599b8ee
+    source:
+      type: service
+    version: 0.0.1
+manifest_hash: ea3c4101d0f1736ae1bd9b35d2e53edd90a1e0128ae0321771b87829e0fd6b63
+target: esp32s3
+version: 1.0.0

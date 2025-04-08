@@ -1882,6 +1882,21 @@ CONFIG_WIFI_PROV_AUTOSTOP_TIMEOUT=30
 CONFIG_WIFI_PROV_STA_ALL_CHANNEL_SCAN=y
 # CONFIG_WIFI_PROV_STA_FAST_SCAN is not set
 # end of Wi-Fi Provisioning Manager
+
+#
+# Stepper Motor Driver TMC2208
+#
+
+#
+# GPIO Configuration
+#
+CONFIG_MOTOR_STEP_IO=5
+CONFIG_MOTOR_DIR_IO=4
+CONFIG_MOTOR_EN_IO=10
+CONFIG_MOTOR_MS1_IO=6
+CONFIG_MOTOR_MS2_IO=7
+# end of GPIO Configuration
+# end of Stepper Motor Driver TMC2208
 # end of Component config
 
 # CONFIG_IDF_EXPERIMENTAL_FEATURES is not set
