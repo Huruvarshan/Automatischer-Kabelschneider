@@ -14,7 +14,7 @@
 //#include "AKS.h"
 #include "stepper_motor_encoder.h"
 //#include "led_strip.h" 
-//#include "tmc2208.h" //Include wenn die MS1 und MS2 Pins nicht mehr gehardwired sind. 
+#include "tmc2208.h" 
 
 
 void EspNowTask(void *pvParameters); 
@@ -196,7 +196,7 @@ char *mac_to_str(char *buffer, uint8_t *mac)
 
 void StepperTask(void *pvParameters){
     static const char *STEPPER_TAG = "STEPPER TASK";
-    ESP_LOGI(STEPPER_TAG, "Initialize EN + DIR GPIO");
+    /*ESP_LOGI(STEPPER_TAG, "Initialize EN + DIR GPIO");
     gpio_config_t en_dir_gpio_config = {
         .mode = GPIO_MODE_OUTPUT,
         .intr_type = GPIO_INTR_DISABLE,
@@ -258,14 +258,38 @@ void StepperTask(void *pvParameters){
     const static uint32_t decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES;
     
     ESP_LOGI(STEPPER_TAG, "Steps per millimeter: %d", STEPS_PER_mm); 
-    ESP_LOGI(STEPPER_TAG, "Steps per micrometer: %d", STEPS_PER_um); 
+    ESP_LOGI(STEPPER_TAG, "Steps per micrometer: %d", STEPS_PER_um); */
+
+    tmc2208_io_config_t config_io_motor1 = {
+        .step_pin = STEP_MOTOR_GPIO_STEP,
+        .dir_pin = STEP_MOTOR_GPIO_DIR,
+        .enable_pin = STEP_MOTOR_GPIO_EN,
+        .ms1_pin = STEP_MOTOR_GPIO_MS1,
+        .ms2_pin = STEP_MOTOR_GPIO_MS1,
+    };
+
+    ESP_ERROR_CHECK(tmc2208_init(&config_io_motor1));
+    ESP_LOGI(STEPPER_TAG, "Driver initialization done");
+
+    tmc2208_motor_config_t motor1_config = {
+        .enable_level = STEP_MOTOR_ENABLE_LEVEL,
+        .dir_clockwise = 0,
+        .resolution_hz = STEP_MOTOR_RESOLUTION_HZ,
+        .start_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
+        .end_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
+        .accel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES,
+        .uniform_speed_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
+        .decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES,
+        .microstep = TMC2208_MICROSTEP_4
+    };
+
 
     while (1)
     {
         xSemaphoreTake(feederStructMutex, portMAX_DELAY); //Take MUTEX to access the feeder struct
 
         if((feeder_incoming.setAmount > feeder_outgoing.processedAmount) && (feeder_incoming.flagStartStop && !feeder_incoming.flagAbort && feeder_outgoing.flagStartStop && !feeder_outgoing.flagAbort && !feeder_outgoing.runOut)){
-            // acceleration phase
+            /*// acceleration phase
             tx_config.loop_count = 0; 
             ESP_ERROR_CHECK(rmt_transmit(motor_chan, accel_motor_encoder, &accel_samples, sizeof(accel_samples), &tx_config));
 
@@ -278,11 +302,16 @@ void StepperTask(void *pvParameters){
             tx_config.loop_count = 0;
             ESP_ERROR_CHECK(rmt_transmit(motor_chan, decel_motor_encoder, &decel_samples, sizeof(decel_samples), &tx_config));
             // wait all transactions finished
-            ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
+            ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));*/
+
 
             feeder_outgoing.processedAmount ++; 
             ESP_LOGI(STEPPER_TAG, "Feeding finished. Processed amount: %d", feeder_outgoing.processedAmount);
             ESP_LOGI(STEPPER_TAG, "Remaining amount: %d", feeder_incoming.setAmount - feeder_outgoing.processedAmount); 
+
+            
+            int32_t steps = (feeder_incoming.setLength * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
+            tmc2208_move_steps(&config_io_motor1, &motor1_config, steps, false, false);
 
             xSemaphoreGive(triggerSemaphore); //Give trigger to the ESP-NOW task to send the data to the display unit
         } 
