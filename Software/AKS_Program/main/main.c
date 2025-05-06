@@ -25,6 +25,7 @@ void on_sent(const uint8_t *mac_addr, esp_now_send_status_t status);
 void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int data_len); 
 
 SemaphoreHandle_t feederStructMutex; 
+SemaphoreHandle_t triggerSemaphore;
 
 // Structure for incoming data from the display unit
 struct feeder_in_t {
@@ -51,10 +52,11 @@ void app_main(void)
     char my_mac_str[13];
 
     feederStructMutex = xSemaphoreCreateMutex(); 
+    triggerSemaphore = xSemaphoreCreateBinary(); 
 
     //feeder.incoming.id = //set to gpio mäuseklavier
-    feeder_incoming.setAmount = 10; // Edit to 0 later
-    feeder_incoming.setLength = 100; // Edit to 0 later
+    feeder_incoming.setAmount = 0; // Edit to 0 later
+    feeder_incoming.setLength = 0; // Edit to 0 later
     feeder_incoming.flagStartStop = 1; 
     feeder_incoming.flagAbort = 0; 
 
@@ -65,36 +67,37 @@ void app_main(void)
     feeder_outgoing.runOut = 0;
 
     xTaskCreate(StepperTask, "StepperTask", 8192, NULL, 4, NULL);
+    xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 4, NULL);
 }
 
 
 
 void EspNowTask(void *pvParameters){
-    uint8_t macDisplay[6] = {0xe4, 0x65, 0xb8, 0x7e, 0x27, 0x98}; 
+    uint8_t macDisplay[6] = {0xe4, 0x65, 0xb8, 0x7e, 0x27, 0x98}; // MAC address of the display unit 
     uint8_t my_mac[6];
-    char send_buffer[250];
     char my_mac_str[13];
-    //char send_buffer[250];
-
-
+    // Define a local instance of the feeder_out_t struct for transmission
+    struct feeder_out_t feeder_outgoing_data;
+    
     esp_efuse_mac_get_default(my_mac);
     ESP_LOGI("MAC_ADDRESS", "My mac %s", mac_to_str(my_mac_str, my_mac));
-
+    
+    // Initialize NVS and networking components
     nvs_flash_init();
-
     ESP_ERROR_CHECK(esp_netif_init());
-
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
     ESP_ERROR_CHECK(esp_wifi_set_storage(WIFI_STORAGE_RAM));
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_start());
-
+    
+    // Initialize ESP-NOW
     ESP_ERROR_CHECK(esp_now_init());
     ESP_ERROR_CHECK(esp_now_register_send_cb(on_sent));
     ESP_ERROR_CHECK(esp_now_register_recv_cb(on_receive));
-
+    
+    // Configure peer (display unit)
     esp_now_peer_info_t peer;
     memset(&peer, 0, sizeof(esp_now_peer_info_t));
     memcpy(peer.peer_addr, macDisplay, 6);
@@ -102,35 +105,87 @@ void EspNowTask(void *pvParameters){
     peer.ifidx = ESP_IF_WIFI_STA;
     peer.encrypt = false;
     ESP_ERROR_CHECK(esp_now_add_peer(&peer));
-
-
+    
     while (1)
     {
-        sprintf(send_buffer, "Hello from %s. Es stinkt!", my_mac_str);
-        ESP_ERROR_CHECK(esp_now_send(NULL, (uint8_t *)send_buffer, strlen(send_buffer)));
-
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        // Wait for trigger semaphore from another task
+        if(xSemaphoreTake(triggerSemaphore, portMAX_DELAY) == pdTRUE){
+            // Access shared data with mutex protection
+            xSemaphoreTake(feederStructMutex, portMAX_DELAY);
+            
+            // Copy the global feeder_outgoing struct data to local struct
+            // (assuming feeder_outgoing is a global variable)
+            memcpy(&feeder_outgoing_data, &feeder_outgoing, sizeof(struct feeder_out_t));
+            
+            // Log the data being sent (optional)
+            ESP_LOGI("ESP_NOW", "Sending data: id=%d, processed=%d, start/stop=%d, abort=%d, runOut=%d", 
+                   feeder_outgoing_data.id, 
+                   feeder_outgoing_data.processedAmount,
+                   feeder_outgoing_data.flagStartStop,
+                   feeder_outgoing_data.flagAbort,
+                   feeder_outgoing_data.runOut);
+            
+            // Send the struct directly through ESP-NOW
+            ESP_ERROR_CHECK(esp_now_send(NULL, (uint8_t *)&feeder_outgoing_data, sizeof(struct feeder_out_t)));
+            
+            // Release the mutex
+            xSemaphoreGive(feederStructMutex);
+           
+            // Delay to prevent flooding the network
+            vTaskDelay(pdMS_TO_TICKS(1000));
+        }
     }
 }
 
 void on_sent(const uint8_t *mac_addr, esp_now_send_status_t status)
 {
-  char buffer[13];
-  switch (status)
-  {
-  case ESP_NOW_SEND_SUCCESS:
-    ESP_LOGI("MAC_ADDRESS", "message sent to %s", mac_to_str(buffer, (uint8_t *)mac_addr));
-    break;
-  case ESP_NOW_SEND_FAIL:
-    ESP_LOGE("MAC_ADDRESS", "message sent to %s failed", mac_to_str(buffer, (uint8_t *)mac_addr));
-    break;
-  }
+    xSemaphoreTake(feederStructMutex, portMAX_DELAY); //Take MUTEX to access the feeder struct
+
+    char buffer[13];
+    switch (status)
+    {
+    case ESP_NOW_SEND_SUCCESS:
+        ESP_LOGI("MAC_ADDRESS", "message sent to %s", mac_to_str(buffer, (uint8_t *)mac_addr));
+        break;
+    case ESP_NOW_SEND_FAIL:
+        ESP_LOGE("MAC_ADDRESS", "message sent to %s failed", mac_to_str(buffer, (uint8_t *)mac_addr));
+        break;
+    }
+
+    xSemaphoreGive(feederStructMutex); //Give MUTEX to allow other tasks to access the feeder struct
 }
 
 void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int data_len)
 {
-  ESP_LOGI("MAC_ADDRESS", "got message from " MACSTR, MAC2STR(esp_now_info->src_addr));
-  printf("message: %.*s\n", data_len, data);
+    // Take mutex to safely access the shared feeder struct
+    xSemaphoreTake(feederStructMutex, portMAX_DELAY);
+    
+    // Log the MAC address of the sender
+    ESP_LOGI("MAC_ADDRESS", "Got message from " MACSTR, MAC2STR(esp_now_info->src_addr));
+    
+    // Check if the data size matches our expected struct size
+    if (data_len == sizeof(struct feeder_in_t)) {
+        // Cast the received data to our struct type and copy to our global struct
+        memcpy(&feeder_incoming, data, sizeof(struct feeder_in_t));
+        
+        // Log the received data for debugging
+        ESP_LOGI("ESP_NOW", "Received struct data: id=%d, setAmount=%d, setLength=%d, startStop=%d, abort=%d",
+               feeder_incoming.id,
+               feeder_incoming.setAmount,
+               feeder_incoming.setLength,
+               feeder_incoming.flagStartStop,
+               feeder_incoming.flagAbort);
+               
+        // Optional: Add any trigger for other tasks that need to know new data arrived
+        // For example: xSemaphoreGive(newDataSemaphore);
+    } else {
+        // Handle unexpected data size
+        ESP_LOGW("ESP_NOW", "Received data with unexpected size: %d bytes (expected %d bytes)", 
+                data_len, sizeof(struct feeder_in_t));
+    }
+    
+    // Release the mutex
+    xSemaphoreGive(feederStructMutex);
 }
 
 char *mac_to_str(char *buffer, uint8_t *mac)
@@ -145,7 +200,7 @@ void StepperTask(void *pvParameters){
     gpio_config_t en_dir_gpio_config = {
         .mode = GPIO_MODE_OUTPUT,
         .intr_type = GPIO_INTR_DISABLE,
-        .pin_bit_mask = 1ULL << STEP_MOTOR_GPIO_DIR | 1ULL << STEP_MOTOR_GPIO_EN,
+        .pin_bit_mask = 1ULL << STEP_MOTOR_GPIO_DIR | 1ULL << STEP_MOTOR_GPIO_EN | 1ULL << STEP_MOTOR_GPIO_MS1 | 1ULL << STEP_MOTOR_GPIO_MS2,
     };
     ESP_ERROR_CHECK(gpio_config(&en_dir_gpio_config));
 
@@ -210,24 +265,26 @@ void StepperTask(void *pvParameters){
         xSemaphoreTake(feederStructMutex, portMAX_DELAY); //Take MUTEX to access the feeder struct
 
         if((feeder_incoming.setAmount > feeder_outgoing.processedAmount) && (feeder_incoming.flagStartStop && !feeder_incoming.flagAbort && feeder_outgoing.flagStartStop && !feeder_outgoing.flagAbort && !feeder_outgoing.runOut)){
-                        // acceleration phase
-                        tx_config.loop_count = 0; 
-                        ESP_ERROR_CHECK(rmt_transmit(motor_chan, accel_motor_encoder, &accel_samples, sizeof(accel_samples), &tx_config));
-            
-                        // uniform phase
-                        //tx_config.loop_count = counter;
-                        tx_config.loop_count = (feeder_incoming.setLength * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
-                        ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
-            
-                        // deceleration phase
-                        tx_config.loop_count = 0;
-                        ESP_ERROR_CHECK(rmt_transmit(motor_chan, decel_motor_encoder, &decel_samples, sizeof(decel_samples), &tx_config));
-                        // wait all transactions finished
-                        ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
+            // acceleration phase
+            tx_config.loop_count = 0; 
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, accel_motor_encoder, &accel_samples, sizeof(accel_samples), &tx_config));
 
-                        feeder_outgoing.processedAmount ++; 
-                        ESP_LOGI(STEPPER_TAG, "Feeding finished. Processed amount: %d", feeder_outgoing.processedAmount);
-                        ESP_LOGI(STEPPER_TAG, "Remaining amount: %d", feeder_incoming.setAmount - feeder_outgoing.processedAmount); 
+            // uniform phase
+            //tx_config.loop_count = counter;
+            tx_config.loop_count = (feeder_incoming.setLength * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, uniform_motor_encoder, &uniform_speed_hz, sizeof(uniform_speed_hz), &tx_config));
+
+            // deceleration phase
+            tx_config.loop_count = 0;
+            ESP_ERROR_CHECK(rmt_transmit(motor_chan, decel_motor_encoder, &decel_samples, sizeof(decel_samples), &tx_config));
+            // wait all transactions finished
+            ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
+
+            feeder_outgoing.processedAmount ++; 
+            ESP_LOGI(STEPPER_TAG, "Feeding finished. Processed amount: %d", feeder_outgoing.processedAmount);
+            ESP_LOGI(STEPPER_TAG, "Remaining amount: %d", feeder_incoming.setAmount - feeder_outgoing.processedAmount); 
+
+            xSemaphoreGive(triggerSemaphore); //Give trigger to the ESP-NOW task to send the data to the display unit
         } 
 
         xSemaphoreGive(feederStructMutex); //Give MUTEX to allow other tasks to access the feeder struct
