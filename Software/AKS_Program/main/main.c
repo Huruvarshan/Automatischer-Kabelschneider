@@ -11,10 +11,9 @@
 #include "esp_now.h"
 #include "esp_mac.h"
 #include "string.h"
-//#include "AKS.h"
 #include "stepper_motor_encoder.h"
 //#include "led_strip.h" 
-#include "tmc2208.h" 
+//#include "tmc2208.h" 
 
 
 void EspNowTask(void *pvParameters); 
@@ -165,8 +164,20 @@ void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
     
     // Check if the data size matches our expected struct size
     if (data_len == sizeof(struct feeder_in_t)) {
-        // Cast the received data to our struct type and copy to our global struct
-        memcpy(&feeder_incoming, data, sizeof(struct feeder_in_t));
+        struct feeder_in_t temp_incoming;
+        
+        // Cast the received data to our temp struct 
+        memcpy(&temp_incoming, data, sizeof(struct feeder_in_t));
+        
+        // Check if we've completed the previous job
+        if (feeder_outgoing.processedAmount >= feeder_incoming.setAmount) {
+            // Job is complete, reset the counter for the new job
+            feeder_outgoing.processedAmount = 0;
+            ESP_LOGI("ESP_NOW", "Previous job complete. Resetting processed amount for new job.");
+        }
+        
+        // Now copy to our global struct
+        memcpy(&feeder_incoming, &temp_incoming, sizeof(struct feeder_in_t));
         
         // Log the received data for debugging
         ESP_LOGI("ESP_NOW", "Received struct data: id=%d, setAmount=%d, setLength=%d, startStop=%d, abort=%d",
@@ -175,9 +186,6 @@ void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
                feeder_incoming.setLength,
                feeder_incoming.flagStartStop,
                feeder_incoming.flagAbort);
-               
-        // Optional: Add any trigger for other tasks that need to know new data arrived
-        // For example: xSemaphoreGive(newDataSemaphore);
     } else {
         // Handle unexpected data size
         ESP_LOGW("ESP_NOW", "Received data with unexpected size: %d bytes (expected %d bytes)", 
@@ -190,13 +198,18 @@ void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
 
 char *mac_to_str(char *buffer, uint8_t *mac)
 {
-    sprintf(buffer, MACSTR, MAC2STR(mac));
+    // Make sure the buffer is properly initialized
+    memset(buffer, 0, 18);  // Clear buffer (allocate at least 18 bytes for the buffer)
+    
+    // Format MAC address with proper null termination
+    snprintf(buffer, 18, MACSTR, MAC2STR(mac));
+    
     return buffer;
 }
 
 void StepperTask(void *pvParameters){
     static const char *STEPPER_TAG = "STEPPER TASK";
-    /*ESP_LOGI(STEPPER_TAG, "Initialize EN + DIR GPIO");
+    ESP_LOGI(STEPPER_TAG, "Initialize EN + DIR GPIO");
     gpio_config_t en_dir_gpio_config = {
         .mode = GPIO_MODE_OUTPUT,
         .intr_type = GPIO_INTR_DISABLE,
@@ -258,9 +271,9 @@ void StepperTask(void *pvParameters){
     const static uint32_t decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES;
     
     ESP_LOGI(STEPPER_TAG, "Steps per millimeter: %d", STEPS_PER_mm); 
-    ESP_LOGI(STEPPER_TAG, "Steps per micrometer: %d", STEPS_PER_um); */
+    ESP_LOGI(STEPPER_TAG, "Steps per micrometer: %d", STEPS_PER_um); 
 
-    tmc2208_io_config_t config_io_motor1 = {
+    /*tmc2208_io_config_t config_io_motor1 = {
         .step_pin = STEP_MOTOR_GPIO_STEP,
         .dir_pin = STEP_MOTOR_GPIO_DIR,
         .enable_pin = STEP_MOTOR_GPIO_EN,
@@ -280,16 +293,16 @@ void StepperTask(void *pvParameters){
         .accel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES,
         .uniform_speed_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
         .decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES,
-        .microstep = TMC2208_MICROSTEP_4
-    };
+        .microstep = TMC2208_MICROSTEP_16
+    };*/
 
-
+    
     while (1)
     {
         xSemaphoreTake(feederStructMutex, portMAX_DELAY); //Take MUTEX to access the feeder struct
 
         if((feeder_incoming.setAmount > feeder_outgoing.processedAmount) && (feeder_incoming.flagStartStop && !feeder_incoming.flagAbort && feeder_outgoing.flagStartStop && !feeder_outgoing.flagAbort && !feeder_outgoing.runOut)){
-            /*// acceleration phase
+            // acceleration phase
             tx_config.loop_count = 0; 
             ESP_ERROR_CHECK(rmt_transmit(motor_chan, accel_motor_encoder, &accel_samples, sizeof(accel_samples), &tx_config));
 
@@ -302,16 +315,15 @@ void StepperTask(void *pvParameters){
             tx_config.loop_count = 0;
             ESP_ERROR_CHECK(rmt_transmit(motor_chan, decel_motor_encoder, &decel_samples, sizeof(decel_samples), &tx_config));
             // wait all transactions finished
-            ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));*/
+            ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
+
+            /*int32_t steps = (feeder_incoming.setLength * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
+            tmc2208_move_steps(&config_io_motor1, &motor1_config, steps, true, true);*/
 
 
             feeder_outgoing.processedAmount ++; 
             ESP_LOGI(STEPPER_TAG, "Feeding finished. Processed amount: %d", feeder_outgoing.processedAmount);
             ESP_LOGI(STEPPER_TAG, "Remaining amount: %d", feeder_incoming.setAmount - feeder_outgoing.processedAmount); 
-
-            
-            int32_t steps = (feeder_incoming.setLength * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
-            tmc2208_move_steps(&config_io_motor1, &motor1_config, steps, false, false);
 
             xSemaphoreGive(triggerSemaphore); //Give trigger to the ESP-NOW task to send the data to the display unit
         } 

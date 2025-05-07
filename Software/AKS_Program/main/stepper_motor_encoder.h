@@ -24,7 +24,7 @@ extern "C" {
 
 #define STEP_MOTOR_RESOLUTION_HZ                    1000000 // Resolution of the motor driver in Hz
 #define STEP_MOTOR_ACCEL_DECEL_FREQ                 3000 // Frequency of the motor driver in Hz
-#define STEP_MOTOR_ACCEL_DECEL_SAMPLES              50 // Number of samples for acceleration and deceleration
+#define STEP_MOTOR_ACCEL_DECEL_SAMPLES              150 // Number of samples for acceleration and deceleration
 #define STEP_MOTOR_FULL_ROTATION_STEPS              3200 // Number of steps for a full rotation, excluding acceleration and deceleration
 #define STEP_MOTOR_FULL_ROTATION_AFTER_ACCEL_DECEL  3100 // STEP_MOTOR_FULL_ROTATION_STEPS - 2 * STEP_MOTOR_ACCEL_DECEL_SAMPLES = 3200 - 100
 
