@@ -15,7 +15,6 @@
 //#include "led_strip.h" 
 //#include "tmc2208.h" 
 
-
 void EspNowTask(void *pvParameters); 
 void StepperTask(void *pvParameters); 
 
@@ -65,8 +64,8 @@ void app_main(void)
     feeder_outgoing.flagAbort = 0;
     feeder_outgoing.runOut = 0;
 
-    xTaskCreate(StepperTask, "StepperTask", 8192, NULL, 4, NULL);
-    xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 4, NULL);
+    xTaskCreate(StepperTask, "StepperTask", 8192, NULL, 1, NULL);
+    xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 1, NULL);
 }
 
 

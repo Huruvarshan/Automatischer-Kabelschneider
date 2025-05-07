@@ -13,5 +13,8 @@
         "IDF_CCACHE_ENABLE": "1",
         "ESP_ROM_ELF_DIR": "c:\\esp\\tools\\tools\\esp-rom-elfs\\20230320/",
         "IDF_TARGET": "esp32s3"
+    },
+    "files.associations": {
+        "touch_pad.h": "c"
     }
 }
