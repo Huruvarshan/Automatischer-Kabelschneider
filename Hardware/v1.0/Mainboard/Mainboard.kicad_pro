@@ -528,7 +528,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Mainboard.step",
       "svg": "",
       "vrml": ""
     },
