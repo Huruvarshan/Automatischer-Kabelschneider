@@ -14,13 +14,19 @@
 #include "stepper_motor_encoder.h"
 //#include "led_strip.h" 
 //#include "tmc2208.h" 
+#include "driver/touch_pad.h"
+
+#define TOUCH_GPIO 1 // GPIO for touch sensor
 
 void EspNowTask(void *pvParameters); 
 void StepperTask(void *pvParameters); 
+void TouchTask(void *pvParameters);
 
 char *mac_to_str(char *buffer, uint8_t *mac);
 void on_sent(const uint8_t *mac_addr, esp_now_send_status_t status); 
 void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int data_len); 
+
+
 
 SemaphoreHandle_t feederStructMutex; 
 SemaphoreHandle_t triggerSemaphore;
@@ -64,8 +70,11 @@ void app_main(void)
     feeder_outgoing.flagAbort = 0;
     feeder_outgoing.runOut = 0;
 
+
+
     xTaskCreate(StepperTask, "StepperTask", 8192, NULL, 1, NULL);
     xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 1, NULL);
+    xTaskCreate(TouchTask, "TouchTask", 4096, NULL, 1, NULL);
 }
 
 
@@ -216,6 +225,9 @@ void StepperTask(void *pvParameters){
     };
     ESP_ERROR_CHECK(gpio_config(&en_dir_gpio_config));
 
+    gpio_set_level(STEP_MOTOR_GPIO_MS1, 1);
+    gpio_set_level(STEP_MOTOR_GPIO_MS2, 1);
+
     ESP_LOGI(STEPPER_TAG, "Create RMT TX channel");
     rmt_channel_handle_t motor_chan = NULL;
     rmt_tx_channel_config_t tx_chan_config = {
@@ -325,9 +337,36 @@ void StepperTask(void *pvParameters){
             ESP_LOGI(STEPPER_TAG, "Remaining amount: %d", feeder_incoming.setAmount - feeder_outgoing.processedAmount); 
 
             xSemaphoreGive(triggerSemaphore); //Give trigger to the ESP-NOW task to send the data to the display unit
-        } 
+        } //else dann motor off
 
         xSemaphoreGive(feederStructMutex); //Give MUTEX to allow other tasks to access the feeder struct
         vTaskDelay(pdMS_TO_TICKS(2500)); //Delay the task for 2 seconds  
+    }
+}
+
+void TouchTask(void *pvParameters){ //auch für runout benutzen
+    touch_pad_init();
+    touch_pad_config(TOUCH_GPIO); 
+    touch_pad_denoise_t denoise = {
+        /* The bits to be cancelled are determined according to the noise level. */
+        .grade = TOUCH_PAD_DENOISE_BIT4,
+        .cap_level = TOUCH_PAD_DENOISE_CAP_L4,
+    };
+    touch_pad_denoise_set_config(&denoise);
+    touch_pad_denoise_enable();
+    /* Enable touch sensor clock. Work mode is "timer trigger". */
+    touch_pad_set_fsm_mode(TOUCH_FSM_MODE_TIMER);
+    touch_pad_fsm_start();
+    
+
+    uint32_t touch_value = 0;
+    
+    vTaskDelay(100 / portTICK_PERIOD_MS);
+    
+    while (1)
+    {
+        touch_pad_read_raw_data(TOUCH_GPIO, &touch_value);    // read raw data.
+        ESP_LOGI("TOUCH", "Touch value: %" PRIu32, touch_value);
+        vTaskDelay(pdMS_TO_TICKS(1000)); // Delay for 1 second
     }
 }
