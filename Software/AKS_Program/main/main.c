@@ -17,10 +17,11 @@
 #include "driver/touch_pad.h"
 
 #define TOUCH_GPIO 1 // GPIO for touch sensor
+#define THRESHOLD 80000 // Threshold for touch sensor
 
 void EspNowTask(void *pvParameters); 
 void StepperTask(void *pvParameters); 
-void TouchTask(void *pvParameters);
+void SafetyTask(void *pvParameters);
 
 char *mac_to_str(char *buffer, uint8_t *mac);
 void on_sent(const uint8_t *mac_addr, esp_now_send_status_t status); 
@@ -74,7 +75,7 @@ void app_main(void)
 
     xTaskCreate(StepperTask, "StepperTask", 8192, NULL, 1, NULL);
     xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 1, NULL);
-    xTaskCreate(TouchTask, "TouchTask", 4096, NULL, 1, NULL);
+    xTaskCreate(SafetyTask, "SafetyTask", 8192, NULL, 2, NULL);
 }
 
 
@@ -139,7 +140,7 @@ void EspNowTask(void *pvParameters){
             xSemaphoreGive(feederStructMutex);
            
             // Delay to prevent flooding the network
-            vTaskDelay(pdMS_TO_TICKS(1000));
+            //vTaskDelay(pdMS_TO_TICKS(1000));
         }
     }
 }
@@ -344,7 +345,7 @@ void StepperTask(void *pvParameters){
     }
 }
 
-void TouchTask(void *pvParameters){ //auch für runout benutzen
+void SafetyTask(void *pvParameters){ //auch für runout benutzen
     touch_pad_init();
     touch_pad_config(TOUCH_GPIO); 
     touch_pad_denoise_t denoise = {
@@ -365,8 +366,22 @@ void TouchTask(void *pvParameters){ //auch für runout benutzen
     
     while (1)
     {
+        xSemaphoreTake(feederStructMutex, portMAX_DELAY); // Take MUTEX to access the feeder struct
         touch_pad_read_raw_data(TOUCH_GPIO, &touch_value);    // read raw data.
-        ESP_LOGI("TOUCH", "Touch value: %" PRIu32, touch_value);
-        vTaskDelay(pdMS_TO_TICKS(1000)); // Delay for 1 second
+        //ESP_LOGI("TOUCH", "Touch value: %" PRIu32, touch_value);
+
+        if (touch_value > THRESHOLD) {
+            ESP_LOGW("TOUCH", "Touch detected! Touch value: %" PRIu32, touch_value);
+
+            feeder_outgoing.flagAbort = 1; // Set flagAbort to 1
+            
+            // Abort the stepper motor task and disabling the motor
+            gpio_set_level(STEP_MOTOR_GPIO_EN, !STEP_MOTOR_ENABLE_LEVEL);
+
+            xSemaphoreGive(triggerSemaphore); // Trigger the ESP-NOW task
+        }
+
+        xSemaphoreGive(feederStructMutex); // Release MUTEX
+        vTaskDelay(pdMS_TO_TICKS(100)); 
     }
 }
