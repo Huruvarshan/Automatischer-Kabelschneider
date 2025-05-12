@@ -646,6 +646,13 @@ C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Pro
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/espressif__led_strip/CMakeFiles/__idf_espressif__led_strip.dir
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/espressif__led_strip/CMakeFiles/edit_cache.dir
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/espressif__led_strip/CMakeFiles/rebuild_cache.dir
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/espressif__led_strip/CMakeFiles/list_install_components.dir
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/espressif__led_strip/CMakeFiles/install.dir
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/espressif__led_strip/CMakeFiles/install/local.dir
+C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/espressif__led_strip/CMakeFiles/install/strip.dir
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/pedrominatel__tmc2208/CMakeFiles/__idf_pedrominatel__tmc2208.dir
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/pedrominatel__tmc2208/CMakeFiles/edit_cache.dir
 C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build/esp-idf/pedrominatel__tmc2208/CMakeFiles/rebuild_cache.dir

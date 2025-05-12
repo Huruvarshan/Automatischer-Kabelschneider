@@ -1,5 +1,6 @@
 ## IDF Component Manager Manifest File
 dependencies:
+  espressif/led_strip: "^3.0.1"
   pedrominatel/tmc2208: "^0.0.1"
   ## Required IDF version
   idf:

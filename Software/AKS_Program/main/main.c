@@ -12,16 +12,18 @@
 #include "esp_mac.h"
 #include "string.h"
 #include "stepper_motor_encoder.h"
-//#include "led_strip.h" 
-//#include "tmc2208.h" 
+#include "led_strip.h" 
 #include "driver/touch_pad.h"
 
 #define TOUCH_GPIO 1 // GPIO for touch sensor
 #define THRESHOLD 80000 // Threshold for touch sensor
+#define LED_STRIP_GPIO 14 // GPIO for LED strip
+#define LED_STRIP_NUM_LEDS 12 // Number of LEDs in the strip
 
 void EspNowTask(void *pvParameters); 
 void StepperTask(void *pvParameters); 
 void SafetyTask(void *pvParameters);
+void LedTask(void *pvParameters); 
 
 char *mac_to_str(char *buffer, uint8_t *mac);
 void on_sent(const uint8_t *mac_addr, esp_now_send_status_t status); 
@@ -73,9 +75,10 @@ void app_main(void)
 
 
 
-    xTaskCreate(StepperTask, "StepperTask", 8192, NULL, 1, NULL);
-    xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 1, NULL);
-    xTaskCreate(SafetyTask, "SafetyTask", 8192, NULL, 2, NULL);
+    xTaskCreate(StepperTask, "StepperTask", 8192, NULL, 2, NULL);
+    xTaskCreate(EspNowTask, "EspNowTask", 8192, NULL, 2, NULL);
+    xTaskCreate(SafetyTask, "SafetyTask", 8192, NULL, 3, NULL);
+    xTaskCreate(LedTask, "LedTask", 8192, NULL, 1, NULL);
 }
 
 
@@ -305,29 +308,6 @@ void StepperTask(void *pvParameters){
     ESP_LOGI(STEPPER_TAG, "Steps per millimeter: %d", STEPS_PER_mm); 
     ESP_LOGI(STEPPER_TAG, "Steps per micrometer: %d", STEPS_PER_um); 
 
-    /*tmc2208_io_config_t config_io_motor1 = {
-        .step_pin = STEP_MOTOR_GPIO_STEP,
-        .dir_pin = STEP_MOTOR_GPIO_DIR,
-        .enable_pin = STEP_MOTOR_GPIO_EN,
-        .ms1_pin = STEP_MOTOR_GPIO_MS1,
-        .ms2_pin = STEP_MOTOR_GPIO_MS1,
-    };
-
-    ESP_ERROR_CHECK(tmc2208_init(&config_io_motor1));
-    ESP_LOGI(STEPPER_TAG, "Driver initialization done");
-
-    tmc2208_motor_config_t motor1_config = {
-        .enable_level = STEP_MOTOR_ENABLE_LEVEL,
-        .dir_clockwise = 0,
-        .resolution_hz = STEP_MOTOR_RESOLUTION_HZ,
-        .start_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
-        .end_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
-        .accel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES,
-        .uniform_speed_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
-        .decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES,
-        .microstep = TMC2208_MICROSTEP_16
-    };*/
-
     
     while (1)
     {
@@ -349,8 +329,6 @@ void StepperTask(void *pvParameters){
             // wait all transactions finished
             ESP_ERROR_CHECK(rmt_tx_wait_all_done(motor_chan, -1));
 
-            /*int32_t steps = (feeder_incoming.setLength * (STEPS_PER_um/1000)) - STEP_MOTOR_ACCEL_DECEL_SAMPLES;
-            tmc2208_move_steps(&config_io_motor1, &motor1_config, steps, true, true);*/
 
 
             feeder_outgoing.processedAmount ++; 
@@ -403,5 +381,72 @@ void SafetyTask(void *pvParameters){ //auch für runout benutzen
 
         xSemaphoreGive(feederStructMutex); // Release MUTEX
         vTaskDelay(pdMS_TO_TICKS(100)); 
+    }
+}
+
+void LedTask(void *pvParameters){
+
+    led_strip_config_t strip_config = {
+    .strip_gpio_num = LED_STRIP_GPIO,  // The GPIO that connected to the LED strip's data line
+    .max_leds = LED_STRIP_NUM_LEDS,                 // The number of LEDs in the strip,
+    .led_model = LED_MODEL_WS2812, // LED strip model, it determines the bit timing
+    .color_component_format = LED_STRIP_COLOR_COMPONENT_FMT_GRB, // The color component format is G-R-B
+    .flags = {
+        .invert_out = false, // don't invert the output signal
+        }
+    };
+
+    /// RMT backend specific configuration
+    led_strip_rmt_config_t rmt_config = {
+        .clk_src = RMT_CLK_SRC_DEFAULT,    // different clock source can lead to different power consumption
+        .resolution_hz = 10 * 1000 * 1000, // RMT counter clock frequency: 10MHz
+        .mem_block_symbols = 64,           // the memory size of each RMT channel, in words (4 bytes)
+        .flags = {
+            .with_dma = false, // DMA feature is available on chips like ESP32-S3/P4
+        }
+    };
+
+    /// Create the LED strip object
+    led_strip_handle_t led_strip;
+    ESP_ERROR_CHECK(led_strip_new_rmt_device(&strip_config, &rmt_config, &led_strip));
+
+    
+    static bool led_state = false; // For flashing behavior
+    
+    while (1)
+    {   
+        xSemaphoreTake(feederStructMutex, portMAX_DELAY); // Take MUTEX to access the feeder struct
+        for (int i = 0; i < LED_STRIP_NUM_LEDS; i++) {
+            if (feeder_incoming.flagAbort || feeder_outgoing.runOut || feeder_outgoing.flagAbort) {
+            // Flash red (abort or runout)
+            if (led_state) {
+                ESP_ERROR_CHECK(led_strip_set_pixel(led_strip, i, 255, 0, 0)); // Red
+            } else {
+                ESP_ERROR_CHECK(led_strip_set_pixel(led_strip, i, 0, 0, 0)); // Turn off LEDs
+            }
+            } else {
+            switch (feeder_incoming.flagStartStop) {
+                case 0: // No job or paused
+                // Solid green (no job)
+                ESP_ERROR_CHECK(led_strip_set_pixel(led_strip, i, 0, 255, 0)); // Green
+                break;
+    
+                case 1: // Job in progress
+                // Solid yellow
+                ESP_ERROR_CHECK(led_strip_set_pixel(led_strip, i, 255, 255, 0)); // Yellow
+                break;
+    
+                default:
+                ESP_LOGW("LED_TASK", "Unexpected flagStartStop value: %d", feeder_incoming.flagStartStop);
+                break;
+            }
+            }
+        }
+    
+        ESP_ERROR_CHECK(led_strip_refresh(led_strip)); // Refresh the LED strip
+        xSemaphoreGive(feederStructMutex); // Release MUTEX
+    
+        led_state = !led_state; // Toggle the LED state for flashing behavior
+        vTaskDelay(pdMS_TO_TICKS(500)); // Delay for 1 second
     }
 }
