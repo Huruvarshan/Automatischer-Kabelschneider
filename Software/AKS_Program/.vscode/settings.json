@@ -6,7 +6,7 @@
         "board/esp32s3-builtin.cfg"
     ],
     "idf.toolsPathWin": "c:\\esp\\tools",
-    "idf.portWin": "COM5",
+    "idf.portWin": "COM6",
     "idf.flashType": "JTAG",
     "idf.customExtraVars": {
         "OPENOCD_SCRIPTS": "c:\\esp\\tools\\tools\\openocd-esp32\\v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "AKS_Program",
-    "project_version":    "6f5e6d0-dirty",
+    "project_version":    "706b75a-dirty",
     "project_path":       "C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program",
     "idf_path":           "C:/Users/e1Suresh/Documents/v5.2.2/esp-idf",
     "build_dir":          "C:/Users/e1Suresh/Documents/GitHub/Automatischer-Kabelschneider/Software/AKS_Program/build",

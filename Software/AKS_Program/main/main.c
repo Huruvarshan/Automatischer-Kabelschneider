@@ -113,6 +113,26 @@ void EspNowTask(void *pvParameters){
     peer.ifidx = ESP_IF_WIFI_STA;
     peer.encrypt = false;
     ESP_ERROR_CHECK(esp_now_add_peer(&peer));
+
+    xSemaphoreTake(feederStructMutex, portMAX_DELAY);
+
+    // Copy the global feeder_outgoing struct data to local struct
+    // (assuming feeder_outgoing is a global variable)
+    memcpy(&feeder_outgoing_data, &feeder_outgoing, sizeof(struct feeder_out_t));
+
+    // Log the data being sent (optional)
+    ESP_LOGI("ESP_NOW", "Sending data: id=%d, processed=%d, start/stop=%d, abort=%d, runOut=%d", 
+    feeder_outgoing_data.id, 
+    feeder_outgoing_data.processedAmount,
+    feeder_outgoing_data.flagStartStop,
+    feeder_outgoing_data.flagAbort,
+    feeder_outgoing_data.runOut);
+
+    // Send the struct directly through ESP-NOW
+    ESP_ERROR_CHECK(esp_now_send(NULL, (uint8_t *)&feeder_outgoing_data, sizeof(struct feeder_out_t)));
+
+    // Release the mutex
+    xSemaphoreGive(feederStructMutex);
     
     while (1)
     {

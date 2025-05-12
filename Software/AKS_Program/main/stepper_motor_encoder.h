@@ -19,7 +19,7 @@ extern "C" {
 #define STEP_MOTOR_GPIO_MS1                         7 //Microstep pin 1 of the motor driver
 #define STEP_MOTOR_GPIO_MS2                         8 //Microstep pin 2 of the motor driver
 #define STEP_MOTOR_ENABLE_LEVEL                     0 //Enable level of the motor driver; 0 for !ENABLE, 1 for ENABLE
-#define STEP_MOTOR_SPIN_DIR_CLOCKWISE               1 //Spin direction of the motor driver; 1 for clockwise, 0 for counterclockwise
+#define STEP_MOTOR_SPIN_DIR_CLOCKWISE               0 //Spin direction of the motor driver; 1 for clockwise, 0 for counterclockwise
 #define STEP_MOTOR_SPIN_DIR_COUNTERCLOCKWISE        STEP_MOTOR_SPIN_DIR_CLOCKWISE //Spin direction of the motor driver
 
 #define STEP_MOTOR_RESOLUTION_HZ                    1000000 // Resolution of the motor driver in Hz
