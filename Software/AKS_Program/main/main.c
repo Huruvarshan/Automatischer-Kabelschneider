@@ -64,7 +64,7 @@ void app_main(void)
     //feeder.incoming.id = //set to gpio mäuseklavier
     feeder_incoming.setAmount = 0; // Edit to 0 later
     feeder_incoming.setLength = 0; // Edit to 0 later
-    feeder_incoming.flagStartStop = 1; 
+    feeder_incoming.flagStartStop = 0; 
     feeder_incoming.flagAbort = 0; 
 
     //feeder_outgoing.id //set to gpio mäuseklavier
@@ -190,27 +190,34 @@ void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
 {
     // Take mutex to safely access the shared feeder struct
     xSemaphoreTake(feederStructMutex, portMAX_DELAY);
-    
+   
     // Log the MAC address of the sender
     ESP_LOGI("MAC_ADDRESS", "Got message from " MACSTR, MAC2STR(esp_now_info->src_addr));
-    
+   
     // Check if the data size matches our expected struct size
     if (data_len == sizeof(struct feeder_in_t)) {
         struct feeder_in_t temp_incoming;
-        
-        // Cast the received data to our temp struct 
+       
+        // Cast the received data to our temp struct
         memcpy(&temp_incoming, data, sizeof(struct feeder_in_t));
         
-        // Check if we've completed the previous job
-        if (feeder_outgoing.processedAmount >= feeder_incoming.setAmount) {
+        // Check if this is a new job (different ID or different setAmount)
+        if (temp_incoming.id != feeder_incoming.id || 
+            temp_incoming.setAmount != feeder_incoming.setAmount) {
+            // New job detected, reset the processed amount counter
+            feeder_outgoing.processedAmount = 0;
+            ESP_LOGI("ESP_NOW", "New job detected. Resetting processed amount.");
+        }
+        // The original check is still useful for when the job completes
+        else if (feeder_outgoing.processedAmount >= feeder_incoming.setAmount) {
             // Job is complete, reset the counter for the new job
             feeder_outgoing.processedAmount = 0;
             ESP_LOGI("ESP_NOW", "Previous job complete. Resetting processed amount for new job.");
         }
-        
+       
         // Now copy to our global struct
         memcpy(&feeder_incoming, &temp_incoming, sizeof(struct feeder_in_t));
-        
+       
         // Log the received data for debugging
         ESP_LOGI("ESP_NOW", "Received struct data: id=%d, setAmount=%d, setLength=%d, startStop=%d, abort=%d",
                feeder_incoming.id,
@@ -220,10 +227,10 @@ void on_receive(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
                feeder_incoming.flagAbort);
     } else {
         // Handle unexpected data size
-        ESP_LOGW("ESP_NOW", "Received data with unexpected size: %d bytes (expected %d bytes)", 
+        ESP_LOGW("ESP_NOW", "Received data with unexpected size: %d bytes (expected %d bytes)",
                 data_len, sizeof(struct feeder_in_t));
     }
-    
+   
     // Release the mutex
     xSemaphoreGive(feederStructMutex);
 }
@@ -240,71 +247,90 @@ char *mac_to_str(char *buffer, uint8_t *mac)
 }
 
 void StepperTask(void *pvParameters){
+    // Tag for logging messages from the Stepper Task
     static const char *STEPPER_TAG = "STEPPER TASK";
+
+    // Initialize GPIO pins for EN (Enable), DIR (Direction), and Microstep settings (MS1, MS2)
     ESP_LOGI(STEPPER_TAG, "Initialize EN + DIR GPIO");
     gpio_config_t en_dir_gpio_config = {
-        .mode = GPIO_MODE_OUTPUT,
-        .intr_type = GPIO_INTR_DISABLE,
-        .pin_bit_mask = 1ULL << STEP_MOTOR_GPIO_DIR | 1ULL << STEP_MOTOR_GPIO_EN | 1ULL << STEP_MOTOR_GPIO_MS1 | 1ULL << STEP_MOTOR_GPIO_MS2,
+        .mode = GPIO_MODE_OUTPUT, // Set as output mode
+        .intr_type = GPIO_INTR_DISABLE, // Disable interrupts
+        .pin_bit_mask = 1ULL << STEP_MOTOR_GPIO_DIR | 1ULL << STEP_MOTOR_GPIO_EN | 1ULL << STEP_MOTOR_GPIO_MS1 | 1ULL << STEP_MOTOR_GPIO_MS2, // GPIO pins for motor control
     };
     ESP_ERROR_CHECK(gpio_config(&en_dir_gpio_config));
 
-    gpio_set_level(STEP_MOTOR_GPIO_MS1, 1);
-    gpio_set_level(STEP_MOTOR_GPIO_MS2, 1);
+    // Set microstepping mode (MS1 and MS2 pins)
+    gpio_set_level(STEP_MOTOR_GPIO_MS1, 1); // Enable MS1
+    gpio_set_level(STEP_MOTOR_GPIO_MS2, 1); // Enable MS2
 
+    // Create RMT (Remote Control) TX channel for stepper motor control
     ESP_LOGI(STEPPER_TAG, "Create RMT TX channel");
     rmt_channel_handle_t motor_chan = NULL;
     rmt_tx_channel_config_t tx_chan_config = {
-        .clk_src = RMT_CLK_SRC_DEFAULT, // select clock source
-        .gpio_num = STEP_MOTOR_GPIO_STEP,
-        .mem_block_symbols = 64,
-        .resolution_hz = STEP_MOTOR_RESOLUTION_HZ,
-        .trans_queue_depth = 10, // set the number of transactions that can be pending in the background
+        .clk_src = RMT_CLK_SRC_DEFAULT, // Select default clock source
+        .gpio_num = STEP_MOTOR_GPIO_STEP, // GPIO pin for STEP signal
+        .mem_block_symbols = 64, // Memory block size
+        .resolution_hz = STEP_MOTOR_RESOLUTION_HZ, // RMT resolution in Hz
+        .trans_queue_depth = 10, // Transaction queue depth
     };
     ESP_ERROR_CHECK(rmt_new_tx_channel(&tx_chan_config, &motor_chan));
 
+    // Set motor spin direction
     ESP_LOGI(STEPPER_TAG, "Set spin direction");
-    gpio_set_level(STEP_MOTOR_GPIO_DIR, STEP_MOTOR_SPIN_DIR_CLOCKWISE);
-    ESP_LOGI(STEPPER_TAG, "Enable step motor");
-    gpio_set_level(STEP_MOTOR_GPIO_EN, STEP_MOTOR_ENABLE_LEVEL);
+    gpio_set_level(STEP_MOTOR_GPIO_DIR, STEP_MOTOR_SPIN_DIR_CLOCKWISE); // Set direction to clockwise
 
+    // Enable the stepper motor
+    ESP_LOGI(STEPPER_TAG, "Enable step motor");
+    gpio_set_level(STEP_MOTOR_GPIO_EN, STEP_MOTOR_ENABLE_LEVEL); // Enable motor driver
+
+    // Create motor encoders for acceleration, uniform speed, and deceleration phases
     ESP_LOGI(STEPPER_TAG, "Create motor encoders");
+
+    // Encoder for acceleration phase
     stepper_motor_curve_encoder_config_t accel_encoder_config = {
-        .resolution = STEP_MOTOR_RESOLUTION_HZ,
-        .sample_points = 500,
-        .start_freq_hz = 500,
-        .end_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
+        .resolution = STEP_MOTOR_RESOLUTION_HZ, // Encoder resolution
+        .sample_points = 500, // Number of sample points
+        .start_freq_hz = 500, // Starting frequency in Hz
+        .end_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ, // Ending frequency in Hz
     };
     rmt_encoder_handle_t accel_motor_encoder = NULL;
     ESP_ERROR_CHECK(rmt_new_stepper_motor_curve_encoder(&accel_encoder_config, &accel_motor_encoder));
 
+    // Encoder for uniform speed phase
     stepper_motor_uniform_encoder_config_t uniform_encoder_config = {
-        .resolution = STEP_MOTOR_RESOLUTION_HZ,
+        .resolution = STEP_MOTOR_RESOLUTION_HZ, // Encoder resolution
     };
     rmt_encoder_handle_t uniform_motor_encoder = NULL;
     ESP_ERROR_CHECK(rmt_new_stepper_motor_uniform_encoder(&uniform_encoder_config, &uniform_motor_encoder));
 
+    // Encoder for deceleration phase
     stepper_motor_curve_encoder_config_t decel_encoder_config = {
-        .resolution = STEP_MOTOR_RESOLUTION_HZ,
-        .sample_points = 500,
-        .start_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ,
-        .end_freq_hz = 500,
+        .resolution = STEP_MOTOR_RESOLUTION_HZ, // Encoder resolution
+        .sample_points = 500, // Number of sample points
+        .start_freq_hz = STEP_MOTOR_ACCEL_DECEL_FREQ, // Starting frequency in Hz
+        .end_freq_hz = 500, // Ending frequency in Hz
     };
     rmt_encoder_handle_t decel_motor_encoder = NULL;
     ESP_ERROR_CHECK(rmt_new_stepper_motor_curve_encoder(&decel_encoder_config, &decel_motor_encoder));
 
+    // Enable the RMT channel
     ESP_LOGI(STEPPER_TAG, "Enable RMT channel");
     ESP_ERROR_CHECK(rmt_enable(motor_chan));
 
+    // Log the motor spin configuration
     ESP_LOGI(STEPPER_TAG, "Spin motor for 6000 steps: 500 accel + 5000 uniform + 500 decel");
+
+    // Configure RMT transmission settings
     rmt_transmit_config_t tx_config = {
-        .loop_count = 0,
+        .loop_count = 0, // No looping
     };
 
-    const static uint32_t accel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES;
-    const static uint32_t uniform_speed_hz = STEP_MOTOR_ACCEL_DECEL_FREQ;
-    const static uint32_t decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES;
-    
+    // Define constants for acceleration, uniform speed, and deceleration phases
+    const static uint32_t accel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES; // Number of acceleration samples
+    const static uint32_t uniform_speed_hz = STEP_MOTOR_ACCEL_DECEL_FREQ; // Uniform speed frequency in Hz
+    const static uint32_t decel_samples = STEP_MOTOR_ACCEL_DECEL_SAMPLES; // Number of deceleration samples
+
+    // Log stepper motor parameters
     ESP_LOGI(STEPPER_TAG, "Steps per millimeter: %d", STEPS_PER_mm); 
     ESP_LOGI(STEPPER_TAG, "Steps per micrometer: %d", STEPS_PER_um); 
 
