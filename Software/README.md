@@ -26,6 +26,3 @@ This directory contains the software for the Automatic Cable Cutter project.
 - If you have questions or encounter issues, create an issue in this repository.
 - Documentation for hardware setup and wiring may be provided in additional files or the project Wiki.
 
----
-
-**Note:** Any accidentally included information has been removed from this README.
