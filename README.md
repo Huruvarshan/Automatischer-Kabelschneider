@@ -1,7 +1,6 @@
 # Automatischer Kabelschneider (Automatic Cable Cutter)
 
-![Device Image](./images/A6703971.jpg "Image")
-![Alt text](./images/A6703971.JPG "a title")
+![Alt text](https://github.com/Huruvarshan/Automatischer-Kabelschneider/blob/main/Images/A6703971.JPG "a title")
 ![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
 
 ## Overview
