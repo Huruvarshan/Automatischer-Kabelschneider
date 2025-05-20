@@ -5,7 +5,7 @@ Welcome to the hardware section of the Automatischer Kabelschneider (Automatic C
 ## PCB Design
 
 - The PCB (Printed Circuit Board) design files are available here:  
-  [./PCB/](../PCB/)  
+  [./PCB/](Automatischer-Kabelschneider/Hardware/PCB/)  
 
 ## Mechanical Design
 
