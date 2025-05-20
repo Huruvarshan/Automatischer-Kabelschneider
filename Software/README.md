@@ -1,32 +1,31 @@
-# AKS-Program
-
-This directory contains the software for the Automatischer Kabelschneider (Automatic Cable Cutter).
-
-## Requirements
-
-- Download the `led-strip.h` library from the Espressif component registry: [led_strip v3.0.1](https://components.espressif.com/components/espressif/led_strip/versions/3.0.1)
+# Automatic Cable Cutter – Software
 
 ## Overview
 
-The code in this folder controls the automatic cable cutting process. Key features include:
-- Interfacing with hardware components such as motors and sensors
-- Controlling an LED strip for visual feedback
-- Providing configuration options for cable length and quantity
+This directory contains the software for the Automatic Cable Cutter project.
 
-## File Structure
+- **Arduino File:** The Arduino file is intended exclusively for the display unit. It manages and controls the display and user interface.
+- **AKS Program:** The AKS program is for the main unit of the cable cutter. It performs the main control functions for the cable cutting process.
 
-- `main.c` (or similar): Main application logic for controlling the cable cutter
-- `led-strip.h`: Required library for LED control (see above)
-- Additional source and header files for hardware interface and user configuration
+## Structure
 
-## Getting Started
+- `/Arduino/`  
+  Code for the display unit (e.g., showing data, handling user input)
+- `/AKS/`  
+  Main program for controlling and automating the cable cutter
 
-1. Clone this repository.
-2. Download and add `led-strip.h` to your project as described above.
-3. Build and flash the firmware to your hardware using your preferred ESP32 development environment.
+## Usage Notes
 
-## Usage
+- Make sure to upload the Arduino firmware only to the display unit.
+- The AKS program should be loaded onto the main control unit (e.g., microcontroller or control computer).
+- Both programs are designed to work together, but are not interchangeable.
 
-- Configure your desired cable length and quantity in the software or via the user interface.
-- Start the program to begin the automatic cutting process.
-- The LED strip will provide status and progress feedback during operation.
+## Additional Information
+
+- Please make changes or add features in separate branches and submit a pull request.
+- If you have questions or encounter issues, create an issue in this repository.
+- Documentation for hardware setup and wiring may be provided in additional files or the project Wiki.
+
+---
+
+**Note:** Any accidentally included information has been removed from this README.
