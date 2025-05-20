@@ -1,6 +1,6 @@
 # Automatischer Kabelschneider (Automatic Cable Cutter)
 
-![Device Image](./images/A6703971.JPG)
+![Device Image](./images/A6703971.JPG"Image")
 
 ## Overview
 
