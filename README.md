@@ -1,6 +1,6 @@
 # Automatischer Kabelschneider (Automatic Cable Cutter)
 
-![Device Image](images/A6703971.JPG)
+![Device Image](https://github.com/Huruvarshan/Automatischer-Kabelschneider/raw/main/images/A6703971.JPG)
 
 ## Overview
 
