@@ -1,3 +1,4 @@
+# REPO PUBLIC MACHEN, ALLE DATEN HINAFLADEN. 
 # Cable and Heat Shrink Tube Cutter
 # Description:
 This repository contains the KiCad files and code for the microcontroller of an open-source cable and heat shrink tube cutter. The device is designed to process cables, heat shrink tubes, and similar materials precisely and efficiently.
