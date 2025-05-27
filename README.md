@@ -1,6 +1,6 @@
 # Automatischer Kabelschneider (Automatic Cable Cutter)
 
-![Alt text](https://github.com/Huruvarshan/Automatischer-Kabelschneider/blob/main/Images/A6703971.JPG "a title")
+![Alt text](https://github.com/Huruvarshan/Automatischer-Kabelschneider/blob/main/Images/A6703999.jpg "a title")
 
 ## Overview
 
